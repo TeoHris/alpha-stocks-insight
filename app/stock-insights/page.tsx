@@ -25,11 +25,7 @@ const CATEGORIES = [
   'AI Infrastructure',
 ]
 
-export default function StockInsightsPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ q?: string; cat?: string }>
-}) {
+export default function StockInsightsPage() {
   const articles = getAllArticles()
 
   return (

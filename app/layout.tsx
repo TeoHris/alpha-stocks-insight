@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 
 // ── Roboto Font ──────────────────────────────────────────────
 const roboto = Roboto({
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-roboto',
