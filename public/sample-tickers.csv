@@ -1,0 +1,11 @@
+symbol,exchange,name,sector
+NVDA,NASDAQ,NVIDIA Corporation,Semiconductors
+AAPL,NASDAQ,Apple Inc.,Technology
+TSLA,NASDAQ,"Tesla, Inc.",Automotive / EV
+MSFT,NASDAQ,Microsoft Corporation,Technology
+AMZN,NASDAQ,"Amazon.com, Inc.",E-Commerce / Cloud
+META,NASDAQ,"Meta Platforms, Inc.",Social Media / AI
+GOOGL,NASDAQ,Alphabet Inc.,Technology
+AMD,NASDAQ,"Advanced Micro Devices, Inc.",Semiconductors
+PLTR,NYSE,Palantir Technologies Inc.,AI Analytics
+SMCI,NASDAQ,"Super Micro Computer, Inc.",AI Infrastructure
