@@ -120,7 +120,7 @@ export default function LegalPage() {
           <ul className="list-disc pl-5 space-y-1.5">
             <li><strong>Right of Access</strong> — You may request a copy of personal data we hold about you.</li>
             <li><strong>Right to Rectification</strong> — You may request correction of inaccurate personal data.</li>
-            <li><strong>Right to Erasure</strong> — You may request deletion of your personal data ('right to be forgotten').</li>
+            <li><strong>Right to Erasure</strong> — You may request deletion of your personal data (&apos;right to be forgotten&apos;).</li>
             <li><strong>Right to Portability</strong> — You may request your data in a machine-readable format.</li>
             <li><strong>Right to Object</strong> — You may object to certain uses of your data.</li>
           </ul>

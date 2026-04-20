@@ -68,7 +68,7 @@ export default function AboutPage() {
           How Our Content Is Generated
         </h2>
         <p>
-          Alpha Stocks Insight uses Claude AI agents (built on Anthropic's API) to generate
+          Alpha Stocks Insight uses Claude AI agents (built on Anthropic&apos;s API) to generate
           original articles. The workflow is:
         </p>
         <ol className="list-decimal pl-5 space-y-2 text-sm">
