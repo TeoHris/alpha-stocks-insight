@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Star, Plus, Trash2, RefreshCw } from 'lucide-react'
+import { Star, Plus, Trash2 } from 'lucide-react'
 import Link from 'next/link'
 import type { StockEntry } from '@/lib/types'
 
