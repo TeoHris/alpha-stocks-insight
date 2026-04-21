@@ -1,11 +1,8 @@
 import { BarChart2, Clock, TrendingUp } from 'lucide-react'
-import quotesData from '@/data/quotes.json'
 
 interface HeroBannerProps {
   articleCount: number
 }
-
-const DEMO_QUOTES = quotesData as { sym: string; price: string; chg: string; up: boolean }[]
 
 export default function HeroBanner({ articleCount }: HeroBannerProps) {
   const today = new Date().toLocaleDateString('en-US', {
@@ -35,7 +32,7 @@ export default function HeroBanner({ articleCount }: HeroBannerProps) {
         </p>
 
         {/* Meta row */}
-        <div className="flex flex-wrap items-center gap-4 text-xs text-blue-300 mb-5">
+        <div className="flex flex-wrap items-center gap-4 text-xs text-blue-300">
           <span className="flex items-center gap-1.5">
             <Clock size={11} />
             {today}
@@ -49,26 +46,6 @@ export default function HeroBanner({ articleCount }: HeroBannerProps) {
           <span className="flex items-center gap-1.5">
             <TrendingUp size={11} />
             NYSE &amp; NASDAQ Coverage
-          </span>
-        </div>
-
-        {/* Mini ticker strip */}
-        {/* TODO: Replace DEMO_QUOTES with real-time data from Finnhub or Alpha Vantage */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
-          {DEMO_QUOTES.map((q) => (
-            <div
-              key={q.sym}
-              className="flex-shrink-0 flex items-center gap-2 bg-blue-950/60 border border-blue-800 rounded-lg px-2.5 py-1.5 text-xs"
-            >
-              <span className="font-bold font-mono text-white">{q.sym}</span>
-              <span className="text-blue-200">{q.price}</span>
-              <span className={`font-semibold ${q.up ? 'text-green-400' : 'text-red-400'}`}>
-                {q.chg}
-              </span>
-            </div>
-          ))}
-          <span className="text-blue-500 text-xs flex-shrink-0 pl-1 italic">
-            Prices indicative · 15-min delay
           </span>
         </div>
       </div>
