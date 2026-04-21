@@ -16,7 +16,7 @@ export default function FeaturedGrid({ articles, date }: FeaturedGridProps) {
       {/* Section header */}
       <div className="mb-4">
         <h2 className="text-lg font-black text-gray-900 dark:text-white leading-tight">
-          Today's Top Stock Highlights
+          Today&apos;s Top Stock Highlights
         </h2>
         {date && (
           <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{date}</p>
