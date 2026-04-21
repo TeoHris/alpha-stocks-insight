@@ -85,43 +85,64 @@ CATEGORIES = [
     "Technology",
 ]
 
-AUTHOR_NAME = "Alpha Stocks Insight Research Team"
-AUTHOR_BIO  = "AI-powered analysis covering NASDAQ and NYSE stocks."
+AUTHOR_NAME = "Alpha Stocks Insight Staff"
+AUTHOR_BIO  = "Independent stock news and analysis covering NASDAQ and NYSE markets."
 
 
 # ─────────────────────────────────────────────────────────────
-# STEP 1 — Fetch news headlines from Finnhub
+# STEP 1 — Fetch market data from Finnhub
 # ─────────────────────────────────────────────────────────────
 
-def fetch_news(symbol: str) -> list[dict]:
-    """Return recent news items for a stock symbol from Finnhub."""
+def finnhub_get(endpoint: str, params: dict) -> dict | list | None:
+    """Generic Finnhub API call. Returns parsed JSON or None on error."""
+    params["token"] = FINNHUB_API_KEY
+    try:
+        resp = requests.get(f"https://finnhub.io/api/v1{endpoint}", params=params, timeout=10)
+        resp.raise_for_status()
+        return resp.json()
+    except Exception:
+        return None
+
+
+def fetch_market_data(symbol: str) -> dict:
+    """
+    Fetch all market data for a symbol in one place:
+      - Recent news headlines
+      - Current quote (price, change)
+      - Analyst price targets
+      - Analyst buy/hold/sell recommendations
+    Returns a single dict with all data (missing fields left as None).
+    """
     end   = datetime.date.today()
     start = end - datetime.timedelta(days=NEWS_LOOKBACK_DAYS)
 
-    url = "https://finnhub.io/api/v1/company-news"
-    params = {
-        "symbol": symbol,
-        "from":   start.isoformat(),
-        "to":     end.isoformat(),
-        "token":  FINNHUB_API_KEY,
-    }
+    # ── News ──────────────────────────────────────────────────
+    news_raw = finnhub_get("/company-news", {"symbol": symbol, "from": start.isoformat(), "to": end.isoformat()})
+    news = [i for i in (news_raw or []) if i.get("headline") and i.get("summary")][:5]
 
-    try:
-        resp = requests.get(url, params=params, timeout=10)
-        resp.raise_for_status()
-        items = resp.json()
-        # Return up to 5 most recent items that have a headline and summary
-        return [i for i in items if i.get("headline") and i.get("summary")][:5]
-    except Exception as e:
-        print(f"  ⚠  Could not fetch news for {symbol}: {e}")
-        return []
+    # ── Current quote ─────────────────────────────────────────
+    quote = finnhub_get("/quote", {"symbol": symbol}) or {}
+
+    # ── Analyst price targets ─────────────────────────────────
+    targets = finnhub_get("/stock/price-target", {"symbol": symbol}) or {}
+
+    # ── Analyst recommendations (last 2 months) ───────────────
+    recs_raw = finnhub_get("/stock/recommendation", {"symbol": symbol}) or []
+    recs = recs_raw[:2] if recs_raw else []
+
+    return {
+        "news":    news,
+        "quote":   quote,
+        "targets": targets,
+        "recs":    recs,
+    }
 
 
 # ─────────────────────────────────────────────────────────────
 # STEP 2 — Generate the article with Claude
 # ─────────────────────────────────────────────────────────────
 
-def generate_article(ticker: dict, news_items: list[dict]) -> dict | None:
+def generate_article(ticker: dict, market_data: dict) -> dict | None:
     """Call Claude to write a full article and return a structured dict."""
 
     try:
@@ -135,7 +156,12 @@ def generate_article(ticker: dict, news_items: list[dict]) -> dict | None:
     name     = ticker.get("name", symbol)
     sector   = ticker.get("sector", "Technology")
 
-    # Format news for the prompt
+    news_items = market_data["news"]
+    quote      = market_data["quote"]
+    targets    = market_data["targets"]
+    recs       = market_data["recs"]
+
+    # ── Format news ───────────────────────────────────────────
     news_text = ""
     for i, item in enumerate(news_items, 1):
         news_text += f"\n{i}. HEADLINE: {item['headline']}\n"
@@ -144,38 +170,111 @@ def generate_article(ticker: dict, news_items: list[dict]) -> dict | None:
         if item.get("source"):
             news_text += f"   SOURCE: {item['source']}\n"
 
-    today = datetime.date.today()
-    date_str = today.strftime("%B %d, %Y").replace(" 0", " ")  # e.g. "April 20, 2026"
-    time_str = "9:00 AM ET"
+    # ── Format quote ──────────────────────────────────────────
+    price_text = "Not available."
+    if quote.get("c"):
+        chg_abs = quote.get("d", 0)
+        chg_pct = quote.get("dp", 0)
+        direction = "▲" if chg_abs >= 0 else "▼"
+        price_text = (
+            f"Current price: ${quote['c']:.2f} "
+            f"({direction} ${abs(chg_abs):.2f} / {abs(chg_pct):.2f}% today). "
+            f"52-week range: ${quote.get('l', 'N/A')} – ${quote.get('h', 'N/A')}."
+        )
 
-    prompt = f"""You are a financial analyst writing for Alpha Stocks Insight, a US stock analysis website.
+    # ── Format analyst targets ────────────────────────────────
+    target_text = "Not available."
+    if targets.get("targetMean"):
+        target_text = (
+            f"Wall Street consensus price target: ${targets['targetMean']:.2f} "
+            f"(high: ${targets.get('targetHigh', 'N/A')}, low: ${targets.get('targetLow', 'N/A')}). "
+            f"Based on {targets.get('numberOfAnalysts', 'N/A')} analyst estimates."
+        )
+        if targets.get("targetMedian"):
+            target_text += f" Median target: ${targets['targetMedian']:.2f}."
 
-Write a professional, insightful investment analysis article about {name} ({exchange}:{symbol}), a {sector} company.
+    # ── Format analyst recommendations ────────────────────────
+    rec_text = "Not available."
+    if recs:
+        r = recs[0]
+        rec_text = (
+            f"Latest consensus ({r.get('period', 'recent')}): "
+            f"Strong Buy: {r.get('strongBuy', 0)}, Buy: {r.get('buy', 0)}, "
+            f"Hold: {r.get('hold', 0)}, Sell: {r.get('sell', 0)}, "
+            f"Strong Sell: {r.get('strongSell', 0)}."
+        )
+        if len(recs) > 1:
+            r2 = recs[1]
+            rec_text += (
+                f" Prior period ({r2.get('period', '')}): "
+                f"Strong Buy: {r2.get('strongBuy', 0)}, Buy: {r2.get('buy', 0)}, "
+                f"Hold: {r2.get('hold', 0)}."
+            )
 
-Use these recent news headlines as your source material:
+    today    = datetime.date.today()
+    date_str = today.strftime("%B %d, %Y").replace(" 0", " ")
+
+    # ══════════════════════════════════════════════════════════
+    # EDITORIAL PROMPT — edit below to change article style
+    # ══════════════════════════════════════════════════════════
+    prompt = f"""You are a staff writer for Alpha Stocks Insight, a US stock news website.
+
+Write a factual, direct news article about {name} ({exchange}:{symbol}), a {sector} company.
+
+━━ MARKET DATA (use all figures provided — do not invent numbers) ━━
+
+CURRENT PRICE & PERFORMANCE:
+{price_text}
+
+RECENT NEWS:
 {news_text}
 
-Write the article in this EXACT JSON format (return ONLY valid JSON, no markdown code blocks):
+WALL STREET ANALYST DATA:
+Price targets: {target_text}
+Recommendations: {rec_text}
+
+━━ EDITORIAL GUIDELINES (follow strictly) ━━
+
+TONE & STYLE:
+- Write directly and concisely. No hype, no filler phrases.
+- Do not use words like: "soaring", "surging", "skyrocketing", "explosive", "massive", "game-changer", "revolutionary", "stunning".
+- Use plain, precise language. State facts. Let numbers speak.
+- Attribute claims to sources (e.g. "according to the company", "analysts at Goldman Sachs note").
+
+REQUIRED SECTIONS (use these exact ## headings):
+1. ## Recent Developments
+   Summarise the key news factually. Include specific figures, dates, and company statements from the news items above.
+
+2. ## Financial Snapshot
+   Include the current stock price and today's change. Reference any relevant financial results or metrics mentioned in the news. Keep it factual and brief.
+
+3. ## Wall Street View
+   Summarise the analyst consensus price target and any recent changes. Report the buy/hold/sell breakdown from the recommendation data above. If a target was raised or cut, say so explicitly.
+
+4. ## Technical Picture
+   Write a short technical analysis paragraph. Reference the current price vs. the 52-week range. Include observations on support/resistance levels, and note MACD and RSI conditions if you can infer them from price momentum. Be specific — avoid vague statements.
+
+5. ### Key Takeaways
+   3–4 bullet points summarising the most important facts from the article.
+
+FORMATTING:
+- Total length: 450–600 words
+- Do NOT restate the title at the top of the content
+- Do NOT add a disclaimer — the site adds one automatically
+- Use **bold** only for numbers and company names, not for emphasis
+
+━━ OUTPUT FORMAT ━━
+
+Return ONLY this JSON object (no markdown fences, no explanation):
 {{
-  "title": "<compelling article title mentioning the stock>",
-  "teaser": "<2-sentence preview that hooks the reader, max 180 characters>",
+  "title": "<factual headline with ticker symbol, max 90 characters>",
+  "teaser": "<2 concise sentences summarising the article, max 180 characters>",
   "category": "<one of: Stock Analysis | Earnings Preview | AI & Technology | Semiconductors | Cloud Computing | Big Tech | AI Infrastructure | Technology>",
   "tags": ["<tag1>", "<tag2>", "<tag3>", "<tag4>"],
   "featured": false,
   "readTime": "<X min read>",
-  "content": "<full article in Markdown, 450-650 words>"
-}}
-
-Requirements for the content field (Markdown):
-- Use ## for section headings (2-3 sections)
-- Include a "### Key Takeaways" section with 3-4 bullet points at the end
-- Mention specific data points from the news headlines
-- Include a brief risk/bear case paragraph
-- Professional tone, avoid hype
-- Do NOT include the title again at the start of the content
-- Do NOT include any disclaimer — the site adds that automatically
-
-Return ONLY the raw JSON object. No explanation, no markdown fences."""
+  "content": "<full article in Markdown>"
+}}"""
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -308,17 +407,17 @@ def main():
 
         print(f"── {symbol} {'─' * (40 - len(symbol))}")
 
-        # Fetch news
-        print(f"   Fetching news…")
-        news = fetch_news(symbol)
-        if not news:
+        # Fetch all market data
+        print(f"   Fetching market data…")
+        market_data = fetch_market_data(symbol)
+        if not market_data["news"]:
             print(f"   No recent news found. Skipping.")
             continue
-        print(f"   Found {len(news)} news item(s).")
+        print(f"   Found {len(market_data['news'])} news item(s). Price: ${market_data['quote'].get('c', 'N/A')}")
 
         # Generate article
         print(f"   Generating article with Claude…")
-        article = generate_article(ticker, news)
+        article = generate_article(ticker, market_data)
         if not article:
             continue
 
