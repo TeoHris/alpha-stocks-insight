@@ -1,27 +1,26 @@
 import Link from 'next/link'
-import { Star, Clock, User } from 'lucide-react'
+import { Clock, User } from 'lucide-react'
 import TickerBadge from '@/components/TickerBadge'
 import type { Article } from '@/lib/types'
 
 interface FeaturedGridProps {
   articles: Article[]
+  date: string
 }
 
-export default function FeaturedGrid({ articles }: FeaturedGridProps) {
+export default function FeaturedGrid({ articles, date }: FeaturedGridProps) {
+  if (articles.length === 0) return null
+
   return (
     <section className="mb-8">
       {/* Section header */}
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-black flex items-center gap-2 text-gray-900 dark:text-white">
-          <Star size={18} className="text-amber-500" fill="currentColor" />
-          Featured News
+      <div className="mb-4">
+        <h2 className="text-lg font-black text-gray-900 dark:text-white leading-tight">
+          Today's Top Stock Highlights
         </h2>
-        <Link
-          href="/stock-insights"
-          className="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          View all →
-        </Link>
+        {date && (
+          <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{date}</p>
+        )}
       </div>
 
       {/* Card grid */}
@@ -52,7 +51,7 @@ export default function FeaturedGrid({ articles }: FeaturedGridProps) {
                   </span>
                   <span className="flex items-center gap-1 text-xs text-gray-400 dark:text-gray-500">
                     <Clock size={10} />
-                    {article.date}
+                    {article.time}
                   </span>
                 </div>
                 <div className="flex gap-1.5 flex-wrap">

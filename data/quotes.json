@@ -1,50 +1,50 @@
 [
   {
     "sym": "NVDA",
-    "price": "202.06",
-    "chg": "+0.19%",
+    "price": "202.08",
+    "chg": "+0.20%",
     "up": true
   },
   {
     "sym": "AAPL",
-    "price": "273.05",
-    "chg": "+1.04%",
+    "price": "273.07",
+    "chg": "+1.05%",
     "up": true
   },
   {
     "sym": "TSLA",
-    "price": "392.50",
-    "chg": "-2.03%",
+    "price": "392.52",
+    "chg": "-2.02%",
     "up": false
   },
   {
     "sym": "MSFT",
-    "price": "418.07",
-    "chg": "-1.12%",
+    "price": "418.09",
+    "chg": "-1.11%",
     "up": false
   },
   {
     "sym": "AMZN",
-    "price": "248.28",
-    "chg": "-0.91%",
+    "price": "248.30",
+    "chg": "-0.90%",
     "up": false
   },
   {
     "sym": "META",
-    "price": "670.91",
+    "price": "670.93",
     "chg": "-2.56%",
     "up": false
   },
   {
     "sym": "GOOGL",
-    "price": "337.42",
-    "chg": "-1.25%",
+    "price": "337.44",
+    "chg": "-1.24%",
     "up": false
   },
   {
     "sym": "AMD",
-    "price": "274.95",
-    "chg": "-1.24%",
+    "price": "274.97",
+    "chg": "-1.23%",
     "up": false
   }
 ]

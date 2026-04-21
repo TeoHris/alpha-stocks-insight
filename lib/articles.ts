@@ -73,3 +73,26 @@ export function getTrendingArticles(limit = 8): Article[] {
   const rest = all.filter((a) => !a.featured)
   return [...featured, ...rest].slice(0, limit)
 }
+
+/**
+ * Return the top articles from the most recent publish date,
+ * excluding daily roundup articles (slug starts with "roundup-").
+ * Used for the "Today's Top Stock Highlights" section.
+ */
+export function getTodaysTopArticles(limit = 4): Article[] {
+  const all = getAllArticles().filter((a) => !a.slug.startsWith('roundup-'))
+  if (all.length === 0) return []
+  // Find the most recent date in the dataset
+  const latestDate = all[0].date
+  const todaysArticles = all.filter((a) => a.date === latestDate)
+  return todaysArticles.slice(0, limit)
+}
+
+/**
+ * Return the display date for the most recent batch of articles.
+ * Used to show the date in the "Today's Top Stock Highlights" heading.
+ */
+export function getLatestPublishDate(): string {
+  const all = getAllArticles().filter((a) => !a.slug.startsWith('roundup-'))
+  return all.length > 0 ? all[0].date : ''
+}

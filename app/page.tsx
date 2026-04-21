@@ -8,7 +8,8 @@ import Disclaimer from '@/components/Disclaimer'
 import {
   getAllArticles,
   getArticlesByDate,
-  getFeaturedArticles,
+  getTodaysTopArticles,
+  getLatestPublishDate,
   getTrendingArticles,
 } from '@/lib/articles'
 
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const allArticles  = getAllArticles()
-  const featured     = getFeaturedArticles()
+  const topArticles  = getTodaysTopArticles(4)
+  const latestDate   = getLatestPublishDate()
   const trending     = getTrendingArticles(8)
   const byDate       = getArticlesByDate()
   const dateGroups   = Object.entries(byDate) // already sorted newest-first
@@ -44,8 +46,8 @@ export default function HomePage() {
           {/* ═══ LEFT / MAIN COLUMN ═══════════════════════════ */}
           <div className="flex-1 min-w-0">
 
-            {/* Featured Ideas */}
-            <FeaturedGrid articles={featured} />
+            {/* Today's Top Stock Highlights */}
+            <FeaturedGrid articles={topArticles} date={latestDate} />
 
             {/* AD #2: In-content native */}
             <div className="mb-6">
