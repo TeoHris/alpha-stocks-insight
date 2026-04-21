@@ -1,6 +1,33 @@
 [
   {
     "id": 1,
+    "slug": "tsla-tesla-tsla-slips-2-ahead-of-q1-earnings-as-analyst-sentiment",
+    "title": "Tesla (TSLA) Slips 2% Ahead of Q1 Earnings as Analyst Sentiment Remains Mixed",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 21, 2026",
+    "time": "12:15 PM ET",
+    "dateISO": "2026-04-21T12:15:52Z",
+    "teaser": "TSLA shares fell $8.12 to $392.50 ahead of Wednesday's Q1 earnings report. Analyst consensus shows a divided outlook with 29 buy-equivalent ratings against 31 holds and sells.",
+    "content": "## Recent Developments\n\n**Tesla, Inc.** (NASDAQ: **TSLA**) is set to report first-quarter earnings after market close on Wednesday, a closely watched event for investors tracking the electric vehicle maker's trajectory. The company heads into the report under a cloud of mixed signals, with recent coverage highlighting persistent earnings weakness relative to its mega-cap peers.\n\nAccording to Yahoo, **Tesla** \"remains in the doghouse\" when it comes to earnings trends, lagging behind **Microsoft** and **Apple** among the so-called Magnificent Seven stocks. Separately, analysts are weighing the potential impact of a future **SpaceX** IPO on **Tesla's** standing within that high-profile group. One Yahoo report suggested that **Tesla** \"could even be a big loser if SpaceX bumps it out of the Magnificent Seven,\" given that both companies are tied to CEO Elon Musk.\n\nBroader market conditions have offered some support. According to SeekingAlpha, U.S. equity markets extended upward momentum last week, led by gains in technology and growth-oriented segments. However, macro headwinds persist, including elevated oil prices tied to Iran tensions and ongoing inflation pressure.\n\n## Financial Snapshot\n\n**Tesla** shares closed at **$392.50**, down **$8.12** or **2.03%** on the day, from a previous close of **$400.62**. The stock trades within a 52-week range of **$222.79** to **$498.83**, placing the current price roughly in the upper-middle portion of that band.\n\nSpecific quarterly financial results are not yet available, as the Q1 report has not been released. Investors will be watching revenue figures, automotive margins, and delivery numbers when **Tesla** reports Wednesday.\n\n## Wall Street View\n\nAnalyst price target data is not currently available. However, the latest consensus recommendation breakdown as of April 1, 2026, shows a divided picture:\n\n- **Strong Buy:** 9\n- **Buy:** 20\n- **Hold:** 21\n- **Sell:** 8\n- **Strong Sell:** 2\n\nThat gives **Tesla** **29** buy-equivalent ratings against **21** holds and **10** sell-equivalent ratings across **60** tracked analysts. Compared to the prior period in March 2026, the number of Strong Buy ratings increased by one, from **8** to **9**, while the buy and hold counts remained unchanged. The April data introduces explicit sell-side ratings (**8** Sell, **2** Strong Sell) that were not disclosed in the March breakdown, suggesting either newly initiated bearish coverage or updated methodology.\n\n## Technical Picture\n\nMoving average data is not available for this report. Without 20-day, 50-day, and 200-day moving average figures, no technical trend assessment can be made at this time. Investors should consult updated charting tools for current trend signals ahead of Wednesday's earnings release.\n\n### Key Takeaways\n\n- **Tesla** reports Q1 earnings after Wednesday's close, with shares trading at **$392.50** after a **2.03%** decline on the day.\n- Analyst consensus is split, with **29** buy-equivalent ratings, **21** holds, and **10** sell-equivalent ratings as of April 2026, reflecting uncertainty around the company's near-term outlook.\n- Recent commentary flags **Tesla's** lagging earnings performance relative to Magnificent Seven peers like **Microsoft** and **Apple**, and raises questions about whether a **SpaceX** IPO could displace **Tesla** from the group.\n- Broader market tailwinds from the technology sector may offer partial support, but macro risks including oil-driven inflation remain in play.",
+    "tickers": [
+      {
+        "exchange": "NASDAQ",
+        "symbol": "TSLA"
+      }
+    ],
+    "category": "Earnings Preview",
+    "featured": false,
+    "readTime": "3 min read",
+    "tags": [
+      "Tesla",
+      "TSLA",
+      "Earnings Preview",
+      "Electric Vehicles"
+    ]
+  },
+  {
+    "id": 2,
     "slug": "nvda-nvidia-nvda-holds-near-52-week-high-as-chip-rally-extends-an",
     "title": "NVIDIA (NVDA) Holds Near 52-Week High as Chip Rally Extends, Analysts Stay Bullish",
     "author": "Alpha Stocks Insight Staff",
@@ -27,7 +54,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "slug": "aapl-apple-inc-aapl-tim-cook-s-departure-marks-a-pivotal-inflecti",
     "title": "Apple Inc. (AAPL): Tim Cook's Departure Marks a Pivotal Inflection Point — What Investors Need to Know",
     "author": "Alpha Stocks Insight Staff",
@@ -55,7 +82,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "slug": "nvda-nvidia-nvda-can-slim-momentum-ai-partnerships-and-a-surging-",
     "title": "NVIDIA (NVDA): CAN SLIM Momentum, AI Partnerships, and a Surging Semiconductor Sector Converge",
     "author": "Alpha Stocks Insight Staff",
@@ -82,7 +109,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "slug": "nvidia-ai-dominance-q1-2026-preview",
     "title": "NVIDIA's AI Dominance Continues: Q1 2026 Preview Shows Massive Data Center Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -110,7 +137,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "slug": "apple-services-revenue-record-safe-haven",
     "title": "Apple's Services Revenue Hits Record High: Is AAPL the Ultimate Safe Haven Stock?",
     "author": "Alpha Stocks Insight Staff",
@@ -138,7 +165,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "slug": "tesla-fsd-14-analyst-upgrades",
     "title": "Tesla Full Self-Driving 14.0 Launch Triggers Analyst Upgrades Across the Board",
     "author": "Alpha Stocks Insight Staff",
@@ -166,7 +193,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "slug": "microsoft-azure-copilot-q2-earnings-beat",
     "title": "Microsoft Azure Growth Accelerates: AI Copilot Adoption Drives Q2 Earnings Beat",
     "author": "Alpha Stocks Insight Staff",
@@ -195,7 +222,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 9,
     "slug": "amazon-aws-reclaims-cloud-position-ai-contracts",
     "title": "Amazon AWS Reclaims Top Cloud Position as Enterprise AI Contracts Surge",
     "author": "Alpha Stocks Insight Staff",
@@ -224,7 +251,7 @@
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "slug": "meta-ai-glasses-advertising-surge",
     "title": "Meta's AI Glasses Reach 5 Million Units: Advertising Revenue Surges 34% YoY",
     "author": "Alpha Stocks Insight Staff",
@@ -253,7 +280,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "slug": "alphabet-gemini-ultra-3-search-rebound",
     "title": "Alphabet's Gemini Ultra 3 Outperforms Rivals: Search Revenue Rebounds Strongly",
     "author": "Alpha Stocks Insight Staff",
@@ -282,7 +309,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": 12,
     "slug": "amd-mi400-data-center-enterprise-orders",
     "title": "AMD MI400 GPUs Challenge NVIDIA's Data Center Monopoly: $8B in Enterprise Orders",
     "author": "Alpha Stocks Insight Staff",
@@ -310,7 +337,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 13,
     "slug": "palantir-dod-ai-contract-government-revenue",
     "title": "Palantir Wins $2.5B DoD AI Contract Extension: Government Revenue to Double",
     "author": "Alpha Stocks Insight Staff",
@@ -339,7 +366,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 14,
     "slug": "super-micro-computer-record-revenue-ai-infrastructure",
     "title": "Super Micro Computer: Record $7.8B Revenue as AI Infrastructure Boom Continues",
     "author": "Alpha Stocks Insight Staff",

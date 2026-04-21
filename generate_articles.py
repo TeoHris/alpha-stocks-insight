@@ -106,12 +106,14 @@ def finnhub_get(endpoint: str, params: dict) -> dict | list | None:
 
 def fetch_market_data(symbol: str) -> dict:
     """
-    Fetch all market data for a symbol in one place:
+    Fetch all market data for a symbol:
       - Recent news headlines
-      - Current quote (price, change)
+      - Current quote (price, daily change)
+      - 52-week high/low from stock metrics
+      - 20/50/200-day moving averages (calculated from daily candles)
       - Analyst price targets
       - Analyst buy/hold/sell recommendations
-    Returns a single dict with all data (missing fields left as None).
+    Returns a single dict with all data.
     """
     end   = datetime.date.today()
     start = end - datetime.timedelta(days=NEWS_LOOKBACK_DAYS)
@@ -120,8 +122,36 @@ def fetch_market_data(symbol: str) -> dict:
     news_raw = finnhub_get("/company-news", {"symbol": symbol, "from": start.isoformat(), "to": end.isoformat()})
     news = [i for i in (news_raw or []) if i.get("headline") and i.get("summary")][:5]
 
-    # ── Current quote ─────────────────────────────────────────
+    # ── Current quote (c=price, d=change, dp=% change, pc=prev close)
     quote = finnhub_get("/quote", {"symbol": symbol}) or {}
+
+    # ── 52-week high/low from basic financials ─────────────────
+    # NOTE: quote fields 'h' and 'l' are the DAY's range, not 52-week.
+    # The correct 52-week data comes from the metrics endpoint.
+    metrics_raw = finnhub_get("/stock/metric", {"symbol": symbol, "metric": "all"}) or {}
+    metrics = metrics_raw.get("metric", {})
+    week52_high = metrics.get("52WeekHigh")
+    week52_low  = metrics.get("52WeekLow")
+
+    # ── Moving averages (calculated from daily candles) ────────
+    # Fetch 220 trading days of daily candles to compute 20/50/200 MAs
+    ma_data = {"ma20": None, "ma50": None, "ma200": None}
+    candle_end   = int(datetime.datetime.now().timestamp())
+    candle_start = int((datetime.datetime.now() - datetime.timedelta(days=310)).timestamp())
+    candles = finnhub_get("/stock/candle", {
+        "symbol":     symbol,
+        "resolution": "D",
+        "from":       candle_start,
+        "to":         candle_end,
+    }) or {}
+
+    closes = candles.get("c", [])  # list of closing prices, oldest first
+    if len(closes) >= 20:
+        ma_data["ma20"]  = round(sum(closes[-20:])  / 20,  2)
+    if len(closes) >= 50:
+        ma_data["ma50"]  = round(sum(closes[-50:])  / 50,  2)
+    if len(closes) >= 200:
+        ma_data["ma200"] = round(sum(closes[-200:]) / 200, 2)
 
     # ── Analyst price targets ─────────────────────────────────
     targets = finnhub_get("/stock/price-target", {"symbol": symbol}) or {}
@@ -131,10 +161,13 @@ def fetch_market_data(symbol: str) -> dict:
     recs = recs_raw[:2] if recs_raw else []
 
     return {
-        "news":    news,
-        "quote":   quote,
-        "targets": targets,
-        "recs":    recs,
+        "news":       news,
+        "quote":      quote,
+        "week52_high": week52_high,
+        "week52_low":  week52_low,
+        "ma_data":    ma_data,
+        "targets":    targets,
+        "recs":       recs,
     }
 
 
@@ -156,10 +189,13 @@ def generate_article(ticker: dict, market_data: dict) -> dict | None:
     name     = ticker.get("name", symbol)
     sector   = ticker.get("sector", "Technology")
 
-    news_items = market_data["news"]
-    quote      = market_data["quote"]
-    targets    = market_data["targets"]
-    recs       = market_data["recs"]
+    news_items  = market_data["news"]
+    quote       = market_data["quote"]
+    targets     = market_data["targets"]
+    recs        = market_data["recs"]
+    ma_data     = market_data["ma_data"]
+    week52_high = market_data["week52_high"]
+    week52_low  = market_data["week52_low"]
 
     # ── Format news ───────────────────────────────────────────
     news_text = ""
@@ -173,14 +209,32 @@ def generate_article(ticker: dict, market_data: dict) -> dict | None:
     # ── Format quote ──────────────────────────────────────────
     price_text = "Not available."
     if quote.get("c"):
-        chg_abs = quote.get("d", 0)
-        chg_pct = quote.get("dp", 0)
+        chg_abs   = quote.get("d", 0)
+        chg_pct   = quote.get("dp", 0)
         direction = "▲" if chg_abs >= 0 else "▼"
         price_text = (
             f"Current price: ${quote['c']:.2f} "
             f"({direction} ${abs(chg_abs):.2f} / {abs(chg_pct):.2f}% today). "
-            f"52-week range: ${quote.get('l', 'N/A')} – ${quote.get('h', 'N/A')}."
+            f"Previous close: ${quote.get('pc', 'N/A')}."
         )
+        if week52_high and week52_low:
+            price_text += f" 52-week range: ${week52_low:.2f} – ${week52_high:.2f}."
+
+    # ── Format moving averages ────────────────────────────────
+    ma_text = "Moving average data not available."
+    if any(v is not None for v in ma_data.values()):
+        current = quote.get("c")
+        parts = []
+        for label, val in [("20-day MA", ma_data["ma20"]),
+                            ("50-day MA", ma_data["ma50"]),
+                            ("200-day MA", ma_data["ma200"])]:
+            if val is not None:
+                if current:
+                    rel = "above" if current > val else "below"
+                    parts.append(f"{label}: ${val:.2f} (price is {rel})")
+                else:
+                    parts.append(f"{label}: ${val:.2f}")
+        ma_text = ". ".join(parts) + "."
 
     # ── Format analyst targets ────────────────────────────────
     target_text = "Not available."
@@ -221,10 +275,13 @@ def generate_article(ticker: dict, market_data: dict) -> dict | None:
 
 Write a factual, direct news article about {name} ({exchange}:{symbol}), a {sector} company.
 
-━━ MARKET DATA (use all figures provided — do not invent numbers) ━━
+━━ MARKET DATA (use only the figures provided below — do not invent or estimate any numbers) ━━
 
 CURRENT PRICE & PERFORMANCE:
 {price_text}
+
+MOVING AVERAGES (calculated from actual price history):
+{ma_text}
 
 RECENT NEWS:
 {news_text}
@@ -252,7 +309,7 @@ REQUIRED SECTIONS (use these exact ## headings):
    Summarise the analyst consensus price target and any recent changes. Report the buy/hold/sell breakdown from the recommendation data above. If a target was raised or cut, say so explicitly.
 
 4. ## Technical Picture
-   Write a short technical analysis paragraph. Reference the current price vs. the 52-week range. Include observations on support/resistance levels, and note MACD and RSI conditions if you can infer them from price momentum. Be specific — avoid vague statements.
+   Use ONLY the moving average figures provided above. State whether the current price is above or below the 20-day, 50-day, and 200-day moving averages, and what that implies about short-term and long-term trend. Do NOT reference or infer the 52-week range for technical conclusions. Do NOT use the daily high/low as a proxy for 52-week levels. Do not invent MACD or RSI values — only describe what the MA data supports.
 
 5. ### Key Takeaways
    3–4 bullet points summarising the most important facts from the article.
