@@ -154,9 +154,6 @@ export default async function ArticlePage({
               </div>
             </div>
 
-            {/* ── DISCLAIMER (TOP) — visible on every article ── */}
-            <Disclaimer variant="article" />
-
             {/* ── AD #2: In-article ad ── */}
             <div className="my-6">
               <AdPlaceholder size="in-article" label="In-Article Ad (in-article)" />

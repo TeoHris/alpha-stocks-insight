@@ -14,7 +14,7 @@ export default function FeaturedGrid({ articles }: FeaturedGridProps) {
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-black flex items-center gap-2 text-gray-900 dark:text-white">
           <Star size={18} className="text-amber-500" fill="currentColor" />
-          Featured Ideas
+          Featured News
         </h2>
         <Link
           href="/stock-insights"

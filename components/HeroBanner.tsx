@@ -37,7 +37,7 @@ export default function HeroBanner({ articleCount }: HeroBannerProps) {
 
         {/* Headline */}
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-2 leading-tight">
-          Latest US Stock News &amp; Investment Ideas
+          Latest US Stock News
         </h1>
         <p className="text-blue-200 text-sm sm:text-base mb-4 max-w-2xl">
           AI-powered independent analysis and research on the stocks that matter most to US investors.
@@ -52,7 +52,7 @@ export default function HeroBanner({ articleCount }: HeroBannerProps) {
           <span className="text-blue-700">·</span>
           <span className="flex items-center gap-1.5">
             <BarChart2 size={11} />
-            {articleCount} ideas published
+            {articleCount} articles published
           </span>
           <span className="text-blue-700">·</span>
           <span className="flex items-center gap-1.5">
