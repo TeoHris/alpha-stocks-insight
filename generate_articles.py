@@ -48,6 +48,7 @@ AFTER RUNNING
 import os
 import sys
 import json
+import csv
 import time
 import datetime
 import re
@@ -69,6 +70,28 @@ FINNHUB_API_KEY   = os.getenv("FINNHUB_API_KEY", "")
 SCRIPT_DIR    = Path(__file__).parent
 ARTICLES_FILE = SCRIPT_DIR / "data" / "articles.json"
 TICKERS_FILE  = SCRIPT_DIR / "data" / "tickers.json"
+TICKERS_CSV   = SCRIPT_DIR / "data" / "us_stocks_formatted_comprehensive.csv"
+
+
+def load_tickers() -> list[dict]:
+    """Load tickers from CSV if available, otherwise fall back to tickers.json."""
+    if TICKERS_CSV.exists():
+        tickers = []
+        with open(TICKERS_CSV, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                if row.get("symbol"):
+                    tickers.append({
+                        "symbol":   row["symbol"].strip().upper(),
+                        "exchange": row.get("exchange", "NASDAQ").strip(),
+                        "name":     row.get("name", "").strip(),
+                        "sector":   row.get("sector", "").strip(),
+                    })
+        return tickers
+    elif TICKERS_FILE.exists():
+        with open(TICKERS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    else:
+        return []
 
 # How many days of news to look back
 NEWS_LOOKBACK_DAYS = 3
@@ -93,15 +116,26 @@ AUTHOR_BIO  = "Independent stock news and analysis covering NASDAQ and NYSE mark
 # STEP 1 — Fetch market data from Finnhub
 # ─────────────────────────────────────────────────────────────
 
-def finnhub_get(endpoint: str, params: dict) -> dict | list | None:
-    """Generic Finnhub API call. Returns parsed JSON or None on error."""
+def finnhub_get(endpoint: str, params: dict, retries: int = 2) -> dict | list | None:
+    """Generic Finnhub API call with retry on rate-limit (429) or timeout."""
     params["token"] = FINNHUB_API_KEY
-    try:
-        resp = requests.get(f"https://finnhub.io/api/v1{endpoint}", params=params, timeout=10)
-        resp.raise_for_status()
-        return resp.json()
-    except Exception:
-        return None
+    for attempt in range(retries + 1):
+        try:
+            resp = requests.get(f"https://finnhub.io/api/v1{endpoint}", params=params, timeout=15)
+            if resp.status_code == 429:
+                # Rate limited — wait and retry
+                wait = 2 * (attempt + 1)
+                time.sleep(wait)
+                continue
+            resp.raise_for_status()
+            return resp.json()
+        except requests.exceptions.Timeout:
+            if attempt < retries:
+                time.sleep(2)
+            continue
+        except Exception:
+            return None
+    return None
 
 
 def fetch_market_data(symbol: str) -> dict:
@@ -121,20 +155,23 @@ def fetch_market_data(symbol: str) -> dict:
     # ── News ──────────────────────────────────────────────────
     news_raw = finnhub_get("/company-news", {"symbol": symbol, "from": start.isoformat(), "to": end.isoformat()})
     news = [i for i in (news_raw or []) if i.get("headline") and i.get("summary")][:5]
+    time.sleep(0.5)
 
     # ── Current quote (c=price, d=change, dp=% change, pc=prev close)
     quote = finnhub_get("/quote", {"symbol": symbol}) or {}
+    time.sleep(0.5)
 
     # ── 52-week high/low from basic financials ─────────────────
     # NOTE: quote fields 'h' and 'l' are the DAY's range, not 52-week.
     # The correct 52-week data comes from the metrics endpoint.
     metrics_raw = finnhub_get("/stock/metric", {"symbol": symbol, "metric": "all"}) or {}
-    metrics = metrics_raw.get("metric", {})
+    metrics     = metrics_raw.get("metric", {})
     week52_high = metrics.get("52WeekHigh")
     week52_low  = metrics.get("52WeekLow")
+    time.sleep(0.5)
 
     # ── Moving averages (calculated from daily candles) ────────
-    # Fetch 220 trading days of daily candles to compute 20/50/200 MAs
+    # Fetch 310 calendar days (~220 trading days) to compute 20/50/200 MAs
     ma_data = {"ma20": None, "ma50": None, "ma200": None}
     candle_end   = int(datetime.datetime.now().timestamp())
     candle_start = int((datetime.datetime.now() - datetime.timedelta(days=310)).timestamp())
@@ -152,9 +189,11 @@ def fetch_market_data(symbol: str) -> dict:
         ma_data["ma50"]  = round(sum(closes[-50:])  / 50,  2)
     if len(closes) >= 200:
         ma_data["ma200"] = round(sum(closes[-200:]) / 200, 2)
+    time.sleep(0.5)
 
     # ── Analyst price targets ─────────────────────────────────
     targets = finnhub_get("/stock/price-target", {"symbol": symbol}) or {}
+    time.sleep(0.5)
 
     # ── Analyst recommendations (last 2 months) ───────────────
     recs_raw = finnhub_get("/stock/recommendation", {"symbol": symbol}) or []
@@ -310,8 +349,12 @@ REQUIRED SECTIONS (use these exact ## headings):
 
 4. ## Technical Picture
    Use ONLY the moving average figures provided above. State whether the current price is above or below the 20-day, 50-day, and 200-day moving averages, and what that implies about short-term and long-term trend. Do NOT reference or infer the 52-week range for technical conclusions. Do NOT use the daily high/low as a proxy for 52-week levels. Do not invent MACD or RSI values — only describe what the MA data supports.
+   IMPORTANT: If moving average data is marked "Not available", omit this section entirely. Do not write a placeholder or explain why it is missing.
 
-5. ### Key Takeaways
+5. ## Wall Street View
+   IMPORTANT: If analyst price target and recommendation data are both marked "Not available", omit this section entirely. Do not write a placeholder or explain why the data is missing.
+
+6. ### Key Takeaways
    3–4 bullet points summarising the most important facts from the article.
 
 FORMATTING:
@@ -415,13 +458,118 @@ def already_covered(existing: list[dict], symbol: str, title: str) -> bool:
 
 
 # ─────────────────────────────────────────────────────────────
+# STEP 3 — Screening: score tickers by news significance
+# ─────────────────────────────────────────────────────────────
+
+# Keywords that indicate a genuinely newsworthy event
+HIGH_SIGNAL_KEYWORDS = [
+    # Earnings & financials
+    "earnings", "revenue", "eps", "profit", "loss", "guidance", "outlook",
+    "beat", "miss", "raised", "lowered", "cut", "q1", "q2", "q3", "q4",
+    "quarterly", "annual results", "full year", "fiscal",
+    # Corporate events
+    "acquisition", "merger", "takeover", "buyout", "deal", "contract",
+    "partnership", "agreement", "joint venture", "spin-off", "ipo", "divest",
+    # Management
+    "ceo", "cfo", "cto", "coo", "president", "resign", "appoint",
+    "hire", "departure", "replace", "named", "steps down",
+    # Regulatory & legal
+    "fda", "sec", "doj", "ftc", "lawsuit", "settlement", "approval",
+    "rejection", "recall", "investigation", "fine", "penalty",
+    # Capital markets
+    "buyback", "dividend", "offering", "dilution", "debt", "upgrade",
+    "downgrade", "price target", "initiated", "coverage",
+]
+
+PRICE_MOVE_THRESHOLD = 3.5  # flag any stock that moved more than this % today
+
+
+def score_ticker(symbol: str, news_days: int = 2) -> dict:
+    """
+    Lightweight screen of a single ticker. Returns:
+      {
+        "symbol":    str,
+        "score":     int,    # 0 = no story, higher = more newsworthy
+        "reasons":   list,   # human-readable reasons for the score
+        "news_count": int,
+        "price_chg": float | None,
+      }
+    Only makes 2 API calls (news + quote). No candles, no targets.
+    """
+    end   = datetime.date.today()
+    start = end - datetime.timedelta(days=news_days)
+
+    news_raw  = finnhub_get("/company-news", {"symbol": symbol, "from": start.isoformat(), "to": end.isoformat()})
+    news      = [i for i in (news_raw or []) if i.get("headline")]
+    time.sleep(0.25)
+
+    quote     = finnhub_get("/quote", {"symbol": symbol}) or {}
+    price_chg = quote.get("dp")   # % change today
+    time.sleep(0.25)
+
+    score   = 0
+    reasons = []
+
+    # Score 1: number of news items (more news = more active story)
+    if len(news) >= 3:
+        score += 2
+    elif len(news) >= 1:
+        score += 1
+
+    # Score 2: high-signal keywords in headlines
+    all_headlines = " ".join(i.get("headline", "").lower() for i in news)
+    matched = [kw for kw in HIGH_SIGNAL_KEYWORDS if kw in all_headlines]
+    if matched:
+        score += len(matched) * 2
+        reasons.append(f"keywords: {', '.join(matched[:4])}")
+
+    # Score 3: significant price move (may precede or follow news)
+    if price_chg is not None and abs(price_chg) >= PRICE_MOVE_THRESHOLD:
+        score += 5
+        direction = "▲" if price_chg > 0 else "▼"
+        reasons.append(f"price {direction}{abs(price_chg):.1f}% today")
+
+    return {
+        "symbol":     symbol,
+        "score":      score,
+        "reasons":    reasons,
+        "news_count": len(news),
+        "price_chg":  price_chg,
+    }
+
+
+def get_earnings_today(ticker_symbols: set) -> set:
+    """
+    Return the set of ticker symbols from our list that have
+    earnings reported or scheduled today or tomorrow.
+    Uses Finnhub's earnings calendar endpoint.
+    """
+    today    = datetime.date.today()
+    tomorrow = today + datetime.timedelta(days=1)
+    result   = finnhub_get("/calendar/earnings", {
+        "from": today.isoformat(),
+        "to":   tomorrow.isoformat(),
+    }) or {}
+
+    earnings_tickers = set()
+    for item in result.get("earningsCalendar", []):
+        sym = item.get("symbol", "").upper()
+        if sym in ticker_symbols:
+            earnings_tickers.add(sym)
+    return earnings_tickers
+
+
+# ─────────────────────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(description="Generate AI stock articles")
-    parser.add_argument("tickers", nargs="*", help="Ticker symbols (default: all in tickers.json)")
-    parser.add_argument("--max", type=int, default=0, help="Max articles to generate (0 = unlimited)")
+    parser.add_argument("tickers", nargs="*", help="Ticker symbols (default: screen all in tickers.json)")
+    parser.add_argument("--max",        type=int, default=15,  help="Max articles to generate per run (default: 15)")
+    parser.add_argument("--min-score",  type=int, default=4,   help="Minimum significance score to generate an article (default: 4)")
+    parser.add_argument("--top",        type=int, default=20,  help="Number of top-scored tickers to consider after screening (default: 20)")
+    parser.add_argument("--no-screen",  action="store_true",   help="Skip screening phase (use with explicit ticker list)")
     args = parser.parse_args()
 
     # ── Validate API keys ──
@@ -432,25 +580,75 @@ def main():
         print("ERROR: FINNHUB_API_KEY not set. Add it to your .env file.")
         sys.exit(1)
 
-    # ── Load ticker list ──
-    if args.tickers:
-        # User passed specific tickers on the command line
-        ticker_list = [{"symbol": s.upper(), "exchange": "NASDAQ"} for s in args.tickers]
-        # Try to enrich from tickers.json if available
-        if TICKERS_FILE.exists():
-            with open(TICKERS_FILE, "r") as f:
-                saved = {t["symbol"]: t for t in json.load(f)}
-            ticker_list = [saved.get(t["symbol"], t) for t in ticker_list]
-    else:
-        if not TICKERS_FILE.exists():
-            print(f"ERROR: {TICKERS_FILE} not found. Run the script with ticker symbols as arguments.")
-            sys.exit(1)
-        with open(TICKERS_FILE, "r") as f:
-            ticker_list = json.load(f)
+    # ── Load full ticker list ──
+    all_tickers = load_tickers()
+    if not all_tickers:
+        print("ERROR: No tickers found. Add tickers.json or us_stocks_formatted_comprehensive.csv to data/")
+        sys.exit(1)
+    ticker_map = {t["symbol"]: t for t in all_tickers}  # quick lookup by symbol
 
     print(f"\n🤖  Alpha Stocks Insight — Article Generator")
-    print(f"    Tickers: {', '.join(t['symbol'] for t in ticker_list)}")
-    print(f"    Date:    {datetime.date.today()}\n")
+    print(f"    Date: {datetime.date.today()}")
+
+    # ── Determine which tickers to process ──
+    if args.tickers:
+        # Specific tickers passed on command line — skip screening
+        candidate_symbols = [s.upper() for s in args.tickers]
+        ticker_list = [ticker_map.get(s, {"symbol": s, "exchange": "NASDAQ"}) for s in candidate_symbols]
+        print(f"    Mode: targeted ({len(ticker_list)} ticker(s) specified)\n")
+    elif args.no_screen:
+        ticker_list = all_tickers
+        print(f"    Mode: no-screen, all {len(ticker_list)} tickers\n")
+    else:
+        # ════════════════════════════════════════════════════
+        # PHASE 1: SCREEN ALL TICKERS FOR NEWSFLOW
+        # ════════════════════════════════════════════════════
+        all_symbols = set(t["symbol"] for t in all_tickers)
+        print(f"    Mode: full screen ({len(all_tickers)} tickers)\n")
+        print(f"━━ PHASE 1: Screening for newsflow ━━")
+
+        # Check earnings calendar first (always top priority)
+        print(f"   Checking earnings calendar…")
+        earnings_today = get_earnings_today(all_symbols)
+        if earnings_today:
+            print(f"   Earnings today/tomorrow: {', '.join(sorted(earnings_today))}")
+        else:
+            print(f"   No earnings today/tomorrow in your list.")
+        time.sleep(0.5)
+
+        # Screen all tickers
+        scores = []
+        total  = len(all_tickers)
+        for i, ticker in enumerate(all_tickers, 1):
+            symbol = ticker["symbol"]
+            # Always include earnings tickers — skip scoring to save API calls
+            if symbol in earnings_today:
+                scores.append({"symbol": symbol, "score": 999, "reasons": ["earnings today/tomorrow"], "news_count": 1, "price_chg": None})
+                continue
+            result = score_ticker(symbol)
+            if result["score"] > 0:
+                scores.append(result)
+            # Progress indicator every 50 tickers
+            if i % 50 == 0 or i == total:
+                hits = len(scores)
+                print(f"   [{i}/{total}] {hits} candidate(s) found so far…")
+
+        # Sort by score descending, take top N
+        scores.sort(key=lambda x: x["score"], reverse=True)
+        qualified = [s for s in scores if s["score"] >= args.min_score][:args.top]
+
+        print(f"\n   Screening complete. {len(qualified)} ticker(s) qualified (score ≥ {args.min_score}):")
+        for s in qualified:
+            reasons = ", ".join(s["reasons"]) if s["reasons"] else f"{s['news_count']} news items"
+            chg_str = f"  {s['price_chg']:+.1f}%" if s["price_chg"] is not None else ""
+            print(f"   {'★ ' if s['symbol'] in earnings_today else '  '}{s['symbol']:6s}  score={s['score']:3d}  {reasons}{chg_str}")
+
+        if not qualified:
+            print("\n   No newsworthy tickers found today. Try again later or lower --min-score.")
+            sys.exit(0)
+
+        ticker_list = [ticker_map.get(s["symbol"], {"symbol": s["symbol"], "exchange": "NASDAQ"}) for s in qualified]
+        print(f"\n━━ PHASE 2: Generating articles for {len(ticker_list)} ticker(s) ━━\n")
 
     existing  = load_articles()
     new_count = 0
@@ -464,7 +662,7 @@ def main():
 
         print(f"── {symbol} {'─' * (40 - len(symbol))}")
 
-        # Fetch all market data
+        # Fetch full market data
         print(f"   Fetching market data…")
         market_data = fetch_market_data(symbol)
         if not market_data["news"]:
