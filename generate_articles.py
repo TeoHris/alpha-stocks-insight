@@ -458,7 +458,40 @@ def already_covered(existing: list[dict], symbol: str, title: str) -> bool:
 
 
 # ─────────────────────────────────────────────────────────────
-# STEP 3 — Screening: score tickers by news significance
+# STEP 3 — Refresh banner prices in data/quotes.json
+# ─────────────────────────────────────────────────────────────
+
+QUOTES_FILE     = SCRIPT_DIR / "data" / "quotes.json"
+BANNER_TICKERS  = ["NVDA", "AAPL", "TSLA", "MSFT", "AMZN", "META", "GOOGL", "AMD"]
+
+def refresh_quotes() -> None:
+    """Fetch current prices for the home page banner and save to data/quotes.json."""
+    print("   Refreshing banner prices…")
+    quotes = []
+    for sym in BANNER_TICKERS:
+        q = finnhub_get("/quote", {"symbol": sym}) or {}
+        price = q.get("c")
+        chg   = q.get("dp")
+        if price:
+            sign = "+" if chg >= 0 else ""
+            quotes.append({
+                "sym":   sym,
+                "price": f"{price:.2f}",
+                "chg":   f"{sign}{chg:.2f}%",
+                "up":    chg >= 0,
+            })
+        time.sleep(0.3)
+
+    if quotes:
+        with open(QUOTES_FILE, "w", encoding="utf-8") as f:
+            json.dump(quotes, f, indent=2)
+        print(f"   ✓  Prices updated for: {', '.join(q['sym'] for q in quotes)}")
+    else:
+        print("   ⚠  Could not fetch prices — quotes.json unchanged.")
+
+
+# ─────────────────────────────────────────────────────────────
+# STEP 4 — Screening: score tickers by news significance
 # ─────────────────────────────────────────────────────────────
 
 # Keywords that indicate a genuinely newsworthy event
@@ -589,6 +622,8 @@ def main():
 
     print(f"\n🤖  Alpha Stocks Insight — Article Generator")
     print(f"    Date: {datetime.date.today()}")
+    print()
+    refresh_quotes()
 
     # ── Determine which tickers to process ──
     if args.tickers:

@@ -1,0 +1,10 @@
+[
+  { "sym": "NVDA",  "price": "0.00", "chg": "+0.00%", "up": true },
+  { "sym": "AAPL",  "price": "0.00", "chg": "+0.00%", "up": true },
+  { "sym": "TSLA",  "price": "0.00", "chg": "+0.00%", "up": true },
+  { "sym": "MSFT",  "price": "0.00", "chg": "+0.00%", "up": true },
+  { "sym": "AMZN",  "price": "0.00", "chg": "+0.00%", "up": true },
+  { "sym": "META",  "price": "0.00", "chg": "+0.00%", "up": true },
+  { "sym": "GOOGL", "price": "0.00", "chg": "+0.00%", "up": true },
+  { "sym": "AMD",   "price": "0.00", "chg": "+0.00%", "up": true }
+]

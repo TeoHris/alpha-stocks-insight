@@ -1,20 +1,11 @@
 import { BarChart2, Clock, TrendingUp } from 'lucide-react'
+import quotesData from '@/data/quotes.json'
 
 interface HeroBannerProps {
   articleCount: number
 }
 
-// Indicative demo quotes — replace with real Finnhub/Alpha Vantage API data
-const DEMO_QUOTES = [
-  { sym: 'NVDA',  price: '942.30', chg: '+3.2%',  up: true  },
-  { sym: 'AAPL',  price: '213.45', chg: '+0.8%',  up: true  },
-  { sym: 'TSLA',  price: '287.10', chg: '-1.3%',  up: false },
-  { sym: 'MSFT',  price: '456.20', chg: '+1.1%',  up: true  },
-  { sym: 'AMZN',  price: '201.85', chg: '+2.4%',  up: true  },
-  { sym: 'META',  price: '580.70', chg: '+1.9%',  up: true  },
-  { sym: 'GOOGL', price: '198.40', chg: '-0.4%',  up: false },
-  { sym: 'AMD',   price: '178.55', chg: '+4.2%',  up: true  },
-]
+const DEMO_QUOTES = quotesData as { sym: string; price: string; chg: string; up: boolean }[]
 
 export default function HeroBanner({ articleCount }: HeroBannerProps) {
   const today = new Date().toLocaleDateString('en-US', {
