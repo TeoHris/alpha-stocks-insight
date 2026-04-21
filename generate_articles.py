@@ -99,7 +99,7 @@ NEWS_LOOKBACK_DAYS = 3
 # Categories to rotate through
 CATEGORIES = [
     "Stock Analysis",
-    "Earnings Preview",
+    "Earnings Report",
     "AI & Technology",
     "Semiconductors",
     "Cloud Computing",
@@ -110,6 +110,33 @@ CATEGORIES = [
 
 AUTHOR_NAME = "Alpha Stocks Insight Staff"
 AUTHOR_BIO  = "Independent stock news and analysis covering NASDAQ and NYSE markets."
+
+# ── Model config ──────────────────────────────────────────────
+MODEL_PREMIUM   = "claude-sonnet-4-6"          # premium full articles
+MODEL_QUICK_HIT = "claude-haiku-4-5-20251001"  # quick hits (batched)
+MODEL_ROUNDUP   = "claude-haiku-4-5-20251001"  # daily roundup
+
+# Pricing per million tokens (input / output)
+PRICING = {
+    MODEL_PREMIUM:   (3.00,  15.00),
+    MODEL_QUICK_HIT: (0.80,   4.00),
+    MODEL_ROUNDUP:   (0.80,   4.00),
+}
+
+# Score threshold: at or above this → premium article; below → quick hit
+PREMIUM_SCORE_THRESHOLD = 10
+
+# Cost tracker (updated as articles are generated)
+_cost_usd     = 0.0
+_tokens_in    = 0
+_tokens_out   = 0
+
+def track_usage(model: str, input_tokens: int, output_tokens: int) -> None:
+    global _cost_usd, _tokens_in, _tokens_out
+    price_in, price_out = PRICING.get(model, (3.00, 15.00))
+    _cost_usd  += (input_tokens * price_in + output_tokens * price_out) / 1_000_000
+    _tokens_in  += input_tokens
+    _tokens_out += output_tokens
 
 
 # ─────────────────────────────────────────────────────────────
@@ -331,6 +358,13 @@ Recommendations: {rec_text}
 
 ━━ EDITORIAL GUIDELINES (follow strictly) ━━
 
+CRITICAL RULE — EVENTS THAT HAVE ALREADY HAPPENED ONLY:
+- You must write ONLY about events that have already occurred and been reported.
+- Do NOT write preview or outlook articles about upcoming earnings, product launches, or scheduled events.
+- If earnings results appear in the news, write about the actual reported figures (EPS, revenue, guidance given).
+- Do NOT speculate about what a company might report or do in the future.
+- If there is no concrete event to report on (no results, no announcement, no deal, no material news), do not fabricate a story — state this and return an error signal in the title field: "NO_STORY".
+
 TONE & STYLE:
 - Write directly and concisely. No hype, no filler phrases.
 - Do not use words like: "soaring", "surging", "skyrocketing", "explosive", "massive", "game-changer", "revolutionary", "stunning".
@@ -339,22 +373,20 @@ TONE & STYLE:
 
 REQUIRED SECTIONS (use these exact ## headings):
 1. ## Recent Developments
-   Summarise the key news factually. Include specific figures, dates, and company statements from the news items above.
+   Summarise the key news factually. Include specific figures, dates, and company statements from the news items above. This must be about something that has already happened.
 
 2. ## Financial Snapshot
    Include the current stock price and today's change. Reference any relevant financial results or metrics mentioned in the news. Keep it factual and brief.
 
 3. ## Wall Street View
    Summarise the analyst consensus price target and any recent changes. Report the buy/hold/sell breakdown from the recommendation data above. If a target was raised or cut, say so explicitly.
+   IMPORTANT: If analyst price target and recommendation data are both marked "Not available", omit this section entirely. Do not write a placeholder.
 
 4. ## Technical Picture
-   Use ONLY the moving average figures provided above. State whether the current price is above or below the 20-day, 50-day, and 200-day moving averages, and what that implies about short-term and long-term trend. Do NOT reference or infer the 52-week range for technical conclusions. Do NOT use the daily high/low as a proxy for 52-week levels. Do not invent MACD or RSI values — only describe what the MA data supports.
-   IMPORTANT: If moving average data is marked "Not available", omit this section entirely. Do not write a placeholder or explain why it is missing.
+   Use ONLY the moving average figures provided above. State whether the current price is above or below the 20-day, 50-day, and 200-day moving averages, and what that implies about short-term and long-term trend. Do not invent MACD or RSI values.
+   IMPORTANT: If moving average data is marked "Not available", omit this section entirely. Do not write a placeholder.
 
-5. ## Wall Street View
-   IMPORTANT: If analyst price target and recommendation data are both marked "Not available", omit this section entirely. Do not write a placeholder or explain why the data is missing.
-
-6. ### Key Takeaways
+5. ### Key Takeaways
    3–4 bullet points summarising the most important facts from the article.
 
 FORMATTING:
@@ -367,9 +399,9 @@ FORMATTING:
 
 Return ONLY this JSON object (no markdown fences, no explanation):
 {{
-  "title": "<factual headline with ticker symbol, max 90 characters>",
+  "title": "<factual headline with ticker symbol, max 90 characters — use NO_STORY if there is nothing to report>",
   "teaser": "<2 concise sentences summarising the article, max 180 characters>",
-  "category": "<one of: Stock Analysis | Earnings Preview | AI & Technology | Semiconductors | Cloud Computing | Big Tech | AI Infrastructure | Technology>",
+  "category": "<one of: Stock Analysis | Earnings Report | AI & Technology | Semiconductors | Cloud Computing | Big Tech | AI Infrastructure | Technology>",
   "tags": ["<tag1>", "<tag2>", "<tag3>", "<tag4>"],
   "featured": false,
   "readTime": "<X min read>",
@@ -380,10 +412,11 @@ Return ONLY this JSON object (no markdown fences, no explanation):
 
     try:
         message = client.messages.create(
-            model="claude-opus-4-6",
+            model=MODEL_PREMIUM,
             max_tokens=2000,
             messages=[{"role": "user", "content": prompt}],
         )
+        track_usage(MODEL_PREMIUM, message.usage.input_tokens, message.usage.output_tokens)
         raw = message.content[0].text.strip()
     except Exception as e:
         print(f"  ✗  Claude API error for {symbol}: {e}")
@@ -398,6 +431,11 @@ Return ONLY this JSON object (no markdown fences, no explanation):
     except json.JSONDecodeError as e:
         print(f"  ✗  JSON parse error for {symbol}: {e}")
         print(f"     Raw response (first 300 chars): {raw[:300]}")
+        return None
+
+    # If Claude signals there's no real story, discard silently
+    if data.get("title", "").startswith("NO_STORY"):
+        print(f"   ⚠  {symbol}: no concrete story to report — skipped.")
         return None
 
     # Build the full article record
@@ -423,6 +461,209 @@ Return ONLY this JSON object (no markdown fences, no explanation):
     }
 
     return article
+
+
+# ─────────────────────────────────────────────────────────────
+# Quick-hit batch generator (Haiku — 5 articles per API call)
+# ─────────────────────────────────────────────────────────────
+
+def generate_quick_hits_batch(batch: list[dict]) -> list[dict]:
+    """
+    Generate 300–400 word quick-hit articles for a batch of tickers
+    in a single Haiku API call. Returns a list of article dicts.
+    """
+    try:
+        import anthropic
+    except ImportError:
+        print("ERROR: 'anthropic' not installed.")
+        return []
+
+    today    = datetime.date.today()
+    date_str = today.strftime("%B %d, %Y").replace(" 0", " ")
+    now      = datetime.datetime.now()
+
+    # Build a compact brief for each ticker in the batch
+    briefs = ""
+    for i, item in enumerate(batch, 1):
+        t      = item["ticker"]
+        mdata  = item["market_data"]
+        symbol = t["symbol"]
+        name   = t.get("name", symbol)
+        quote  = mdata["quote"]
+        news   = mdata["news"][:3]
+
+        price_str = f"${quote['c']:.2f} ({quote.get('dp', 0):+.2f}%)" if quote.get("c") else "N/A"
+        headlines = " | ".join(n["headline"] for n in news) if news else "No recent news"
+
+        briefs += f"\n{i}. {symbol} ({name})\n   Price: {price_str}\n   News: {headlines}\n"
+
+    prompt = f"""You are a financial news writer. Write a short quick-hit article (300–400 words each) for EACH of the {len(batch)} stocks below.
+
+STOCKS:
+{briefs}
+
+RULES:
+- Direct, factual tone. No hype words.
+- Include current price and day's change.
+- 2–3 short paragraphs + 3 bullet Key Takeaways.
+- Do NOT add disclaimers (added automatically by the site).
+- Do NOT restate the ticker name as the first word of the content.
+
+Return ONLY a valid JSON array with exactly {len(batch)} objects, one per stock:
+[
+  {{
+    "symbol": "TICKER",
+    "title": "Factual headline mentioning ticker, max 80 chars",
+    "teaser": "One sentence summary, max 140 chars",
+    "category": "Stock Analysis",
+    "tags": ["tag1", "tag2", "tag3"],
+    "readTime": "2 min read",
+    "content": "Full markdown content, 300-400 words"
+  }}
+]"""
+
+    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    try:
+        message = client.messages.create(
+            model=MODEL_QUICK_HIT,
+            max_tokens=4000,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        track_usage(MODEL_QUICK_HIT, message.usage.input_tokens, message.usage.output_tokens)
+        raw = message.content[0].text.strip()
+    except Exception as e:
+        print(f"  ✗  Haiku API error (batch): {e}")
+        return []
+
+    raw = re.sub(r"^```(?:json)?\n?", "", raw)
+    raw = re.sub(r"\n?```$", "", raw)
+
+    try:
+        data_list = json.loads(raw)
+    except json.JSONDecodeError as e:
+        print(f"  ✗  JSON parse error in quick-hit batch: {e}")
+        return []
+
+    articles = []
+    for data in data_list:
+        sym    = data.get("symbol", "").upper()
+        ticker = next((item["ticker"] for item in batch if item["ticker"]["symbol"] == sym), batch[0]["ticker"])
+        slug   = f"{sym.lower()}-{re.sub(r'[^a-z0-9]+', '-', data['title'].lower()).strip('-')[:60]}"
+        articles.append({
+            "id":        None,
+            "slug":      slug,
+            "title":     data["title"],
+            "author":    AUTHOR_NAME,
+            "authorBio": AUTHOR_BIO,
+            "date":      date_str,
+            "time":      now.strftime("%I:%M %p ET").lstrip("0"),
+            "dateISO":   now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "teaser":    data["teaser"],
+            "content":   data["content"],
+            "tickers":   [{"exchange": ticker.get("exchange", "NASDAQ"), "symbol": sym}],
+            "category":  data.get("category", "Stock Analysis"),
+            "featured":  False,
+            "readTime":  data.get("readTime", "2 min read"),
+            "tags":      data.get("tags", [sym]),
+        })
+    return articles
+
+
+# ─────────────────────────────────────────────────────────────
+# Daily roundup generator (Haiku — covers top 5–8 tickers)
+# ─────────────────────────────────────────────────────────────
+
+def generate_roundup(top_items: list[dict]) -> dict | None:
+    """
+    Generate one 'Today's Top Stock Highlights' roundup article
+    covering the 5–8 most newsworthy tickers of the day.
+    Uses Haiku (cheap) in a single API call.
+    """
+    try:
+        import anthropic
+    except ImportError:
+        return None
+
+    today    = datetime.date.today()
+    date_str = today.strftime("%B %d, %Y").replace(" 0", " ")
+    now      = datetime.datetime.now()
+
+    briefs = ""
+    tickers_covered = []
+    for item in top_items[:8]:
+        t      = item["ticker"]
+        mdata  = item["market_data"]
+        symbol = t["symbol"]
+        name   = t.get("name", symbol)
+        quote  = mdata["quote"]
+        news   = mdata["news"][:2]
+
+        price_str = f"${quote['c']:.2f} ({quote.get('dp', 0):+.2f}%)" if quote.get("c") else "N/A"
+        headlines = "; ".join(n["headline"] for n in news) if news else "No recent news"
+
+        briefs += f"\n- **{symbol}** ({name}) — {price_str}: {headlines}"
+        tickers_covered.append({"exchange": t.get("exchange", "NASDAQ"), "symbol": symbol})
+
+    date_label = today.strftime("%B %d, %Y").replace(" 0", " ")
+
+    prompt = f"""You are a financial news writer. Write a daily market roundup article for {date_label} covering the stocks listed below.
+
+STOCKS TO COVER:
+{briefs}
+
+RULES:
+- Title must be: "Today's Top Stock Highlights — {date_label}"
+- One paragraph per stock (3–5 sentences each). State facts, include price move.
+- End with a ### Key Takeaways section with one bullet per stock.
+- Neutral, professional tone. No hype. No disclaimers (added automatically).
+- Total length: 500–700 words.
+
+Return ONLY this JSON (no markdown fences):
+{{
+  "title": "Today's Top Stock Highlights — {date_label}",
+  "teaser": "A roundup of today's most significant stock moves and news across the market.",
+  "content": "Full markdown roundup here"
+}}"""
+
+    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    try:
+        message = client.messages.create(
+            model=MODEL_ROUNDUP,
+            max_tokens=2000,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        track_usage(MODEL_ROUNDUP, message.usage.input_tokens, message.usage.output_tokens)
+        raw = message.content[0].text.strip()
+    except Exception as e:
+        print(f"  ✗  Haiku roundup error: {e}")
+        return None
+
+    raw = re.sub(r"^```(?:json)?\n?", "", raw)
+    raw = re.sub(r"\n?```$", "", raw)
+
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError:
+        return None
+
+    slug = f"roundup-{today.strftime('%Y-%m-%d')}"
+    return {
+        "id":        None,
+        "slug":      slug,
+        "title":     data["title"],
+        "author":    AUTHOR_NAME,
+        "authorBio": AUTHOR_BIO,
+        "date":      date_str,
+        "time":      now.strftime("%I:%M %p ET").lstrip("0"),
+        "dateISO":   now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "teaser":    data["teaser"],
+        "content":   data["content"],
+        "tickers":   tickers_covered,
+        "category":  "Stock Analysis",
+        "featured":  False,
+        "readTime":  "4 min read",
+        "tags":      ["market roundup", "daily highlights", date_label],
+    }
 
 
 # ─────────────────────────────────────────────────────────────
@@ -573,23 +814,65 @@ def score_ticker(symbol: str, news_days: int = 2) -> dict:
 
 def get_earnings_today(ticker_symbols: set) -> set:
     """
-    Return the set of ticker symbols from our list that have
-    earnings reported or scheduled today or tomorrow.
-    Uses Finnhub's earnings calendar endpoint.
+    Return the set of ticker symbols from our list that have ALREADY REPORTED
+    earnings today — confirmed by the presence of actual results news.
+
+    Logic:
+      1. Check Finnhub earnings calendar for TODAY only (not tomorrow).
+      2. For each calendar match, verify actual results exist in news
+         (e.g. headlines containing "reports Q", "EPS of", "beats estimates").
+      3. Only include tickers where results have been published.
+
+    This prevents writing empty preview articles for companies that are
+    scheduled to report but haven't done so yet.
     """
-    today    = datetime.date.today()
-    tomorrow = today + datetime.timedelta(days=1)
-    result   = finnhub_get("/calendar/earnings", {
+    today  = datetime.date.today()
+    result = finnhub_get("/calendar/earnings", {
         "from": today.isoformat(),
-        "to":   tomorrow.isoformat(),
+        "to":   today.isoformat(),   # TODAY only — not tomorrow
     }) or {}
 
-    earnings_tickers = set()
+    # Keywords that confirm results have been PUBLISHED (not merely scheduled)
+    RESULTS_KEYWORDS = [
+        "reports q", "reported q", "quarterly results", "quarterly earnings",
+        "eps of", "earnings per share", "net income", "revenue of",
+        "beats estimates", "misses estimates", "beat expectations",
+        "miss expectations", "topped estimates", "fell short",
+        "raised guidance", "lowered guidance", "cut guidance",
+        "first quarter", "second quarter", "third quarter", "fourth quarter",
+        "q1 results", "q2 results", "q3 results", "q4 results",
+        "profit rose", "profit fell", "revenue grew", "revenue declined",
+        "results beat", "results miss", "above estimates", "below estimates",
+    ]
+
+    # Tickers on the calendar today that are in our watchlist
+    calendar_hits = set()
     for item in result.get("earningsCalendar", []):
         sym = item.get("symbol", "").upper()
         if sym in ticker_symbols:
-            earnings_tickers.add(sym)
-    return earnings_tickers
+            calendar_hits.add(sym)
+
+    if not calendar_hits:
+        return set()
+
+    # For each calendar hit, check whether actual results news exists
+    confirmed = set()
+    yesterday = today - datetime.timedelta(days=1)
+    for sym in calendar_hits:
+        news_raw = finnhub_get("/company-news", {
+            "symbol": sym,
+            "from":   yesterday.isoformat(),
+            "to":     today.isoformat(),
+        }) or []
+        full_text = " ".join(
+            (n.get("headline", "") + " " + n.get("summary", "")).lower()
+            for n in news_raw
+        )
+        if any(kw in full_text for kw in RESULTS_KEYWORDS):
+            confirmed.add(sym)
+        time.sleep(0.3)
+
+    return confirmed
 
 
 # ─────────────────────────────────────────────────────────────
@@ -656,9 +939,9 @@ def main():
         total  = len(all_tickers)
         for i, ticker in enumerate(all_tickers, 1):
             symbol = ticker["symbol"]
-            # Always include earnings tickers — skip scoring to save API calls
+            # Confirmed earnings reporters get top priority — results are already public
             if symbol in earnings_today:
-                scores.append({"symbol": symbol, "score": 999, "reasons": ["earnings today/tomorrow"], "news_count": 1, "price_chg": None})
+                scores.append({"symbol": symbol, "score": 999, "reasons": ["earnings results published today"], "news_count": 1, "price_chg": None})
                 continue
             result = score_ticker(symbol)
             if result["score"] > 0:
@@ -688,42 +971,75 @@ def main():
     existing  = load_articles()
     new_count = 0
 
+    # ── Fetch full market data for all qualified tickers ──────
+    print(f"   Fetching full market data for {len(ticker_list)} ticker(s)…\n")
+    enriched = []   # list of {ticker, market_data, score}
     for ticker in ticker_list:
-        symbol = ticker["symbol"]
-
-        if args.max and new_count >= args.max:
-            print(f"\n✅  Reached max ({args.max}) articles. Stopping.")
-            break
-
-        print(f"── {symbol} {'─' * (40 - len(symbol))}")
-
-        # Fetch full market data
-        print(f"   Fetching market data…")
+        symbol      = ticker["symbol"]
         market_data = fetch_market_data(symbol)
         if not market_data["news"]:
-            print(f"   No recent news found. Skipping.")
+            print(f"   {symbol}: no news — skipping.")
             continue
-        print(f"   Found {len(market_data['news'])} news item(s). Price: ${market_data['quote'].get('c', 'N/A')}")
+        score = next((s["score"] for s in (scores if not args.tickers else []) if s["symbol"] == symbol), 5)
+        enriched.append({"ticker": ticker, "market_data": market_data, "score": score})
+        print(f"   {symbol}: {len(market_data['news'])} news, price ${market_data['quote'].get('c', 'N/A')}")
 
-        # Generate article
-        print(f"   Generating article with Claude…")
-        article = generate_article(ticker, market_data)
+    if not enriched:
+        print("\nNo tickers with news found.")
+        sys.exit(0)
+
+    # ── Split into premium vs quick-hit based on score ────────
+    premium_items   = [e for e in enriched if e["score"] >= PREMIUM_SCORE_THRESHOLD]
+    quick_hit_items = [e for e in enriched if e["score"] <  PREMIUM_SCORE_THRESHOLD]
+
+    print(f"\n   Premium (Sonnet): {len(premium_items)} | Quick-hit (Haiku): {len(quick_hit_items)}")
+    print(f"\n━━ PHASE 2: Generating content ━━\n")
+
+    # ── PREMIUM articles (Sonnet, one at a time) ───────────────
+    for item in premium_items:
+        if args.max and new_count >= args.max:
+            break
+        ticker = item["ticker"]
+        symbol = ticker["symbol"]
+        print(f"── [PREMIUM] {symbol} {'─' * (34 - len(symbol))}")
+        article = generate_article(ticker, item["market_data"])
         if not article:
             continue
-
-        # Deduplication check
         if already_covered(existing, symbol, article["title"]):
             print(f"   ⚠  Similar article already exists. Skipping.")
             continue
-
-        # Prepend so newest articles appear first
         existing.insert(0, article)
         new_count += 1
         print(f"   ✓  \"{article['title']}\"")
 
-        # Polite delay between API calls
-        if ticker != ticker_list[-1]:
-            time.sleep(2)
+    # ── QUICK-HIT articles (Haiku, batched 5 at a time) ───────
+    batch_size = 5
+    for i in range(0, len(quick_hit_items), batch_size):
+        if args.max and new_count >= args.max:
+            break
+        batch = quick_hit_items[i:i + batch_size]
+        symbols = ", ".join(b["ticker"]["symbol"] for b in batch)
+        print(f"── [QUICK-HIT batch] {symbols}")
+        articles = generate_quick_hits_batch(batch)
+        for article in articles:
+            sym = article["tickers"][0]["symbol"] if article["tickers"] else "?"
+            if already_covered(existing, sym, article["title"]):
+                print(f"   ⚠  {sym}: similar article exists. Skipping.")
+                continue
+            existing.insert(0, article)
+            new_count += 1
+            print(f"   ✓  {sym}: \"{article['title']}\"")
+
+    # ── DAILY ROUNDUP (Haiku, covers top tickers) ─────────────
+    today_slug = f"roundup-{datetime.date.today().strftime('%Y-%m-%d')}"
+    roundup_exists = any(a.get("slug") == today_slug for a in existing)
+    if not roundup_exists and len(enriched) >= 3:
+        print(f"\n── [ROUNDUP] Today's highlights ({min(8, len(enriched))} tickers)")
+        roundup = generate_roundup(enriched)
+        if roundup:
+            existing.insert(0, roundup)
+            new_count += 1
+            print(f"   ✓  \"{roundup['title']}\"")
 
     if new_count == 0:
         print("\nNo new articles were added (no new news or all duplicates).")
@@ -732,6 +1048,15 @@ def main():
         print(f"\n✅  {new_count} new article(s) added to data/articles.json")
         print(f"\nNext step — publish to your site:")
         print(f'   git add . && git commit -m "Add {new_count} AI-generated articles" && git push\n')
+
+    # ── Cost summary ──────────────────────────────────────────
+    print(f"━━ Cost Summary ━━")
+    print(f"   Articles generated : {new_count}")
+    print(f"   Tokens used        : {_tokens_in:,} in / {_tokens_out:,} out")
+    print(f"   Estimated cost     : ${_cost_usd:.4f} USD")
+    if new_count > 0:
+        print(f"   Cost per article   : ${_cost_usd / new_count:.4f} USD")
+    print()
 
 
 if __name__ == "__main__":
