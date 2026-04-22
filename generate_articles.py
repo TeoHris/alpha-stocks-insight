@@ -158,7 +158,10 @@ PRICING = {
 }
 
 # Score threshold: at or above this → premium article; below → quick hit
-PREMIUM_SCORE_THRESHOLD = 10
+# Earnings tickers always score 999 (always Sonnet).
+# A big price move alone = 5pts. Price move + several keywords = ~15pts.
+# Set to 20 so only earnings + high-signal tickers use Sonnet; the rest use Haiku.
+PREMIUM_SCORE_THRESHOLD = 20
 
 # Cost tracker (updated as articles are generated)
 _cost_usd     = 0.0
