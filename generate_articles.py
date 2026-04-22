@@ -1176,7 +1176,6 @@ def main():
     print(f"\n🤖  Alpha Stocks Insight — Article Generator")
     print(f"    Date: {datetime.date.today()}")
     print()
-    refresh_quotes()
 
     # ── Determine which tickers to process ──
     if args.tickers:

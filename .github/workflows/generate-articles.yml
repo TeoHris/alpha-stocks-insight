@@ -66,7 +66,7 @@ jobs:
           git config user.name  "Alpha Stocks Bot"
           git config user.email "bot@alphastocksinsight.com"
 
-          git add data/articles.json data/quotes.json
+          git add data/articles.json
 
           if git diff --staged --quiet; then
             echo "✓ No new articles — nothing to commit."

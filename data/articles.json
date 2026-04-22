@@ -1,6 +1,152 @@
 [
   {
     "id": 1,
+    "slug": "roundup-2026-04-22",
+    "title": "Today's Top Stock Highlights — April 22, 2026",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 22, 2026",
+    "time": "12:31 PM ET",
+    "dateISO": "2026-04-22T12:31:39Z",
+    "teaser": "A roundup of today's most significant stock moves and news across the market.",
+    "content": "**BA (The Boeing Company) — $219.16 (-2.63%)**\n\nBoeing shares declined despite positive developments in its widebody aircraft segment, as a new Ethiopian Airlines order for 787 Dreamliners underscores sustained international demand for the company's premium offerings. The order reinforces the valuation case for Boeing's commercial aircraft business, particularly as global airlines continue fleet modernization efforts. However, the stock retreated on broader market sentiment, with investors digesting earnings expectations and operational execution risks. The geopolitical backdrop also shifted slightly as the Trump administration extended its Iran truce, which had initially buoyed equity futures earlier in the session.\n\n**ELV (Elevance Health Inc.) — $328.11 (+2.74%)**\n\nElevance Health posted a notable gain following the release of its first-quarter 2026 earnings, which included a raised annual profit forecast reflecting the company's confidence in cost control initiatives across its operations. The managed healthcare provider signaled improved operational efficiency and margin expansion, benefiting from disciplined expense management and favorable claims trends. The upward guidance revision typically signals management confidence in full-year performance and resonated positively with investors seeking exposure to healthcare cost containment themes.\n\n**IBM (International Business Machines Corporation) — $255.68 (+0.78%)**\n\nIBM edged higher in a session marked by mixed signals, as enterprise technology trends continued to evolve around artificial intelligence partnerships and software buyback activity. Recent industry moves, including Adobe's aggressive buyback program, have reframed growth opportunities for legacy enterprise software and infrastructure providers like IBM. The technology sector also faced renewed scrutiny following DOJ settlements related to corporate compliance programs, though IBM's diversified portfolio and strong enterprise relationships provided support for the modest gain.\n\n**LRCX (Lam Research Corporation) — $258.37 (-1.82%)**\n\nLam Research declined modestly ahead of its upcoming earnings report, despite a strong backdrop of chip demand driving record sales across the semiconductor equipment industry. The chipmaking equipment maker is positioned to capitalize on elevated production capacity investments from semiconductor manufacturers, yet the stock pulled back slightly as investors awaited detailed guidance and commentary on demand trends. Market-wide strength from Trump's Iran ceasefire extension was offset by profit-taking ahead of the earnings call and broader semiconductor sector volatility.\n\n**LUV (Southwest Airlines Co.) — $40.92 (-2.15%)**\n\nSouthwest Airlines declined as energy cost pressures weighed on the broader airline sector, notably following United Airlines' recent guidance cut attributed to elevated fuel expenses. Despite United's weakness, Southwest shares also retreated on concerns about industry-wide margin compression from fuel inflation. The carrier faces a challenging operating environment amid higher input costs, though Southwest's efficient cost structure provides some insulation compared to legacy carriers.\n\n**LVS (Las Vegas Sands Corp.) — $57.54 (+0.61%)**\n\nLas Vegas Sands gained modestly as a top-ranked growth stock within the consumer discretionary sector, with analysts identifying potential for positive earnings surprises. The casino and hospitality operator continues to benefit from travel normalization and strong consumer spending trends, positioning it favorably within a narrowly bullish consumer discretionary environment. The slight gain reflects steady accumulation ahead of upcoming earnings reports and continued recovery momentum in the leisure and hospitality industry.\n\n**MAS (Masco Corporation) — $66.76 (+0.12%)**\n\nMasco Corporation traded essentially flat on its first-quarter 2026 earnings day, with investors awaiting detailed results and forward guidance from the building products and home improvement company. The company announced leadership changes concurrent with earnings, which may have created mixed sentiment among investors evaluating both operational performance and management continuity. Results are expected to reflect housing market dynamics and consumer spending patterns on discretionary home projects.\n\n**MCO (Moody's Corporation) — $459.59 (-0.07%)**\n\nMoody's traded near unchanged as the ratings agency continued its typical business of credit assessments and rating actions across global financial institutions. The firm issued upgrades for Bank of Åland and AB Artea bankas, reflecting its ongoing analytical work in the financial services sector. The negligible move suggests investor focus remains on broader market dynamics rather than individual rating agency activity.\n\n### Key Takeaways\n\n• **BA**: Ethiopian 787 order validates widebody demand, though geopolitical relief from Iran truce failed to offset overall market caution.\n\n• **ELV**: Raised profit guidance on cost discipline and improved claims management positions the managed healthcare provider favorably for 2026.\n\n• **IBM**: Enterprise AI partnerships and buyback activity reframe growth opportunities despite regulatory scrutiny on corporate compliance programs.\n\n• **LRCX**: Strong chip demand backdrop offset by profit-taking ahead of earnings, with semiconductor equipment cycle remaining robust.\n\n• **LUV**: Airline sector pressured by fuel cost inflation, with Southwest vulnerable to margin compression despite operational efficiency advantages.\n\n• **LVS**: Consumer discretionary strength supports Las Vegas Sands as positive earnings surprise candidate in leisure and hospitality recovery.\n\n• **MAS**: Flat performance on earnings day reflects market's balanced view on housing market dynamics and leadership transition implications.\n\n• **MCO**: Ratings activity continues unchanged; ongoing financial sector assessments reflect normal business operations for the credit rating agency.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "BA"
+      },
+      {
+        "exchange": "NYSE",
+        "symbol": "ELV"
+      },
+      {
+        "exchange": "NYSE",
+        "symbol": "IBM"
+      },
+      {
+        "exchange": "NASDAQ",
+        "symbol": "LRCX"
+      },
+      {
+        "exchange": "NYSE",
+        "symbol": "LUV"
+      },
+      {
+        "exchange": "NYSE",
+        "symbol": "LVS"
+      },
+      {
+        "exchange": "NYSE",
+        "symbol": "MAS"
+      },
+      {
+        "exchange": "NYSE",
+        "symbol": "MCO"
+      }
+    ],
+    "category": "Stock Analysis",
+    "featured": false,
+    "readTime": "4 min read",
+    "tags": [
+      "market roundup",
+      "daily highlights",
+      "April 22, 2026"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "ibm-ibm-navigates-doj-settlement-and-ai-partnership-momentum-ahe",
+    "title": "IBM Navigates DOJ Settlement and AI Partnership Momentum Ahead of Q1 Results (NYSE: IBM)",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 22, 2026",
+    "time": "12:31 PM ET",
+    "dateISO": "2026-04-22T12:31:39Z",
+    "teaser": "IBM agreed to pay $17M to resolve False Claims Act allegations while expanding AI partnerships with Adobe. Shares trade at $255.68 with a 22.9x trailing P/E.",
+    "content": "**NYSE: IBM** · April 22, 2026 · 3 min read\n\n**International Business Machines Corporation** (NYSE: IBM) shares rose **$1.97**, or **0.78%**, to **$255.68** on Tuesday, as investors balanced a **$17 million** Department of Justice settlement against a broadening AI partnership narrative. The stock remains well off its 52-week high of **$324.90**, though it holds comfortably above its 52-week low of **$220.72**.\n\n## Key Developments At a Glance\n\n- **Current price:** $255.68 · **Previous close:** $253.71\n- **52-week range:** $220.72 – $324.90\n- **Market cap:** $239.9B\n- **Trailing P/E:** 22.9x · **Forward P/E:** 19.1x\n- **Net margin:** 15.7% · **Gross margin:** 58.2% · **Operating margin:** 24.8%\n- **Revenue growth (YoY):** 12.2% · **Earnings growth (YoY):** 89.9%\n- **DOJ settlement amount:** $17M under the False Claims Act\n- **Adobe partnership:** expanded to develop vertical-specific AI agent solutions for enterprises\n\n## What's Driving the Story\n\nOn April 10, 2026, the DOJ announced that (NYSE: IBM) agreed to pay more than **$17 million** to resolve allegations that it violated the False Claims Act by failing to comply with requirements tied to federal contracts — the first settlement under the department's Civil Rights Fraud Initiative. While the dollar figure is modest relative to (NYSE: IBM)'s **$239.9B** market cap, the case signals a broader federal push to enforce compliance obligations on corporate contractors, a dynamic that enterprise-focused technology companies will need to monitor closely.\n\nOn the partnership side, (NASDAQ: ADBE) announced at its 2026 Summit that it has expanded its relationship with (NYSE: IBM) to develop vertical-specific AI agent solutions for enterprises. This aligns with (NYSE: IBM)'s sustained focus on AI-driven services revenue, and the collaboration with one of the enterprise software sector's leading platforms adds credibility to that strategy. The combination of **12.2%** revenue growth and **89.9%** earnings growth on a year-over-year basis suggests the AI investment cycle is beginning to translate into measurable financial outcomes.\n\n## Wall Street View\n\nAnalyst sentiment has held steady from March to April 2026. The current consensus stands at **7** Strong Buy, **7** Buy, **11** Hold, **2** Sell, and **0** Strong Sell — unchanged from the prior period. The absence of any upgrade or downgrade activity in the latest cycle suggests the Street is waiting on first-quarter results, which are expected to provide a cleaner read on how AI momentum is converting to revenue. According to Benzinga, (NYSE: IBM) has beaten analyst estimates for both revenue and earnings per share in several consecutive quarters.\n\n## Investor Takeaway\n\nThe **$17 million** DOJ settlement introduces a modest compliance overhang, but it is unlikely to materially alter the fundamental thesis given the company's scale and the demonstrated trajectory of **89.9%** earnings growth. The expanded (NASDAQ: ADBE) partnership reinforces (NYSE: IBM)'s positioning in enterprise AI, while a forward **P/E** of **19.1x** leaves some room relative to the trailing multiple of **22.9x** if earnings continue to expand. Investors with a longer time horizon will likely look to upcoming quarterly results for confirmation that the AI-led revenue ramp remains on track.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "IBM"
+      }
+    ],
+    "category": "Stock Analysis",
+    "sectors": [
+      "Stock Analysis",
+      "Technology"
+    ],
+    "featured": false,
+    "readTime": "3 min read",
+    "tags": [
+      "IBM",
+      "Artificial Intelligence",
+      "Enterprise Tech",
+      "DOJ Settlement"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "elv-elevance-health-elv-raises-full-year-guidance-after-q1-2026-",
+    "title": "Elevance Health (ELV) Raises Full-Year Guidance After Q1 2026 Beat",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 22, 2026",
+    "time": "12:31 PM ET",
+    "dateISO": "2026-04-22T12:31:20Z",
+    "teaser": "Elevance Health posted Q1 2026 adjusted EPS of $12.58 and lifted its full-year profit forecast to at least $26.75 per share on cost discipline.",
+    "content": "**NYSE: ELV** · April 22, 2026 · 3 min read\n\nElevance Health (NYSE: ELV) climbed **$8.75**, or **2.74%**, to **$328.11** on Wednesday after the company reported first-quarter 2026 results that prompted management to raise its full-year adjusted earnings guidance. The insurer now targets annual adjusted profit of at least **$26.75** per share, citing confidence in its ability to contain medical costs across its membership base.\n\n## Q1 2026 At a Glance\n\n- **Operating revenue:** $49.5 billion, up **1.5%** from Q1 2025\n- **Diluted EPS (GAAP):** $8.00\n- **Adjusted diluted EPS:** $12.58, which included approximately **$1 per share** of non-recurring items\n- **Full-year adjusted EPS guidance:** raised to at least **$26.75**\n- **Trailing P/E:** 13.0x | **Forward P/E:** 11.3x\n- **Net margin:** 2.8% | **Gross margin:** 25.6% | **Operating margin:** 1.5%\n- **Revenue growth (YoY):** 9.5% | **Earnings growth (YoY):** 36.3%\n- **Market cap:** $72.4 billion\n- **52-week range:** $273.71 – $432.93\n\n## What Drove the Results\n\nThe guidance raise reflects Elevance's emphasis on keeping medical cost trends in check — a priority that has become central to the managed-care sector's narrative in 2026. The **$12.58** adjusted EPS figure benefited from strong underlying operating performance alongside roughly **$1 per share** in non-recurring items, per the company's earnings release confirmed by its April 22 SEC 8-K filing under Item 9.01.\n\nThe **36.3%** year-over-year earnings growth stands out given that revenue expanded a comparatively modest **9.5%**, suggesting meaningful progress on the expense side rather than top-line acceleration alone. With a forward P/E of **11.3x** against that earnings trajectory, the valuation case appears tied closely to whether cost discipline can be sustained through the remainder of the year.\n\n## Wall Street View\n\nAnalyst sentiment on Elevance Health has held steady heading into this report. As of April 1, 2026, the consensus stood at **5 Strong Buy**, **10 Buy**, and **13 Hold** ratings, with zero Sell or Strong Sell calls — an identical distribution to the prior month's read. The absence of any downward shift in recommendations, even as the stock has traded **19.8%** below its level a year ago, suggests the Street views the recent weakness as a valuation opportunity rather than a fundamental deterioration.\n\n## Investor Takeaway\n\nElevance Health's decision to raise full-year guidance following a quarter in which adjusted EPS reached **$12.58** offers a constructive signal for investors who have watched the stock pull back from its 52-week high of **$432.93**. The unchanged analyst consensus — uniformly positive, with no Sell ratings — reinforces that institutional opinion has not soured despite a difficult twelve months for the shares. At a forward P/E of **11.3x** and with management citing cost control as a key lever, the fundamental story rests on execution in the quarters ahead.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "ELV"
+      }
+    ],
+    "category": "Earnings Report",
+    "sectors": [
+      "Earnings Report",
+      "Health Care"
+    ],
+    "featured": false,
+    "readTime": "3 min read",
+    "tags": [
+      "Elevance Health",
+      "ELV",
+      "Health Care",
+      "Earnings"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "ba-boeing-ba-draws-fresh-787-order-and-737-max-progress-amid-br",
+    "title": "Boeing (BA) Draws Fresh 787 Order and 737 MAX Progress Amid Broad Analyst Confidence",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 22, 2026",
+    "time": "12:30 PM ET",
+    "dateISO": "2026-04-22T12:30:59Z",
+    "teaser": "Ethiopian Airlines expands its 787-9 fleet while Boeing advances 737 MAX certification trials. Analysts remain firmly bullish on BA heading into earnings.",
+    "content": "**NYSE: BA** · April 22, 2026 · 3 min read\n\n**Boeing** (NYSE: BA) shares fell **$5.92**, or **2.63%**, to **$219.16** on Wednesday, pulling back from a prior close of **$225.08**, even as two meaningful operational developments reinforced the company's recovery narrative: a fresh widebody commitment from Ethiopian Airlines and the formal launch of certification trials for the **737 MAX** engine anti-ice fix.\n\n## Key Developments at a Glance\n\n- **Ethiopian Airlines** has fully exercised an order for **six** additional **Boeing 787 Dreamliner** jets, expanding its **787-9** fleet for long-haul passenger and cargo routes\n- **Boeing** has begun formal certification trials of the engine anti-ice (EAI) design fix on its lead **737 MAX 10** test aircraft, according to Air Current\n- Current share price of **$219.16** sits within a **52-week range** of **$156.47 – $254.35**\n- **Market cap**: **$172.2B** | **Trailing P/E**: **88.4x** | **Forward P/E**: **50.1x**\n- **Revenue growth (YoY)**: **57.1%** | **Gross margin**: **4.8%** | **Operating margin**: **-3.2%**\n\n## What's Driving the Story\n\nThe Ethiopian Airlines order is a concrete signal of sustained widebody demand. The carrier's decision to fully exercise its option for **six** additional **787-9** aircraft — building on a previously announced widebody commitment — reflects real-world airline confidence in **Boeing's** (NYSE: BA) long-haul platform at a time when widebody deliveries have faced scrutiny. For investors, this type of order conversion from option to firm commitment carries more weight than a fresh announcement.\n\nMeanwhile, the formal start of certification trials for the **737 MAX** engine anti-ice fix addresses one of the more persistent regulatory overhangs on **Boeing's** (NYSE: BA) near-term delivery pipeline. Per Air Current, trials are now underway on the lead **737 MAX 10** test aircraft — a procedural milestone that, if successful, would clear a path toward broader **MAX** family deliveries. The company's operating margin remains negative at **-3.2%**, underscoring that execution on certification and delivery remains the central financial lever.\n\n## Wall Street View\n\nAnalyst sentiment on **Boeing** (NYSE: BA) remains firmly constructive. As of April 1, 2026, the consensus stands at **13** Strong Buy, **18** Buy, and **6** Hold ratings, with zero Sell or Strong Sell calls. Compared to the prior month — **13** Strong Buy, **17** Buy, **7** Hold — the distribution has nudged incrementally more positive, with one Hold converting to Buy. The breadth of bullish coverage suggests the Street views current challenges as cyclical rather than structural.\n\n## Investor Takeaway\n\nWith **revenue growth** running at **57.1%** year-over-year and a forward **P/E** of **50.1x**, the market is pricing in a meaningful operational recovery — one that hinges on certification progress and delivery execution. The Ethiopian Airlines order and the formal start of **737 MAX** anti-ice trials are incremental steps in the right direction, and the analyst community has taken note with a near-unanimous bullish stance. Investors should monitor upcoming regulatory updates on the **MAX** certification timeline as the single most direct catalyst for margin improvement.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "BA"
+      }
+    ],
+    "category": "Industrials",
+    "sectors": [
+      "Industrials"
+    ],
+    "featured": false,
+    "readTime": "3 min read",
+    "tags": [
+      "Boeing",
+      "BA",
+      "Aerospace",
+      "787 Dreamliner"
+    ]
+  },
+  {
+    "id": 5,
     "slug": "unh-unitedhealth-nyse-unh-beats-q1-2026-estimates-raises-full-ye",
     "title": "UnitedHealth (NYSE: UNH) Beats Q1 2026 Estimates and Raises Full-Year Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -31,7 +177,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 6,
     "slug": "ual-ual-rises-as-american-airlines-rejects-united-merger-proposa",
     "title": "UAL Rises as American Airlines Rejects United Merger Proposal Amid Antitrust Concerns",
     "author": "Alpha Stocks Insight Staff",
@@ -62,7 +208,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 7,
     "slug": "syf-synchrony-financial-syf-beats-q1-2026-estimates-launches-6-5",
     "title": "Synchrony Financial (SYF) Beats Q1 2026 Estimates, Launches $6.5B Buyback Program",
     "author": "Alpha Stocks Insight Staff",
@@ -93,7 +239,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 8,
     "slug": "rtx-rtx-nyse-rtx-beats-q1-2026-estimates-raises-full-year-guidan",
     "title": "RTX (NYSE:RTX) Beats Q1 2026 Estimates, Raises Full-Year Guidance on Defense Strength",
     "author": "Alpha Stocks Insight Staff",
@@ -124,7 +270,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 9,
     "slug": "ntrs-northern-trust-ntrs-beats-q1-2026-estimates-on-fee-income-st",
     "title": "Northern Trust (NTRS) Beats Q1 2026 Estimates on Fee Income Strength",
     "author": "Alpha Stocks Insight Staff",
@@ -155,7 +301,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 10,
     "slug": "noc-northrop-grumman-noc-beats-q1-2026-estimates-as-stock-falls-",
     "title": "Northrop Grumman (NOC) Beats Q1 2026 Estimates as Stock Falls 3.98%",
     "author": "Alpha Stocks Insight Staff",
@@ -186,7 +332,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 11,
     "slug": "msci-msci-inc-nyse-msci-posts-q1-2026-revenue-beat-on-index-segme",
     "title": "MSCI Inc. (NYSE:MSCI) Posts Q1 2026 Revenue Beat on Index Segment Strength",
     "author": "Alpha Stocks Insight Staff",
@@ -217,7 +363,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 12,
     "slug": "mmm-3m-mmm-q1-2026-earnings-eps-beats-by-7-9-revenue-meets-estim",
     "title": "3M (MMM) Q1 2026 Earnings: EPS Beats by 7.9%, Revenue Meets Estimates",
     "author": "Alpha Stocks Insight Staff",
@@ -248,7 +394,7 @@
     ]
   },
   {
-    "id": 9,
+    "id": 13,
     "slug": "hal-halliburton-nyse-hal-beats-q1-2026-estimates-as-shares-rise-",
     "title": "Halliburton (NYSE:HAL) Beats Q1 2026 Estimates as Shares Rise 3.79%",
     "author": "Alpha Stocks Insight Staff",
@@ -279,7 +425,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 14,
     "slug": "gpc-genuine-parts-nyse-gpc-q1-2026-revenue-beats-estimates-profi",
     "title": "Genuine Parts (NYSE:GPC) Q1 2026 Revenue Beats Estimates, Profit Falls on Higher Costs",
     "author": "Alpha Stocks Insight Staff",
@@ -310,7 +456,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": 15,
     "slug": "ge-ge-aerospace-nyse-ge-beats-q1-estimates-as-orders-jump-87-ra",
     "title": "GE Aerospace (NYSE:GE) Beats Q1 Estimates as Orders Jump 87%, Raises Profit Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -341,7 +487,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 16,
     "slug": "eqt-eqt-nyse-eqt-declares-0-165-quarterly-dividend-as-analysts-m",
     "title": "EQT (NYSE:EQT) Declares $0.165 Quarterly Dividend as Analysts Maintain Strong Buy Consensus",
     "author": "Alpha Stocks Insight Staff",
@@ -372,7 +518,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 17,
     "slug": "efx-equifax-efx-beats-q1-2026-estimates-as-mortgage-strength-dri",
     "title": "Equifax (EFX) Beats Q1 2026 Estimates as Mortgage Strength Drives 14.3% Revenue Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -403,7 +549,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 18,
     "slug": "dhi-d-r-horton-dhi-jumps-8-35-after-q2-2026-eps-beat-and-strong-",
     "title": "D.R. Horton (DHI) Jumps 8.35% After Q2 2026 EPS Beat and Strong Order Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -434,7 +580,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": 19,
     "slug": "cb-chubb-nyse-cb-faces-earnings-scrutiny-as-analyst-consensus-h",
     "title": "Chubb (NYSE:CB) Faces Earnings Scrutiny as Analyst Consensus Holds at Mixed Buy",
     "author": "Alpha Stocks Insight Staff",
@@ -465,7 +611,7 @@
     ]
   },
   {
-    "id": 16,
+    "id": 20,
     "slug": "roundup-2026-04-21",
     "title": "Today's Top Stock Highlights — April 21, 2026",
     "author": "Alpha Stocks Insight Staff",
@@ -526,7 +672,7 @@
     ]
   },
   {
-    "id": 17,
+    "id": 21,
     "slug": "eqt-eqt-corporation-nyse-eqt-slips-2-5-ahead-of-q1-earnings-repo",
     "title": "EQT Corporation (NYSE:EQT) Slips 2.5% Ahead of Q1 Earnings Report",
     "author": "Alpha Stocks Insight Staff",
@@ -557,7 +703,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": 22,
     "slug": "elv-elevance-health-elv-slips-ahead-of-q1-earnings-jefferies-tri",
     "title": "Elevance Health (ELV) Slips Ahead of Q1 Earnings; Jefferies Trims Target",
     "author": "Alpha Stocks Insight Staff",
@@ -588,7 +734,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": 23,
     "slug": "efx-equifax-nyse-efx-beats-q1-2026-estimates-on-mortgage-strengt",
     "title": "Equifax (NYSE:EFX) Beats Q1 2026 Estimates on Mortgage Strength",
     "author": "Alpha Stocks Insight Staff",
@@ -619,7 +765,7 @@
     ]
   },
   {
-    "id": 20,
+    "id": 24,
     "slug": "dhr-danaher-dhr-beats-q1-earnings-but-misses-revenue-raises-full",
     "title": "Danaher (DHR) Beats Q1 Earnings but Misses Revenue, Raises Full-Year Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -650,7 +796,7 @@
     ]
   },
   {
-    "id": 21,
+    "id": 25,
     "slug": "dhi-d-r-horton-dhi-rises-2-36-after-mixed-q2-2026-results-with-e",
     "title": "D.R. Horton (DHI) Rises 2.36% After Mixed Q2 2026 Results With EPS Beat",
     "author": "Alpha Stocks Insight Staff",
@@ -681,7 +827,7 @@
     ]
   },
   {
-    "id": 22,
+    "id": 26,
     "slug": "dgx-quest-diagnostics-dgx-beats-q1-2026-estimates-raises-full-ye",
     "title": "Quest Diagnostics (DGX) Beats Q1 2026 Estimates, Raises Full-Year Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -712,7 +858,7 @@
     ]
   },
   {
-    "id": 23,
+    "id": 27,
     "slug": "csx-csx-nasdaq-csx-approaches-52-week-high-ahead-of-earnings-rep",
     "title": "CSX (NASDAQ:CSX) Approaches 52-Week High Ahead of Earnings Report",
     "author": "Alpha Stocks Insight Staff",
@@ -743,7 +889,7 @@
     ]
   },
   {
-    "id": 24,
+    "id": 28,
     "slug": "cof-capital-one-cof-eyes-higher-q1-profit-as-earnings-report-app",
     "title": "Capital One (COF) Eyes Higher Q1 Profit as Earnings Report Approaches",
     "author": "Alpha Stocks Insight Staff",
@@ -774,7 +920,7 @@
     ]
   },
   {
-    "id": 25,
+    "id": 29,
     "slug": "cci-crown-castle-cci-slides-ahead-of-q1-earnings-as-analysts-lea",
     "title": "Crown Castle (CCI) Slides Ahead of Q1 Earnings as Analysts Lean Bullish",
     "author": "Alpha Stocks Insight Staff",
@@ -805,7 +951,7 @@
     ]
   },
   {
-    "id": 26,
+    "id": 30,
     "slug": "ba-boeing-ba-rises-0-76-ahead-of-earnings-ethiopian-airlines-ad",
     "title": "Boeing (BA) Rises 0.76% Ahead of Earnings; Ethiopian Airlines Adds Six 787s",
     "author": "Alpha Stocks Insight Staff",
@@ -836,7 +982,7 @@
     ]
   },
   {
-    "id": 27,
+    "id": 31,
     "slug": "cme-cme-group-cme-approaches-q1-earnings-with-revenue-growth-exp",
     "title": "CME Group (CME) Approaches Q1 Earnings With Revenue Growth Expected at 14%",
     "author": "Alpha Stocks Insight Staff",
@@ -867,7 +1013,7 @@
     ]
   },
   {
-    "id": 28,
+    "id": 32,
     "slug": "cci-crown-castle-cci-slips-1-3-as-investors-weigh-q1-earnings-ou",
     "title": "Crown Castle (CCI) Slips 1.3% as Investors Weigh Q1 Earnings Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -898,7 +1044,7 @@
     ]
   },
   {
-    "id": 29,
+    "id": 33,
     "slug": "cb-chubb-cb-approaches-q1-earnings-with-premium-growth-and-ai-t",
     "title": "Chubb (CB) Approaches Q1 Earnings With Premium Growth and AI Tailwinds",
     "author": "Alpha Stocks Insight Staff",
@@ -929,7 +1075,7 @@
     ]
   },
   {
-    "id": 30,
+    "id": 34,
     "slug": "bsx-boston-scientific-bsx-drops-5-ahead-of-q1-earnings-report",
     "title": "Boston Scientific (BSX) Drops 5% Ahead of Q1 Earnings Report",
     "author": "Alpha Stocks Insight Staff",
@@ -960,7 +1106,7 @@
     ]
   },
   {
-    "id": 31,
+    "id": 35,
     "slug": "ba-boeing-ba-heads-into-earnings-with-strong-analyst-backing-an",
     "title": "Boeing (BA) Heads Into Earnings With Strong Analyst Backing and New Orders",
     "author": "Alpha Stocks Insight Staff",
@@ -991,7 +1137,7 @@
     ]
   },
   {
-    "id": 32,
+    "id": 36,
     "slug": "tsla-tesla-tsla-slips-2-ahead-of-q1-earnings-as-analyst-sentiment",
     "title": "Tesla (TSLA) Slips 2% Ahead of Q1 Earnings as Analyst Sentiment Remains Mixed",
     "author": "Alpha Stocks Insight Staff",
@@ -1022,7 +1168,7 @@
     ]
   },
   {
-    "id": 33,
+    "id": 37,
     "slug": "nvda-nvidia-nvda-holds-near-52-week-high-as-chip-rally-extends-an",
     "title": "NVIDIA (NVDA) Holds Near 52-Week High as Chip Rally Extends, Analysts Stay Bullish",
     "author": "Alpha Stocks Insight Staff",
@@ -1052,7 +1198,7 @@
     ]
   },
   {
-    "id": 34,
+    "id": 38,
     "slug": "aapl-apple-inc-aapl-tim-cook-s-departure-marks-a-pivotal-inflecti",
     "title": "Apple Inc. (AAPL): Tim Cook's Departure Marks a Pivotal Inflection Point — What Investors Need to Know",
     "author": "Alpha Stocks Insight Staff",
@@ -1083,7 +1229,7 @@
     ]
   },
   {
-    "id": 35,
+    "id": 39,
     "slug": "nvda-nvidia-nvda-can-slim-momentum-ai-partnerships-and-a-surging-",
     "title": "NVIDIA (NVDA): CAN SLIM Momentum, AI Partnerships, and a Surging Semiconductor Sector Converge",
     "author": "Alpha Stocks Insight Staff",
@@ -1113,7 +1259,7 @@
     ]
   },
   {
-    "id": 36,
+    "id": 40,
     "slug": "nvidia-ai-dominance-q1-2026-preview",
     "title": "NVIDIA's AI Dominance Continues: Q1 2026 Preview Shows Massive Data Center Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -1145,7 +1291,7 @@
     ]
   },
   {
-    "id": 37,
+    "id": 41,
     "slug": "apple-services-revenue-record-safe-haven",
     "title": "Apple's Services Revenue Hits Record High: Is AAPL the Ultimate Safe Haven Stock?",
     "author": "Alpha Stocks Insight Staff",
@@ -1177,7 +1323,7 @@
     ]
   },
   {
-    "id": 38,
+    "id": 42,
     "slug": "tesla-fsd-14-analyst-upgrades",
     "title": "Tesla Full Self-Driving 14.0 Launch Triggers Analyst Upgrades Across the Board",
     "author": "Alpha Stocks Insight Staff",
@@ -1209,7 +1355,7 @@
     ]
   },
   {
-    "id": 39,
+    "id": 43,
     "slug": "microsoft-azure-copilot-q2-earnings-beat",
     "title": "Microsoft Azure Growth Accelerates: AI Copilot Adoption Drives Q2 Earnings Beat",
     "author": "Alpha Stocks Insight Staff",
@@ -1242,7 +1388,7 @@
     ]
   },
   {
-    "id": 40,
+    "id": 44,
     "slug": "amazon-aws-reclaims-cloud-position-ai-contracts",
     "title": "Amazon AWS Reclaims Top Cloud Position as Enterprise AI Contracts Surge",
     "author": "Alpha Stocks Insight Staff",
@@ -1275,7 +1421,7 @@
     ]
   },
   {
-    "id": 41,
+    "id": 45,
     "slug": "meta-ai-glasses-advertising-surge",
     "title": "Meta's AI Glasses Reach 5 Million Units: Advertising Revenue Surges 34% YoY",
     "author": "Alpha Stocks Insight Staff",
@@ -1308,7 +1454,7 @@
     ]
   },
   {
-    "id": 42,
+    "id": 46,
     "slug": "alphabet-gemini-ultra-3-search-rebound",
     "title": "Alphabet's Gemini Ultra 3 Outperforms Rivals: Search Revenue Rebounds Strongly",
     "author": "Alpha Stocks Insight Staff",
@@ -1341,7 +1487,7 @@
     ]
   },
   {
-    "id": 43,
+    "id": 47,
     "slug": "amd-mi400-data-center-enterprise-orders",
     "title": "AMD MI400 GPUs Challenge NVIDIA's Data Center Monopoly: $8B in Enterprise Orders",
     "author": "Alpha Stocks Insight Staff",
@@ -1372,7 +1518,7 @@
     ]
   },
   {
-    "id": 44,
+    "id": 48,
     "slug": "palantir-dod-ai-contract-government-revenue",
     "title": "Palantir Wins $2.5B DoD AI Contract Extension: Government Revenue to Double",
     "author": "Alpha Stocks Insight Staff",
@@ -1405,7 +1551,7 @@
     ]
   },
   {
-    "id": 45,
+    "id": 49,
     "slug": "super-micro-computer-record-revenue-ai-infrastructure",
     "title": "Super Micro Computer: Record $7.8B Revenue as AI Infrastructure Boom Continues",
     "author": "Alpha Stocks Insight Staff",
