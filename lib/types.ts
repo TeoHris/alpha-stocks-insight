@@ -19,7 +19,8 @@ export interface Article {
   teaser: string       // Short preview text
   content: string      // Full article body in Markdown
   tickers: Ticker[]
-  category: string
+  category: string       // Primary display category
+  sectors: string[]      // All categories this article belongs to (for filtering)
   featured: boolean
   readTime: string     // e.g. "5 min read"
   tags: string[]

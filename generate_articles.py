@@ -93,6 +93,29 @@ def load_tickers() -> list[dict]:
     else:
         return []
 
+# S&P sector name (from CSV) → filter chip name used on the site
+SECTOR_TO_CHIP = {
+    "Information Technology": "Technology",
+    "Health Care":            "Health Care",
+    "Financials":             "Financials",
+    "Industrials":            "Industrials",
+    "Consumer Discretionary": "Consumer",
+    "Consumer Staples":       "Consumer",
+    "Energy":                 "Energy",
+    "Real Estate":            "Real Estate",
+    "Communication Services": "Communication Services",
+    "Materials":              "Materials",
+    "Utilities":              "Utilities",
+}
+
+def build_sectors(primary_category: str, ticker_sector: str) -> list[str]:
+    """Return the full list of sector chips this article belongs to."""
+    sectors = {primary_category}
+    chip = SECTOR_TO_CHIP.get(ticker_sector)
+    if chip:
+        sectors.add(chip)
+    return sorted(sectors)
+
 # How many days of news to look back
 NEWS_LOOKBACK_DAYS = 3
 
@@ -445,6 +468,7 @@ Return ONLY this JSON object (no markdown fences, no explanation):
     slug = f"{symbol.lower()}-{re.sub(r'[^a-z0-9]+', '-', data['title'].lower()).strip('-')[:60]}"
     now  = datetime.datetime.now()
 
+    primary_category = data.get("category", "Stock Analysis")
     article = {
         "id":        None,           # will be assigned below
         "slug":      slug,
@@ -457,7 +481,8 @@ Return ONLY this JSON object (no markdown fences, no explanation):
         "teaser":    data["teaser"],
         "content":   data["content"],
         "tickers":   [{"exchange": exchange, "symbol": symbol}],
-        "category":  data.get("category", "Stock Analysis"),
+        "category":  primary_category,
+        "sectors":   build_sectors(primary_category, sector),
         "featured":  bool(data.get("featured", False)),
         "readTime":  data.get("readTime", "5 min read"),
         "tags":      data.get("tags", [symbol, name, sector]),
@@ -552,6 +577,8 @@ Return ONLY a valid JSON array with exactly {len(batch)} objects, one per stock:
         sym    = data.get("symbol", "").upper()
         ticker = next((item["ticker"] for item in batch if item["ticker"]["symbol"] == sym), batch[0]["ticker"])
         slug   = f"{sym.lower()}-{re.sub(r'[^a-z0-9]+', '-', data['title'].lower()).strip('-')[:60]}"
+        primary_category = data.get("category", "Stock Analysis")
+        ticker_sector    = ticker.get("sector", "")
         articles.append({
             "id":        None,
             "slug":      slug,
@@ -564,7 +591,8 @@ Return ONLY a valid JSON array with exactly {len(batch)} objects, one per stock:
             "teaser":    data["teaser"],
             "content":   data["content"],
             "tickers":   [{"exchange": ticker.get("exchange", "NASDAQ"), "symbol": sym}],
-            "category":  data.get("category", "Stock Analysis"),
+            "category":  primary_category,
+            "sectors":   build_sectors(primary_category, ticker_sector),
             "featured":  False,
             "readTime":  data.get("readTime", "2 min read"),
             "tags":      data.get("tags", [sym]),

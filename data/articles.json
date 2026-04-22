@@ -24,6 +24,10 @@
       "UnitedHealth Group",
       "Health Insurance",
       "Earnings"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Health Care"
     ]
   },
   {
@@ -51,6 +55,10 @@
       "UAL",
       "Airline Merger",
       "American Airlines"
+    ],
+    "sectors": [
+      "Industrials",
+      "Stock Analysis"
     ]
   },
   {
@@ -78,6 +86,10 @@
       "SYF",
       "Earnings",
       "Share Buyback"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Financials"
     ]
   },
   {
@@ -105,6 +117,10 @@
       "Raytheon",
       "Defense",
       "Aerospace"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Industrials"
     ]
   },
   {
@@ -131,6 +147,10 @@
       "Northern Trust",
       "NTRS",
       "Earnings",
+      "Financials"
+    ],
+    "sectors": [
+      "Earnings Report",
       "Financials"
     ]
   },
@@ -159,6 +179,10 @@
       "NOC",
       "Defense",
       "Earnings"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Industrials"
     ]
   },
   {
@@ -186,6 +210,10 @@
       "Earnings",
       "Financials",
       "S&P500"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Financials"
     ]
   },
   {
@@ -213,6 +241,10 @@
       "MMM",
       "Industrials",
       "Earnings"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Industrials"
     ]
   },
   {
@@ -239,6 +271,10 @@
       "Halliburton",
       "HAL",
       "Oilfield Services",
+      "Energy"
+    ],
+    "sectors": [
+      "Earnings Report",
       "Energy"
     ]
   },
@@ -267,6 +303,10 @@
       "GPC",
       "Earnings",
       "Consumer Discretionary"
+    ],
+    "sectors": [
+      "Consumer",
+      "Earnings Report"
     ]
   },
   {
@@ -293,6 +333,10 @@
       "GE Aerospace",
       "NYSE:GE",
       "Earnings",
+      "Industrials"
+    ],
+    "sectors": [
+      "Earnings Report",
       "Industrials"
     ]
   },
@@ -321,6 +365,10 @@
       "Natural Gas",
       "Dividend",
       "Appalachian Basin"
+    ],
+    "sectors": [
+      "Energy",
+      "Stock Analysis"
     ]
   },
   {
@@ -348,6 +396,10 @@
       "EFX",
       "Earnings",
       "Credit Reporting"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Industrials"
     ]
   },
   {
@@ -375,6 +427,10 @@
       "DHI",
       "Homebuilders",
       "Earnings"
+    ],
+    "sectors": [
+      "Consumer",
+      "Earnings Report"
     ]
   },
   {
@@ -402,6 +458,10 @@
       "CB",
       "Insurance",
       "Financials"
+    ],
+    "sectors": [
+      "Financials",
+      "Stock Analysis"
     ]
   },
   {
@@ -456,6 +516,13 @@
       "market roundup",
       "daily highlights",
       "April 21, 2026"
+    ],
+    "sectors": [
+      "Financials",
+      "Health Care",
+      "Industrials",
+      "Real Estate",
+      "Stock Analysis"
     ]
   },
   {
@@ -483,6 +550,10 @@
       "Natural Gas",
       "Earnings Preview",
       "Dividend"
+    ],
+    "sectors": [
+      "Energy",
+      "Stock Analysis"
     ]
   },
   {
@@ -510,6 +581,10 @@
       "ELV",
       "Health Insurance",
       "Earnings Preview"
+    ],
+    "sectors": [
+      "Health Care",
+      "Stock Analysis"
     ]
   },
   {
@@ -537,6 +612,10 @@
       "EFX",
       "Earnings",
       "Credit Reporting"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Industrials"
     ]
   },
   {
@@ -563,6 +642,10 @@
       "Danaher",
       "DHR",
       "Earnings",
+      "Health Care"
+    ],
+    "sectors": [
+      "Earnings Report",
       "Health Care"
     ]
   },
@@ -591,6 +674,10 @@
       "DHI",
       "Homebuilders",
       "Consumer Discretionary"
+    ],
+    "sectors": [
+      "Consumer",
+      "Stock Analysis"
     ]
   },
   {
@@ -618,6 +705,10 @@
       "DGX",
       "Health Care",
       "Earnings"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Health Care"
     ]
   },
   {
@@ -645,6 +736,10 @@
       "Industrials",
       "Freight Rail",
       "Earnings Preview"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Industrials"
     ]
   },
   {
@@ -671,6 +766,10 @@
       "Capital One",
       "COF",
       "Earnings Preview",
+      "Financials"
+    ],
+    "sectors": [
+      "Earnings Report",
       "Financials"
     ]
   },
@@ -699,6 +798,10 @@
       "CCI",
       "REIT",
       "Telecom Infrastructure"
+    ],
+    "sectors": [
+      "Real Estate",
+      "Stock Analysis"
     ]
   },
   {
@@ -726,6 +829,10 @@
       "BA",
       "Aerospace",
       "Earnings Preview"
+    ],
+    "sectors": [
+      "Industrials",
+      "Stock Analysis"
     ]
   },
   {
@@ -753,6 +860,10 @@
       "Earnings Preview",
       "Financials",
       "Derivatives Exchange"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Financials"
     ]
   },
   {
@@ -780,6 +891,10 @@
       "CCI",
       "Real Estate",
       "Telecom Infrastructure"
+    ],
+    "sectors": [
+      "Real Estate",
+      "Stock Analysis"
     ]
   },
   {
@@ -807,6 +922,10 @@
       "CB",
       "Insurance",
       "Earnings Preview"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Financials"
     ]
   },
   {
@@ -833,6 +952,10 @@
       "Boston Scientific",
       "BSX",
       "Earnings Preview",
+      "Health Care"
+    ],
+    "sectors": [
+      "Earnings Report",
       "Health Care"
     ]
   },
@@ -861,6 +984,10 @@
       "BA",
       "Earnings Preview",
       "Aerospace"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Industrials"
     ]
   },
   {
@@ -888,6 +1015,10 @@
       "TSLA",
       "Earnings Preview",
       "Electric Vehicles"
+    ],
+    "sectors": [
+      "Consumer",
+      "Earnings Report"
     ]
   },
   {
@@ -915,6 +1046,9 @@
       "NVDA",
       "Semiconductors",
       "AI"
+    ],
+    "sectors": [
+      "Technology"
     ]
   },
   {
@@ -943,6 +1077,9 @@
       "Tim Cook",
       "CEO Succession",
       "AI Strategy"
+    ],
+    "sectors": [
+      "Technology"
     ]
   },
   {
@@ -970,6 +1107,9 @@
       "NVDA",
       "AI Infrastructure",
       "Semiconductor Rally"
+    ],
+    "sectors": [
+      "Technology"
     ]
   },
   {
@@ -998,6 +1138,10 @@
       "data-center",
       "semiconductors",
       "GPU"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Technology"
     ]
   },
   {
@@ -1026,6 +1170,10 @@
       "earnings",
       "software",
       "platform"
+    ],
+    "sectors": [
+      "Stock Analysis",
+      "Technology"
     ]
   },
   {
@@ -1054,6 +1202,10 @@
       "FSD",
       "EV",
       "AI"
+    ],
+    "sectors": [
+      "Consumer",
+      "Technology"
     ]
   },
   {
@@ -1083,6 +1235,10 @@
       "Copilot",
       "Azure",
       "enterprise"
+    ],
+    "sectors": [
+      "Earnings Report",
+      "Technology"
     ]
   },
   {
@@ -1112,6 +1268,10 @@
       "e-commerce",
       "enterprise",
       "Bedrock"
+    ],
+    "sectors": [
+      "Consumer",
+      "Technology"
     ]
   },
   {
@@ -1141,6 +1301,10 @@
       "social-media",
       "AR",
       "earnings"
+    ],
+    "sectors": [
+      "Communication Services",
+      "Technology"
     ]
   },
   {
@@ -1170,6 +1334,10 @@
       "Gemini",
       "advertising",
       "earnings"
+    ],
+    "sectors": [
+      "Communication Services",
+      "Technology"
     ]
   },
   {
@@ -1198,6 +1366,9 @@
       "semiconductors",
       "data-center",
       "NVIDIA-competition"
+    ],
+    "sectors": [
+      "Technology"
     ]
   },
   {
@@ -1227,6 +1398,10 @@
       "contract",
       "analytics",
       "enterprise"
+    ],
+    "sectors": [
+      "Industrials",
+      "Technology"
     ]
   },
   {
@@ -1255,6 +1430,9 @@
       "data-center",
       "earnings",
       "cooling"
+    ],
+    "sectors": [
+      "Technology"
     ]
   }
 ]

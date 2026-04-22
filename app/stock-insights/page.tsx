@@ -38,7 +38,7 @@ export default async function StockInsightsPage({
   const articles =
     activeCategory === 'All'
       ? allArticles
-      : allArticles.filter((a) => a.category === activeCategory)
+      : allArticles.filter((a) => a.sectors?.includes(activeCategory))
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
