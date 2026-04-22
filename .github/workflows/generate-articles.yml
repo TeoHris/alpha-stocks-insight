@@ -51,7 +51,7 @@ jobs:
 
       # ── 3. Install dependencies ────────────────────────────
       - name: Install Python dependencies
-        run: pip install anthropic requests python-dotenv
+        run: pip install anthropic requests python-dotenv yfinance pandas
 
       # ── 4. Run the article generator ──────────────────────
       - name: Generate articles

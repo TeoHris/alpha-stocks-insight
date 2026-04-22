@@ -56,6 +56,14 @@ import argparse
 import requests
 from pathlib import Path
 
+# ── Optional enrichment libraries ────────────────────────────
+try:
+    import yfinance as yf
+    import pandas as pd
+    _YF_AVAILABLE = True
+except ImportError:
+    _YF_AVAILABLE = False
+
 # ── Load .env file if present ─────────────────────────────────
 try:
     from dotenv import load_dotenv
@@ -166,6 +174,146 @@ def track_usage(model: str, input_tokens: int, output_tokens: int) -> None:
 
 
 # ─────────────────────────────────────────────────────────────
+# SEC EDGAR helpers
+# ─────────────────────────────────────────────────────────────
+
+EDGAR_HEADERS = {"User-Agent": "AlphaStocksInsight bot@alphastocksinsight.com"}
+
+# 8-K item codes → human-readable event type
+EDGAR_ITEM_LABELS = {
+    "1.01": "Material Definitive Agreement (deal/contract)",
+    "1.02": "Termination of Material Agreement",
+    "2.01": "Completion of Acquisition or Disposition",
+    "2.02": "Results of Operations (earnings release)",
+    "2.05": "Departure of Named Executive Officers",
+    "2.06": "Material Impairment",
+    "5.02": "Departure or Appointment of Directors/Officers",
+    "5.03": "Amendment to Articles of Incorporation",
+    "7.01": "Regulation FD Disclosure",
+    "8.01": "Other Material Events",
+}
+
+_cik_cache: dict = {}   # symbol → zero-padded CIK string, loaded once on first use
+
+def _load_cik_cache() -> None:
+    """Fetch the SEC master ticker→CIK table (one network call, cached for the run)."""
+    global _cik_cache
+    if _cik_cache:
+        return
+    try:
+        resp = requests.get(
+            "https://www.sec.gov/files/company_tickers.json",
+            headers=EDGAR_HEADERS, timeout=15,
+        )
+        data = resp.json()
+        _cik_cache = {
+            v["ticker"].upper(): str(v["cik_str"]).zfill(10)
+            for v in data.values()
+        }
+    except Exception:
+        _cik_cache = {}
+
+
+def fetch_edgar_8k(symbol: str) -> list[dict]:
+    """
+    Return recent 8-K filings (last 10 days) for a symbol from SEC EDGAR.
+    Each entry: { date, items: [code, ...], labels: ["human label", ...] }
+    """
+    _load_cik_cache()
+    cik = _cik_cache.get(symbol.upper())
+    if not cik:
+        return []
+
+    try:
+        resp = requests.get(
+            f"https://data.sec.gov/submissions/CIK{cik}.json",
+            headers=EDGAR_HEADERS, timeout=15,
+        )
+        filings  = resp.json().get("filings", {}).get("recent", {})
+        forms    = filings.get("form", [])
+        dates    = filings.get("filingDate", [])
+        items    = filings.get("items", [])
+
+        cutoff  = (datetime.date.today() - datetime.timedelta(days=10)).isoformat()
+        results = []
+        for i, form in enumerate(forms):
+            if form != "8-K":
+                continue
+            date = dates[i] if i < len(dates) else ""
+            if date < cutoff:
+                break   # newest-first — safe to stop
+            codes  = [c.strip() for c in (items[i] if i < len(items) else "").split(",") if c.strip()]
+            labels = [EDGAR_ITEM_LABELS.get(c, f"Item {c}") for c in codes]
+            results.append({"date": date, "items": codes, "labels": labels})
+
+        return results[:5]
+    except Exception:
+        return []
+
+
+# ─────────────────────────────────────────────────────────────
+# yfinance helpers
+# ─────────────────────────────────────────────────────────────
+
+def fetch_yfinance_data(symbol: str) -> dict:
+    """
+    Fetch supplementary data via yfinance:
+      - Last 4 quarters of EPS (actual vs estimate, surprise %)
+      - Key valuation & profitability ratios
+    Returns empty dicts gracefully if yfinance is unavailable.
+    """
+    result: dict = {"earnings_surprise": [], "ratios": {}}
+    if not _YF_AVAILABLE:
+        return result
+
+    try:
+        t = yf.Ticker(symbol)
+
+        # ── Earnings surprise history ──────────────────────────
+        try:
+            ed = t.earnings_dates
+            if ed is not None and not ed.empty:
+                for idx, row in ed.head(4).iterrows():
+                    actual   = row.get("Reported EPS")
+                    estimate = row.get("EPS Estimate")
+                    surprise = row.get("Surprise(%)")
+                    if actual is not None and not pd.isna(actual):
+                        result["earnings_surprise"].append({
+                            "date":        str(idx.date()),
+                            "epsActual":   round(float(actual),   2),
+                            "epsEstimate": round(float(estimate), 2) if estimate is not None and not pd.isna(estimate) else None,
+                            "surprisePct": round(float(surprise), 1) if surprise  is not None and not pd.isna(surprise)  else None,
+                        })
+        except Exception:
+            pass
+
+        # ── Key ratios ─────────────────────────────────────────
+        try:
+            info = t.info
+            def _safe(k):
+                v = info.get(k)
+                if v is None:
+                    return None
+                if isinstance(v, float) and (v != v):   # NaN check
+                    return None
+                return round(v, 4) if isinstance(v, float) else v
+
+            for key in ["marketCap", "trailingPE", "forwardPE",
+                        "profitMargins", "revenueGrowth", "earningsGrowth",
+                        "grossMargins", "operatingMargins"]:
+                val = _safe(key)
+                if val is not None:
+                    result["ratios"][key] = val
+        except Exception:
+            pass
+
+    except Exception:
+        pass
+
+    return result
+
+
+# ─────────────────────────────────────────────────────────────
 # STEP 1 — Fetch market data from Finnhub
 # ─────────────────────────────────────────────────────────────
 
@@ -252,14 +400,25 @@ def fetch_market_data(symbol: str) -> dict:
     recs_raw = finnhub_get("/stock/recommendation", {"symbol": symbol}) or []
     recs = recs_raw[:2] if recs_raw else []
 
+    # ── yfinance: earnings surprise + key ratios ──────────────
+    yf_data = fetch_yfinance_data(symbol)
+    time.sleep(0.3)
+
+    # ── SEC EDGAR: recent 8-K filings ─────────────────────────
+    edgar_8k = fetch_edgar_8k(symbol)
+    time.sleep(0.3)
+
     return {
-        "news":       news,
-        "quote":      quote,
-        "week52_high": week52_high,
-        "week52_low":  week52_low,
-        "ma_data":    ma_data,
-        "targets":    targets,
-        "recs":       recs,
+        "news":             news,
+        "quote":            quote,
+        "week52_high":      week52_high,
+        "week52_low":       week52_low,
+        "ma_data":          ma_data,
+        "targets":          targets,
+        "recs":             recs,
+        "yf_earnings":      yf_data["earnings_surprise"],
+        "yf_ratios":        yf_data["ratios"],
+        "edgar_8k":         edgar_8k,
     }
 
 
@@ -281,13 +440,16 @@ def generate_article(ticker: dict, market_data: dict) -> dict | None:
     name     = ticker.get("name", symbol)
     sector   = ticker.get("sector", "Technology")
 
-    news_items  = market_data["news"]
-    quote       = market_data["quote"]
-    targets     = market_data["targets"]
-    recs        = market_data["recs"]
-    ma_data     = market_data["ma_data"]
-    week52_high = market_data["week52_high"]
-    week52_low  = market_data["week52_low"]
+    news_items   = market_data["news"]
+    quote        = market_data["quote"]
+    targets      = market_data["targets"]
+    recs         = market_data["recs"]
+    ma_data      = market_data["ma_data"]
+    week52_high  = market_data["week52_high"]
+    week52_low   = market_data["week52_low"]
+    yf_earnings  = market_data.get("yf_earnings", [])
+    yf_ratios    = market_data.get("yf_ratios", {})
+    edgar_8k     = market_data.get("edgar_8k", [])
 
     # ── Format news ───────────────────────────────────────────
     news_text = ""
@@ -357,6 +519,52 @@ def generate_article(ticker: dict, market_data: dict) -> dict | None:
                 f"Hold: {r2.get('hold', 0)}."
             )
 
+    # ── Format yfinance earnings surprise ────────────────────
+    earnings_text = "Not available."
+    if yf_earnings:
+        lines = []
+        for e in yf_earnings[:4]:
+            surprise_str = ""
+            if e.get("surprisePct") is not None:
+                sign = "+" if e["surprisePct"] >= 0 else ""
+                surprise_str = f" ({sign}{e['surprisePct']}% surprise)"
+            est_str = f", estimate ${e['epsEstimate']}" if e.get("epsEstimate") else ""
+            lines.append(f"  {e['date']}: EPS ${e['epsActual']}{est_str}{surprise_str}")
+        earnings_text = "\n".join(lines)
+
+    # ── Format yfinance key ratios ────────────────────────────
+    ratios_text = "Not available."
+    if yf_ratios:
+        parts = []
+        if yf_ratios.get("marketCap"):
+            mc = yf_ratios["marketCap"]
+            mc_str = f"${mc/1e12:.2f}T" if mc >= 1e12 else f"${mc/1e9:.1f}B"
+            parts.append(f"Market cap: {mc_str}")
+        if yf_ratios.get("trailingPE"):
+            parts.append(f"Trailing P/E: {yf_ratios['trailingPE']:.1f}x")
+        if yf_ratios.get("forwardPE"):
+            parts.append(f"Forward P/E: {yf_ratios['forwardPE']:.1f}x")
+        if yf_ratios.get("profitMargins"):
+            parts.append(f"Net margin: {yf_ratios['profitMargins']*100:.1f}%")
+        if yf_ratios.get("revenueGrowth"):
+            parts.append(f"Revenue growth (YoY): {yf_ratios['revenueGrowth']*100:.1f}%")
+        if yf_ratios.get("earningsGrowth"):
+            parts.append(f"Earnings growth (YoY): {yf_ratios['earningsGrowth']*100:.1f}%")
+        if yf_ratios.get("grossMargins"):
+            parts.append(f"Gross margin: {yf_ratios['grossMargins']*100:.1f}%")
+        if yf_ratios.get("operatingMargins"):
+            parts.append(f"Operating margin: {yf_ratios['operatingMargins']*100:.1f}%")
+        ratios_text = " | ".join(parts) if parts else "Not available."
+
+    # ── Format SEC EDGAR 8-K filings ─────────────────────────
+    edgar_text = "No recent 8-K filings."
+    if edgar_8k:
+        lines = []
+        for f in edgar_8k:
+            labels = ", ".join(f["labels"]) or "Item " + ", ".join(f["items"])
+            lines.append(f"  {f['date']}: {labels}")
+        edgar_text = "\n".join(lines)
+
     today    = datetime.date.today()
     date_str = today.strftime("%B %d, %Y").replace(" 0", " ")
 
@@ -379,6 +587,15 @@ MOVING AVERAGES (calculated from actual price history):
 RECENT NEWS:
 {news_text}
 
+SEC EDGAR — RECENT 8-K FILINGS (official company disclosures):
+{edgar_text}
+
+EARNINGS HISTORY (last 4 quarters, from SEC filings via yfinance):
+{earnings_text}
+
+COMPANY FUNDAMENTALS (yfinance):
+{ratios_text}
+
 WALL STREET ANALYST DATA:
 Price targets: {target_text}
 Recommendations: {rec_text}
@@ -386,9 +603,14 @@ Recommendations: {rec_text}
 ━━ RULES (follow every one strictly) ━━
 
 FACTUAL INTEGRITY:
-- Write ONLY about events that have already occurred and been reported in the news above.
+- Write ONLY about events that have already occurred and been reported in the data above.
 - Do NOT write previews or speculation about upcoming events.
-- If earnings results appear in the news, report the actual figures (EPS, revenue, guidance given).
+- For earnings articles: use the EPS actual/estimate/surprise from the Earnings History section
+  alongside any revenue or guidance figures from the news. Cross-reference both sources.
+- Use SEC EDGAR 8-K filings to confirm the event type (e.g. Item 2.02 = earnings release,
+  Item 5.02 = management change, Item 2.01 = acquisition). Reference the filing date if relevant.
+- Use Company Fundamentals (P/E, margins, growth) to add valuation and profitability context
+  in the Financial Snapshot or What Drove the Results section — but only if the numbers are present.
 - Never invent, estimate, or extrapolate numbers not present in the data above.
 - If there is no concrete event to report (no results, no announcement, no material news), return "NO_STORY" in the title field.
 
