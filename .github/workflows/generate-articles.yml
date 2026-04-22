@@ -24,6 +24,10 @@ on:
   # Allow manual trigger from the GitHub Actions UI
   workflow_dispatch:
 
+# Grant write access so the bot can commit and push articles
+permissions:
+  contents: write
+
 # Prevent two runs from overlapping
 concurrency:
   group: generate-articles
