@@ -1028,46 +1028,62 @@ HIGH_SIGNAL_KEYWORDS = [
 PRICE_MOVE_THRESHOLD = 3.5  # flag any stock that moved more than this % today
 
 
-def score_ticker(symbol: str, news_days: int = 2) -> dict:
+def score_ticker(symbol: str) -> dict:
     """
     Lightweight screen of a single ticker. Returns:
       {
-        "symbol":    str,
-        "score":     int,    # 0 = no story, higher = more newsworthy
-        "reasons":   list,   # human-readable reasons for the score
+        "symbol":     str,
+        "score":      int,    # 0 = no story, higher = more newsworthy
+        "reasons":    list,   # human-readable reasons for the score
         "news_count": int,
-        "price_chg": float | None,
+        "price_chg":  float | None,
       }
     Only makes 2 API calls (news + quote). No candles, no targets.
+
+    Freshness rule: keyword scoring ONLY applies to articles published in
+    the last 36 hours (unix timestamp). Older articles in the window are
+    counted for volume but do not boost the keyword score — this prevents
+    stale recap/analysis pieces from inflating the score of old events.
     """
     end   = datetime.date.today()
-    start = end - datetime.timedelta(days=news_days)
+    start = end - datetime.timedelta(days=2)
 
-    news_raw  = finnhub_get("/company-news", {"symbol": symbol, "from": start.isoformat(), "to": end.isoformat()})
-    news      = [i for i in (news_raw or []) if i.get("headline")]
+    news_raw = finnhub_get("/company-news", {
+        "symbol": symbol,
+        "from":   start.isoformat(),
+        "to":     end.isoformat(),
+    })
+    news = [i for i in (news_raw or []) if i.get("headline")]
     time.sleep(0.25)
 
     quote     = finnhub_get("/quote", {"symbol": symbol}) or {}
     price_chg = quote.get("dp")   # % change today
     time.sleep(0.25)
 
+    # Split news into fresh (< 36 hours old) vs background
+    now_ts    = datetime.datetime.utcnow().timestamp()
+    fresh_cutoff = now_ts - 36 * 3600
+    fresh_news = [i for i in news if (i.get("datetime") or 0) >= fresh_cutoff]
+
     score   = 0
     reasons = []
 
-    # Score 1: number of news items (more news = more active story)
-    if len(news) >= 3:
+    # Score 1: volume of fresh news items
+    if len(fresh_news) >= 3:
         score += 2
-    elif len(news) >= 1:
+        reasons.append(f"{len(fresh_news)} fresh articles today")
+    elif len(fresh_news) >= 1:
         score += 1
+        reasons.append(f"{len(fresh_news)} fresh article(s) today")
 
-    # Score 2: high-signal keywords in headlines
-    all_headlines = " ".join(i.get("headline", "").lower() for i in news)
-    matched = [kw for kw in HIGH_SIGNAL_KEYWORDS if kw in all_headlines]
+    # Score 2: high-signal keywords — ONLY in fresh headlines
+    fresh_headlines = " ".join(i.get("headline", "").lower() for i in fresh_news)
+    matched = [kw for kw in HIGH_SIGNAL_KEYWORDS if kw in fresh_headlines]
     if matched:
         score += len(matched) * 2
         reasons.append(f"keywords: {', '.join(matched[:4])}")
 
-    # Score 3: significant price move (may precede or follow news)
+    # Score 3: significant price move today (objective, timestamp-independent)
     if price_chg is not None and abs(price_chg) >= PRICE_MOVE_THRESHOLD:
         score += 5
         direction = "▲" if price_chg > 0 else "▼"
@@ -1077,7 +1093,7 @@ def score_ticker(symbol: str, news_days: int = 2) -> dict:
         "symbol":     symbol,
         "score":      score,
         "reasons":    reasons,
-        "news_count": len(news),
+        "news_count": len(fresh_news),
         "price_chg":  price_chg,
     }
 
