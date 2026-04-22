@@ -1,10 +1,6 @@
-import { BarChart2, Clock, TrendingUp } from 'lucide-react'
+import { Clock, TrendingUp } from 'lucide-react'
 
-interface HeroBannerProps {
-  articleCount: number
-}
-
-export default function HeroBanner({ articleCount }: HeroBannerProps) {
+export default function HeroBanner() {
   const today = new Date().toLocaleDateString('en-US', {
     weekday: 'long',
     year: 'numeric',
@@ -36,11 +32,6 @@ export default function HeroBanner({ articleCount }: HeroBannerProps) {
           <span className="flex items-center gap-1.5">
             <Clock size={11} />
             {today}
-          </span>
-          <span className="text-blue-700">·</span>
-          <span className="flex items-center gap-1.5">
-            <BarChart2 size={11} />
-            {articleCount} articles published
           </span>
           <span className="text-blue-700">·</span>
           <span className="flex items-center gap-1.5">

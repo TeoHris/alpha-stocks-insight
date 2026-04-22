@@ -6,7 +6,6 @@ import HeroBanner from '@/components/HeroBanner'
 import TrendingSidebar from '@/components/TrendingSidebar'
 import Disclaimer from '@/components/Disclaimer'
 import {
-  getAllArticles,
   getArticlesByDate,
   getTodaysTopArticles,
   getLatestPublishDate,
@@ -20,7 +19,6 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
-  const allArticles  = getAllArticles()
   const topArticles  = getTodaysTopArticles(4)
   const latestDate   = getLatestPublishDate()
   const trending     = getTrendingArticles(8)
@@ -37,7 +35,7 @@ export default function HomePage() {
       </div>
 
       {/* ── Hero Banner ────────────────────────────────────── */}
-      <HeroBanner articleCount={allArticles.length} />
+      <HeroBanner />
 
       {/* ── Main Content ───────────────────────────────────── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">

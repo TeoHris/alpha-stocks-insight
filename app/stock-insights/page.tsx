@@ -10,19 +10,23 @@ export const metadata: Metadata = {
     'Browse all AI-powered stock analysis and investment ideas covering NASDAQ and NYSE stocks.',
 }
 
-// Category filter options
+// Category filter options — aligned with S&P sector classifications
+// "Technology" covers: Information Technology, Semiconductors, AI, Cloud, Big Tech
+// "Consumer" covers: Consumer Discretionary + Consumer Staples
+// "Real Estate & Utilities" condenses two smaller sectors
 const CATEGORIES = [
   'All',
-  'Earnings Preview',
-  'Earnings',
+  'Earnings Report',
   'Stock Analysis',
   'Technology',
-  'Semiconductors',
-  'Cloud Computing',
-  'AI & Technology',
-  'Big Tech',
-  'Government & Defense',
-  'AI Infrastructure',
+  'Health Care',
+  'Financials',
+  'Industrials',
+  'Consumer',
+  'Energy',
+  'Real Estate',
+  'Communication Services',
+  'Materials',
 ]
 
 export default function StockInsightsPage() {
@@ -38,8 +42,7 @@ export default function StockInsightsPage() {
           <h1 className="text-2xl font-black text-gray-900 dark:text-white">Stock Insights</h1>
         </div>
         <p className="text-gray-600 dark:text-gray-400">
-          All AI-powered investment ideas and stock analysis, newest first.
-          {articles.length} articles available.
+          AI-powered stock news and analysis across NYSE and NASDAQ, newest first.
         </p>
       </div>
 

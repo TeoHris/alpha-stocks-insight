@@ -100,12 +100,15 @@ NEWS_LOOKBACK_DAYS = 3
 CATEGORIES = [
     "Stock Analysis",
     "Earnings Report",
-    "AI & Technology",
-    "Semiconductors",
-    "Cloud Computing",
-    "Big Tech",
-    "AI Infrastructure",
     "Technology",
+    "Health Care",
+    "Financials",
+    "Industrials",
+    "Consumer",
+    "Energy",
+    "Real Estate",
+    "Communication Services",
+    "Materials",
 ]
 
 AUTHOR_NAME = "Alpha Stocks Insight Staff"
@@ -401,7 +404,7 @@ Return ONLY this JSON object (no markdown fences, no explanation):
 {{
   "title": "<factual headline with ticker symbol, max 90 characters — use NO_STORY if there is nothing to report>",
   "teaser": "<2 concise sentences summarising the article, max 180 characters>",
-  "category": "<one of: Stock Analysis | Earnings Report | AI & Technology | Semiconductors | Cloud Computing | Big Tech | AI Infrastructure | Technology>",
+  "category": "<one of: Stock Analysis | Earnings Report | Technology | Health Care | Financials | Industrials | Consumer | Energy | Real Estate | Communication Services | Materials>",
   "tags": ["<tag1>", "<tag2>", "<tag3>", "<tag4>"],
   "featured": false,
   "readTime": "<X min read>",
