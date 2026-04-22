@@ -363,11 +363,12 @@ def generate_article(ticker: dict, market_data: dict) -> dict | None:
     # ══════════════════════════════════════════════════════════
     # EDITORIAL PROMPT — edit below to change article style
     # ══════════════════════════════════════════════════════════
-    prompt = f"""You are a staff writer for Alpha Stocks Insight, a US stock news website.
+    prompt = f"""You are writing in "Factual + Engaging" mode for alphastocksinsight.com.
+Your tone is professional and calm — like a senior analyst writing a client note.
 
-Write a factual, direct news article about {name} ({exchange}:{symbol}), a {sector} company.
+Write an article about {name} ({exchange}:{symbol}), a {sector} company.
 
-━━ MARKET DATA (use only the figures provided below — do not invent or estimate any numbers) ━━
+━━ MARKET DATA (use only figures provided below — do not invent or estimate any numbers) ━━
 
 CURRENT PRICE & PERFORMANCE:
 {price_text}
@@ -382,44 +383,60 @@ WALL STREET ANALYST DATA:
 Price targets: {target_text}
 Recommendations: {rec_text}
 
-━━ EDITORIAL GUIDELINES (follow strictly) ━━
+━━ RULES (follow every one strictly) ━━
 
-CRITICAL RULE — EVENTS THAT HAVE ALREADY HAPPENED ONLY:
-- You must write ONLY about events that have already occurred and been reported.
-- Do NOT write preview or outlook articles about upcoming earnings, product launches, or scheduled events.
-- If earnings results appear in the news, write about the actual reported figures (EPS, revenue, guidance given).
-- Do NOT speculate about what a company might report or do in the future.
-- If there is no concrete event to report on (no results, no announcement, no deal, no material news), do not fabricate a story — state this and return an error signal in the title field: "NO_STORY".
+FACTUAL INTEGRITY:
+- Write ONLY about events that have already occurred and been reported in the news above.
+- Do NOT write previews or speculation about upcoming events.
+- If earnings results appear in the news, report the actual figures (EPS, revenue, guidance given).
+- Never invent, estimate, or extrapolate numbers not present in the data above.
+- If there is no concrete event to report (no results, no announcement, no material news), return "NO_STORY" in the title field.
 
-TONE & STYLE:
-- Write directly and concisely. No hype, no filler phrases.
-- Do not use words like: "soaring", "surging", "skyrocketing", "explosive", "massive", "game-changer", "revolutionary", "stunning".
-- Use plain, precise language. State facts. Let numbers speak.
-- Attribute claims to sources (e.g. "according to the company", "analysts at Goldman Sachs note").
+BANNED WORDS — never use:
+"soaring", "surging", "skyrocketing", "explosive", "massive", "game-changer",
+"revolutionary", "stunning", "blockbuster", "crushing it", "blowout", "monster"
 
-REQUIRED SECTIONS (use these exact ## headings):
-1. ## Recent Developments
-   Summarise the key news factually. Include specific figures, dates, and company statements from the news items above. This must be about something that has already happened.
+STRUCTURE — follow this exact flow, in this order:
 
-2. ## Financial Snapshot
-   Include the current stock price and today's change. Reference any relevant financial results or metrics mentioned in the news. Keep it factual and brief.
+1. FIRST LINE of the content (always):
+   **{exchange}: {symbol}** · {date_str} · [estimated read time, e.g. "2 min read"]
+   This is a metadata line. No heading, no bold title — just this one line.
 
-3. ## Wall Street View
-   Summarise the analyst consensus price target and any recent changes. Report the buy/hold/sell breakdown from the recommendation data above. If a target was raised or cut, say so explicitly.
-   IMPORTANT: If analyst price target and recommendation data are both marked "Not available", omit this section entirely. Do not write a placeholder.
+2. OPENING PARAGRAPH (2–3 sentences, no heading):
+   Lead with the single most important fact and the stock's reaction. Follow immediately with
+   what drove it. No throat-clearing ("In a release today…", "The company announced…").
 
-4. ## Technical Picture
-   Use ONLY the moving average figures provided above. State whether the current price is above or below the 20-day, 50-day, and 200-day moving averages, and what that implies about short-term and long-term trend. Do not invent MACD or RSI values.
-   IMPORTANT: If moving average data is marked "Not available", omit this section entirely. Do not write a placeholder.
+3. ## [Contextual heading — e.g. "Q1 2026 At a Glance", "Deal Terms", "Key Metrics"]
+   Bullet points only. Each bullet: one fact, one number. Never repeat a number used elsewhere.
 
-5. ### Key Takeaways
-   3–4 bullet points summarising the most important facts from the article.
+4. ## What Drove the Results  (or a contextually fitting heading)
+   1–2 short paragraphs on the "why" — cost management, strategic rationale, historical context.
+   Attribute claims to sources. Max 2–4 sentences per paragraph.
 
-FORMATTING:
-- Total length: 450–600 words
-- Do NOT restate the title at the top of the content
-- Do NOT add a disclaimer — the site adds one automatically
-- Use **bold** only for numbers and company names, not for emphasis
+5. ## Wall Street View
+   One short paragraph on analyst consensus. Note any month-over-month shift in ratings.
+   OMIT this section entirely if both price target and recommendation data are "Not available".
+
+6. ## Technical Picture
+   One short paragraph on price vs. 20-, 50-, 200-day MAs and what that implies for trend.
+   Do NOT invent RSI or MACD values.
+   OMIT this section entirely if moving average data is "Not available".
+
+7. ## Investor Takeaway  (always last, always a paragraph — NOT bullets)
+   2–3 sentences. Ground everything in company statements or reported analyst views only.
+   No speculation. No price targets unless explicitly provided in the data above.
+
+TRANSITIONS:
+- Each section should flow naturally from the previous one.
+- Avoid abrupt topic jumps. One bridging sentence between sections where needed.
+
+FORMATTING RULES:
+- Total length: 400–550 words
+- Paragraphs: 2–4 sentences maximum
+- Bold: numbers and company/ticker names only — never bold for emphasis
+- Ticker format: always (NYSE: SYMBOL) or (NASDAQ: SYMBOL) with a space after the colon
+- Do NOT restate the article title anywhere in the content
+- Do NOT include any disclaimer — the site template adds it automatically
 
 ━━ OUTPUT FORMAT ━━
 
