@@ -529,7 +529,7 @@
         "symbol": "EFX"
       }
     ],
-    "category": "Earnings Preview",
+    "category": "Earnings Report",
     "featured": false,
     "readTime": "3 min read",
     "tags": [
@@ -556,7 +556,7 @@
         "symbol": "DHR"
       }
     ],
-    "category": "Earnings Preview",
+    "category": "Earnings Report",
     "featured": false,
     "readTime": "3 min read",
     "tags": [
@@ -610,7 +610,7 @@
         "symbol": "DGX"
       }
     ],
-    "category": "Earnings Preview",
+    "category": "Earnings Report",
     "featured": false,
     "readTime": "3 min read",
     "tags": [
@@ -637,7 +637,7 @@
         "symbol": "CSX"
       }
     ],
-    "category": "Earnings Preview",
+    "category": "Earnings Report",
     "featured": false,
     "readTime": "3 min read",
     "tags": [
@@ -664,7 +664,7 @@
         "symbol": "COF"
       }
     ],
-    "category": "Earnings Preview",
+    "category": "Earnings Report",
     "featured": false,
     "readTime": "3 min read",
     "tags": [
@@ -745,7 +745,7 @@
         "symbol": "CME"
       }
     ],
-    "category": "Earnings Preview",
+    "category": "Earnings Report",
     "featured": false,
     "readTime": "3 min read",
     "tags": [
@@ -799,7 +799,7 @@
         "symbol": "CB"
       }
     ],
-    "category": "Earnings Preview",
+    "category": "Earnings Report",
     "featured": false,
     "readTime": "3 min read",
     "tags": [
@@ -826,7 +826,7 @@
         "symbol": "BSX"
       }
     ],
-    "category": "Earnings Preview",
+    "category": "Earnings Report",
     "featured": false,
     "readTime": "3 min read",
     "tags": [
@@ -853,7 +853,7 @@
         "symbol": "BA"
       }
     ],
-    "category": "Earnings Preview",
+    "category": "Earnings Report",
     "featured": false,
     "readTime": "3 min read",
     "tags": [
@@ -880,7 +880,7 @@
         "symbol": "TSLA"
       }
     ],
-    "category": "Earnings Preview",
+    "category": "Earnings Report",
     "featured": false,
     "readTime": "3 min read",
     "tags": [
@@ -907,7 +907,7 @@
         "symbol": "NVDA"
       }
     ],
-    "category": "Semiconductors",
+    "category": "Technology",
     "featured": false,
     "readTime": "3 min read",
     "tags": [
@@ -934,7 +934,7 @@
         "symbol": "AAPL"
       }
     ],
-    "category": "Big Tech",
+    "category": "Technology",
     "featured": false,
     "readTime": "5 min read",
     "tags": [
@@ -962,7 +962,7 @@
         "symbol": "NVDA"
       }
     ],
-    "category": "Semiconductors",
+    "category": "Technology",
     "featured": false,
     "readTime": "5 min read",
     "tags": [
@@ -989,7 +989,7 @@
         "symbol": "NVDA"
       }
     ],
-    "category": "Earnings Preview",
+    "category": "Earnings Report",
     "featured": true,
     "readTime": "5 min read",
     "tags": [
@@ -1073,7 +1073,7 @@
         "symbol": "MSFT"
       }
     ],
-    "category": "Earnings",
+    "category": "Earnings Report",
     "featured": false,
     "readTime": "5 min read",
     "tags": [
@@ -1102,7 +1102,7 @@
         "symbol": "AMZN"
       }
     ],
-    "category": "Cloud Computing",
+    "category": "Technology",
     "featured": false,
     "readTime": "4 min read",
     "tags": [
@@ -1131,7 +1131,7 @@
         "symbol": "META"
       }
     ],
-    "category": "Big Tech",
+    "category": "Technology",
     "featured": false,
     "readTime": "5 min read",
     "tags": [
@@ -1160,7 +1160,7 @@
         "symbol": "GOOGL"
       }
     ],
-    "category": "AI & Technology",
+    "category": "Technology",
     "featured": false,
     "readTime": "4 min read",
     "tags": [
@@ -1189,7 +1189,7 @@
         "symbol": "AMD"
       }
     ],
-    "category": "Semiconductors",
+    "category": "Technology",
     "featured": false,
     "readTime": "6 min read",
     "tags": [
@@ -1217,7 +1217,7 @@
         "symbol": "PLTR"
       }
     ],
-    "category": "Government & Defense",
+    "category": "Industrials",
     "featured": false,
     "readTime": "5 min read",
     "tags": [
@@ -1246,7 +1246,7 @@
         "symbol": "SMCI"
       }
     ],
-    "category": "AI Infrastructure",
+    "category": "Technology",
     "featured": false,
     "readTime": "4 min read",
     "tags": [
