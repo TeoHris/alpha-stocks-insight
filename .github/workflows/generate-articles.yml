@@ -24,7 +24,7 @@ on:
   # Allow manual trigger from the GitHub Actions UI
   workflow_dispatch:
 
-# Prevent two runs from overlapping (e.g. if a run takes longer than expected)
+# Prevent two runs from overlapping
 concurrency:
   group: generate-articles
   cancel-in-progress: false
@@ -33,7 +33,7 @@ jobs:
   generate:
     name: Screen tickers & generate articles
     runs-on: ubuntu-latest
-    timeout-minutes: 45        # screening 630 tickers takes ~10 min; generation ~15 min
+    timeout-minutes: 45        # screening 630 tickers ~10 min; generation ~15 min
 
     steps:
       # ── 1. Check out the repo ──────────────────────────────
@@ -47,7 +47,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
+          # No pip cache — project has no requirements.txt
 
       # ── 3. Install dependencies ────────────────────────────
       - name: Install Python dependencies
