@@ -163,6 +163,10 @@ PRICING = {
 # Set to 20 so only earnings + high-signal tickers use Sonnet; the rest use Haiku.
 PREMIUM_SCORE_THRESHOLD = 20
 
+# Hard cap: never use Sonnet for more than this many articles per run.
+# This keeps costs predictable even during volatile/earnings-heavy days.
+MAX_PREMIUM_ARTICLES = 3
+
 # Cost tracker (updated as articles are generated)
 _cost_usd     = 0.0
 _tokens_in    = 0
@@ -1277,8 +1281,13 @@ def main():
         sys.exit(0)
 
     # ── Split into premium vs quick-hit based on score ────────
-    premium_items   = [e for e in enriched if e["score"] >= PREMIUM_SCORE_THRESHOLD]
-    quick_hit_items = [e for e in enriched if e["score"] <  PREMIUM_SCORE_THRESHOLD]
+    # Sort by score descending so the highest-signal tickers get Sonnet
+    enriched.sort(key=lambda e: e["score"], reverse=True)
+    all_premium     = [e for e in enriched if e["score"] >= PREMIUM_SCORE_THRESHOLD]
+    # Apply hard cap: at most MAX_PREMIUM_ARTICLES use Sonnet
+    premium_items   = all_premium[:MAX_PREMIUM_ARTICLES]
+    overflow        = all_premium[MAX_PREMIUM_ARTICLES:]  # capped → Haiku instead
+    quick_hit_items = overflow + [e for e in enriched if e["score"] < PREMIUM_SCORE_THRESHOLD]
 
     print(f"\n   Premium (Sonnet): {len(premium_items)} | Quick-hit (Haiku): {len(quick_hit_items)}")
     print(f"\n━━ PHASE 2: Generating content ━━\n")
