@@ -13,10 +13,8 @@ const LEGAL_LINKS = [
   { label: 'FINSA / EU Notice',href: '/legal#finsa'     },
 ]
 const RESOURCE_LINKS = [
-  { label: 'AI Agent Instructions', href: '/ai-agent-instructions' },
-  { label: 'Stock Upload Admin',    href: '/admin'                 },
-  { label: 'RSS Feed',              href: '/feed.xml'              },
-  { label: 'Sitemap',               href: '/sitemap.xml'           },
+  { label: 'RSS Feed', href: '/feed.xml'     },
+  { label: 'Sitemap',  href: '/sitemap.xml'  },
 ]
 
 export default function Footer() {

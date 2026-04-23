@@ -127,14 +127,6 @@ export default function Header() {
               )
             })}
 
-            {/* Admin link in mobile menu */}
-            <Link
-              href="/admin"
-              onClick={() => setMenuOpen(false)}
-              className="block px-4 py-2.5 text-sm font-medium text-gray-400 dark:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800"
-            >
-              ⚙️ Admin (Stock Upload)
-            </Link>
           </div>
         )}
       </div>

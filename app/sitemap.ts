@@ -37,12 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
-    {
-      url: `${BASE_URL}/ai-agent-instructions`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.4,
-    },
   ]
 
   const articlePages: MetadataRoute.Sitemap = articles.map((article) => ({
