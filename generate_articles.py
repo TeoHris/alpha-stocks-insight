@@ -165,7 +165,7 @@ PREMIUM_SCORE_THRESHOLD = 20
 
 # Hard cap: never use Sonnet for more than this many articles per run.
 # This keeps costs predictable even during volatile/earnings-heavy days.
-MAX_PREMIUM_ARTICLES = 3
+MAX_PREMIUM_ARTICLES = 5
 
 # Cost tracker (updated as articles are generated)
 _cost_usd     = 0.0
@@ -756,7 +756,7 @@ def generate_quick_hits_batch(batch: list[dict]) -> list[dict]:
     date_str = today.strftime("%B %d, %Y").replace(" 0", " ")
     now      = datetime.datetime.now()
 
-    # Build a compact brief for each ticker in the batch
+    # Build a rich brief for each ticker in the batch
     briefs = ""
     for i, item in enumerate(batch, 1):
         t      = item["ticker"]
@@ -764,35 +764,87 @@ def generate_quick_hits_batch(batch: list[dict]) -> list[dict]:
         symbol = t["symbol"]
         name   = t.get("name", symbol)
         quote  = mdata["quote"]
-        news   = mdata["news"][:3]
+        news   = mdata["news"][:5]
 
         price_str = f"${quote['c']:.2f} ({quote.get('dp', 0):+.2f}%)" if quote.get("c") else "N/A"
-        headlines = " | ".join(n["headline"] for n in news) if news else "No recent news"
+        prev_close = f"${quote.get('pc', 'N/A')}"
+        week52 = ""
+        metrics = mdata.get("metrics", {})
+        if metrics.get("52WeekHigh") and metrics.get("52WeekLow"):
+            week52 = f"52-wk range: ${metrics['52WeekLow']:.2f}–${metrics['52WeekHigh']:.2f}"
 
-        briefs += f"\n{i}. {symbol} ({name})\n   Price: {price_str}\n   News: {headlines}\n"
+        headlines = "\n   ".join(
+            f"- {n['headline']} ({n.get('source','')})" for n in news
+        ) if news else "No recent news"
 
-    prompt = f"""You are a financial news writer. Write a short quick-hit article (300–400 words each) for EACH of the {len(batch)} stocks below.
+        targets = mdata.get("price_targets", {})
+        target_str = f"Consensus target: ${targets['targetMean']:.2f} ({targets.get('numberOfAnalysts','?')} analysts)" if targets.get("targetMean") else ""
 
-STOCKS:
+        edgar = mdata.get("edgar_8k", [])
+        edgar_str = "; ".join(e.get("title","") for e in edgar[:2]) if edgar else ""
+
+        yf_earnings = mdata.get("yf_earnings", "")
+        yf_ratios   = mdata.get("yf_ratios", "")
+
+        briefs += f"""
+{i}. {symbol} ({name})
+   Price: {price_str} | Prev close: {prev_close} | {week52}
+   {target_str}
+   Recent news:
+   {headlines}
+   {"SEC 8-K filings: " + edgar_str if edgar_str else ""}
+   {"Earnings history: " + yf_earnings if yf_earnings else ""}
+   {"Key ratios: " + yf_ratios if yf_ratios else ""}
+"""
+
+    prompt = f"""You are a financial news writer producing articles for Alpha Stocks Insight.
+
+Write ONE article (400–600 words) for EACH of the {len(batch)} stocks below.
+
+━━ STRUCTURE (mandatory for every article) ━━
+
+1. TITLE: "Company Name (EXCHANGE: TICKER) [Verb] [Key Event]"
+   Example: "UnitedHealth (NYSE: UNH) Beats Q1 Estimates as Premiums Offset Rising Medical Costs"
+
+2. SUB-HEADER line (plain text, not a heading):
+   TICKER • {date_str} • X min read
+
+3. OPENING HOOK (1 paragraph):
+   Lead with the stock's price move and the single most important fact. Include a direct quote from management or analyst if one appears in the news.
+
+4. KEY METRICS section (use heading "## Q[X] 20XX At a Glance" for earnings, or "## By the Numbers" for other events):
+   - 3–4 bullet points with REAL numbers from the data provided (revenue, EPS, guidance, % beat, price target, etc.)
+   - If a number is not in the data, omit that bullet — do NOT invent figures.
+
+5. WHAT DROVE IT (1–2 short paragraphs, heading "## What Drove the Results" or contextually fitting):
+   Explain the WHY with specifics. Attribute to sources. No vague statements.
+
+6. WALL STREET VIEW (1 paragraph, heading "## Wall Street View"):
+   Analyst consensus, price target, rating trend. Omit entirely if no analyst data is available.
+
+7. INVESTOR TAKEAWAY (1 paragraph, heading "## Investor Takeaway"):
+   Concise, useful. Grounded in facts from the data. No speculation.
+
+━━ STRICT QUALITY RULES ━━
+- BANNED phrases: "navigates the shifting landscape", "measured optimism", "bright spot", "ongoing transformation", "resilience in core segments", "remains to be seen", "time will tell", "headwinds", "tailwinds" used vaguely, any other generic business-speak.
+- Short, direct sentences. No repetition of the same idea.
+- Do NOT add disclaimers (added automatically by the site).
+- Do NOT restate the ticker symbol as the very first word of the content.
+- If there is genuinely insufficient data for the full structure, write a shorter "Quick Hit" (200–300 words) with just the hook and key facts — do NOT pad with filler.
+
+━━ STOCKS ━━
 {briefs}
 
-RULES:
-- Direct, factual tone. No hype words.
-- Include current price and day's change.
-- 2–3 short paragraphs + 3 bullet Key Takeaways.
-- Do NOT add disclaimers (added automatically by the site).
-- Do NOT restate the ticker name as the first word of the content.
-
-Return ONLY a valid JSON array with exactly {len(batch)} objects, one per stock:
+Return ONLY a valid JSON array with exactly {len(batch)} objects:
 [
   {{
     "symbol": "TICKER",
-    "title": "Factual headline mentioning ticker, max 80 chars",
-    "teaser": "One sentence summary, max 140 chars",
+    "title": "Headline per format above, max 100 chars",
+    "teaser": "One sharp sentence summary, max 140 chars",
     "category": "Stock Analysis",
     "tags": ["tag1", "tag2", "tag3"],
-    "readTime": "2 min read",
-    "content": "Full markdown content, 300-400 words"
+    "readTime": "3 min read",
+    "content": "Full markdown article, 400-600 words (or 200-300 word Quick Hit if data is thin)"
   }}
 ]"""
 
@@ -800,7 +852,7 @@ Return ONLY a valid JSON array with exactly {len(batch)} objects, one per stock:
     try:
         message = client.messages.create(
             model=MODEL_QUICK_HIT,
-            max_tokens=4000,
+            max_tokens=6000,
             messages=[{"role": "user", "content": prompt}],
         )
         track_usage(MODEL_QUICK_HIT, message.usage.input_tokens, message.usage.output_tokens)
@@ -1328,33 +1380,4 @@ def main():
             print(f"   ✓  {sym}: \"{article['title']}\"")
 
     # ── DAILY ROUNDUP (Haiku, covers top tickers) ─────────────
-    today_slug = f"roundup-{datetime.date.today().strftime('%Y-%m-%d')}"
-    roundup_exists = any(a.get("slug") == today_slug for a in existing)
-    if not roundup_exists and len(enriched) >= 3:
-        print(f"\n── [ROUNDUP] Today's highlights ({min(8, len(enriched))} tickers)")
-        roundup = generate_roundup(enriched)
-        if roundup:
-            existing.insert(0, roundup)
-            new_count += 1
-            print(f"   ✓  \"{roundup['title']}\"")
-
-    if new_count == 0:
-        print("\nNo new articles were added (no new news or all duplicates).")
-    else:
-        save_articles(existing)
-        print(f"\n✅  {new_count} new article(s) added to data/articles.json")
-        print(f"\nNext step — publish to your site:")
-        print(f'   git add . && git commit -m "Add {new_count} AI-generated articles" && git push\n')
-
-    # ── Cost summary ──────────────────────────────────────────
-    print(f"━━ Cost Summary ━━")
-    print(f"   Articles generated : {new_count}")
-    print(f"   Tokens used        : {_tokens_in:,} in / {_tokens_out:,} out")
-    print(f"   Estimated cost     : ${_cost_usd:.4f} USD")
-    if new_count > 0:
-        print(f"   Cost per article   : ${_cost_usd / new_count:.4f} USD")
-    print()
-
-
-if __name__ == "__main__":
-    main()
+    today_slug = f"roundup-{datetime.date.today().strf
