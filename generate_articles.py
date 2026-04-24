@@ -784,7 +784,12 @@ def generate_quick_hits_batch(batch: list[dict]) -> list[dict]:
         edgar_str = "; ".join(e.get("title","") for e in edgar[:2]) if edgar else ""
 
         yf_earnings = mdata.get("yf_earnings", "")
-        yf_ratios   = mdata.get("yf_ratios", "")
+        # yf_ratios may be a dict or a string — normalise to string
+        yf_ratios_raw = mdata.get("yf_ratios", "")
+        if isinstance(yf_ratios_raw, dict):
+            yf_ratios = "; ".join(f"{k}: {v}" for k, v in yf_ratios_raw.items() if v)
+        else:
+            yf_ratios = str(yf_ratios_raw) if yf_ratios_raw else ""
 
         briefs += f"""
 {i}. {symbol} ({name})
