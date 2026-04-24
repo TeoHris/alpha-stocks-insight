@@ -1380,4 +1380,33 @@ def main():
             print(f"   ✓  {sym}: \"{article['title']}\"")
 
     # ── DAILY ROUNDUP (Haiku, covers top tickers) ─────────────
-    today_slug = f"roundup-{datetime.date.today().strf
+    today_slug = f"roundup-{datetime.date.today().strftime('%Y-%m-%d')}"
+    roundup_exists = any(a.get("slug") == today_slug for a in existing)
+    if not roundup_exists and len(enriched) >= 3:
+        print(f"\n── [ROUNDUP] Today's highlights ({min(8, len(enriched))} tickers)")
+        roundup = generate_roundup(enriched)
+        if roundup:
+            existing.insert(0, roundup)
+            new_count += 1
+            print(f"   ✓  \"{roundup['title']}\"")
+
+    if new_count == 0:
+        print("\nNo new articles were added (no new news or all duplicates).")
+    else:
+        save_articles(existing)
+        print(f"\n✅  {new_count} new article(s) added to data/articles.json")
+        print(f"\nNext step — publish to your site:")
+        print(f'   git add . && git commit -m "Add {new_count} AI-generated articles" && git push\n')
+
+    # ── Cost summary ──────────────────────────────────────────
+    print(f"━━ Cost Summary ━━")
+    print(f"   Articles generated : {new_count}")
+    print(f"   Tokens used        : {_tokens_in:,} in / {_tokens_out:,} out")
+    print(f"   Estimated cost     : ${_cost_usd:.4f} USD")
+    if new_count > 0:
+        print(f"   Cost per article   : ${_cost_usd / new_count:.4f} USD")
+    print()
+
+
+if __name__ == "__main__":
+    main()
