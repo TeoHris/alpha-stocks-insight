@@ -846,7 +846,7 @@ Return ONLY a valid JSON array with exactly {len(batch)} objects:
     "symbol": "TICKER",
     "title": "Headline per format above, max 100 chars",
     "teaser": "One sharp sentence summary, max 140 chars",
-    "category": "Stock Analysis",
+    "category": "<choose ONE: Earnings Report | Stock Analysis | Technology | Health Care | Financials | Industrials | Consumer | Energy | Real Estate | Communication Services | Materials — use 'Earnings Report' if the article is about quarterly/annual results, otherwise pick the most relevant sector or 'Stock Analysis'>",
     "tags": ["tag1", "tag2", "tag3"],
     "readTime": "3 min read",
     "content": "Full markdown article, 400-600 words (or 200-300 word Quick Hit if data is thin)"
@@ -1141,10 +1141,16 @@ def score_ticker(symbol: str) -> dict:
         reasons.append(f"{len(fresh_news)} fresh article(s) today")
 
     # Score 2: high-signal keywords — ONLY in fresh headlines
+    # Cap keyword contribution for tickers with near-zero price moves to avoid
+    # mega-caps with routine earnings coverage inflating their score (e.g. GOOGL -0.1%)
     fresh_headlines = " ".join(i.get("headline", "").lower() for i in fresh_news)
     matched = [kw for kw in HIGH_SIGNAL_KEYWORDS if kw in fresh_headlines]
     if matched:
-        score += len(matched) * 2
+        raw_keyword_score = len(matched) * 2
+        # If price barely moved, cap keyword contribution at 8 pts (4 keywords worth)
+        if price_chg is not None and abs(price_chg) < 1.0:
+            raw_keyword_score = min(raw_keyword_score, 8)
+        score += raw_keyword_score
         reasons.append(f"keywords: {', '.join(matched[:4])}")
 
     # Score 3: significant price move today (objective, timestamp-independent)
