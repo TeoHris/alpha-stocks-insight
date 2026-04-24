@@ -627,11 +627,7 @@ BANNED WORDS — never use:
 
 STRUCTURE — follow this exact flow, in this order:
 
-1. FIRST LINE of the content (always):
-   **{exchange}: {symbol}** · {date_str} · [estimated read time, e.g. "2 min read"]
-   This is a metadata line. No heading, no bold title — just this one line.
-
-2. OPENING PARAGRAPH (2–3 sentences, no heading):
+1. OPENING PARAGRAPH (2–3 sentences, no heading):
    Lead with the single most important fact and the stock's reaction. Follow immediately with
    what drove it. No throat-clearing ("In a release today…", "The company announced…").
 
@@ -811,10 +807,7 @@ Write ONE article (400–600 words) for EACH of the {len(batch)} stocks below.
 1. TITLE: "Company Name (EXCHANGE: TICKER) [Verb] [Key Event]"
    Example: "UnitedHealth (NYSE: UNH) Beats Q1 Estimates as Premiums Offset Rising Medical Costs"
 
-2. SUB-HEADER line (plain text, not a heading):
-   TICKER • {date_str} • X min read
-
-3. OPENING HOOK (1 paragraph):
+2. OPENING HOOK (1 paragraph):
    Lead with the stock's price move and the single most important fact. Include a direct quote from management or analyst if one appears in the news.
 
 4. KEY METRICS section (use heading "## Q[X] 20XX At a Glance" for earnings, or "## By the Numbers" for other events):
