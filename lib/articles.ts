@@ -65,13 +65,11 @@ export function searchArticles(query: string): Article[] {
   )
 }
 
-/** Return trending articles (top N by recency + featured flag) */
+/** Return trending articles (top N by recency, excluding daily roundups) */
 export function getTrendingArticles(limit = 8): Article[] {
-  const all = getAllArticles()
-  // Featured articles first, then newest
-  const featured = all.filter((a) => a.featured)
-  const rest = all.filter((a) => !a.featured)
-  return [...featured, ...rest].slice(0, limit)
+  const all = getAllArticles().filter((a) => !a.slug.startsWith('roundup-'))
+  // Simply return the most recent articles — no featured pinning
+  return all.slice(0, limit)
 }
 
 /**
