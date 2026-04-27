@@ -48,10 +48,8 @@ export default async function StockInsightsPage({
     ? byCategory.filter((a) => {
         const q = searchQuery.toLowerCase()
         const inTitle   = a.title.toLowerCase().includes(q)
-        const inTickers = a.tickers.some(
-          (t) =>
-            t.symbol.toLowerCase().includes(q) ||
-            (t.name ?? '').toLowerCase().includes(q)
+        const inTickers = a.tickers.some((t) =>
+          t.symbol.toLowerCase().includes(q)
         )
         const inTags = (a.tags ?? []).some((tag) => tag.toLowerCase().includes(q))
         return inTitle || inTickers || inTags
