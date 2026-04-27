@@ -29,16 +29,34 @@ const CATEGORIES = [
 export default async function StockInsightsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ cat?: string }>
+  searchParams: Promise<{ cat?: string; q?: string }>
 }) {
-  const { cat } = await searchParams
+  const { cat, q } = await searchParams
   const activeCategory = cat && CATEGORIES.includes(cat) ? cat : 'All'
+  const searchQuery = q?.trim() ?? ''
 
   const allArticles = getAllArticles()
-  const articles =
+
+  // Apply category filter first
+  const byCategory =
     activeCategory === 'All'
       ? allArticles
       : allArticles.filter((a) => a.sectors?.includes(activeCategory))
+
+  // Apply search filter if a query is present
+  const articles = searchQuery
+    ? byCategory.filter((a) => {
+        const q = searchQuery.toLowerCase()
+        const inTitle   = a.title.toLowerCase().includes(q)
+        const inTickers = a.tickers.some(
+          (t) =>
+            t.symbol.toLowerCase().includes(q) ||
+            (t.name ?? '').toLowerCase().includes(q)
+        )
+        const inTags = (a.tags ?? []).some((tag) => tag.toLowerCase().includes(q))
+        return inTitle || inTickers || inTags
+      })
+    : byCategory
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
@@ -49,9 +67,16 @@ export default async function StockInsightsPage({
           <BarChart2 size={24} className="text-blue-600 dark:text-blue-400" />
           <h1 className="text-2xl font-black text-gray-900 dark:text-white">Stock Insights</h1>
         </div>
-        <p className="text-gray-600 dark:text-gray-400">
-          AI-powered stock news and analysis across NYSE and NASDAQ, newest first.
-        </p>
+        {searchQuery ? (
+          <p className="text-gray-600 dark:text-gray-400">
+            Showing results for <span className="font-semibold text-gray-900 dark:text-white">&ldquo;{searchQuery}&rdquo;</span>
+            {' '}— <a href="/stock-insights" className="text-blue-600 dark:text-blue-400 hover:underline">clear search</a>
+          </p>
+        ) : (
+          <p className="text-gray-600 dark:text-gray-400">
+            AI-powered stock news and analysis across NYSE and NASDAQ, newest first.
+          </p>
+        )}
       </div>
 
       {/* ── AD #1 ── */}
@@ -59,33 +84,35 @@ export default async function StockInsightsPage({
         <AdPlaceholder size="728x90" label="Stock Insights Top (728×90)" />
       </div>
 
-      {/* ── Category filter chips ── */}
-      <div className="flex gap-2 flex-wrap mb-6">
-        {CATEGORIES.map((cat) => {
-          const isActive = cat === activeCategory
-          const href = cat === 'All' ? '/stock-insights' : `/stock-insights?cat=${encodeURIComponent(cat)}`
-          return (
-            <a
-              key={cat}
-              href={href}
-              className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors ${
-                isActive
-                  ? 'bg-blue-700 border-blue-700 text-white dark:bg-blue-600 dark:border-blue-600'
-                  : 'bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-blue-50 dark:hover:bg-blue-950 hover:text-blue-700 dark:hover:text-blue-300 hover:border-blue-300 dark:hover:border-blue-700'
-              }`}
-            >
-              {cat}
-            </a>
-          )
-        })}
-      </div>
+      {/* ── Category filter chips (hidden during search) ── */}
+      {!searchQuery && (
+        <div className="flex gap-2 flex-wrap mb-6">
+          {CATEGORIES.map((cat) => {
+            const isActive = cat === activeCategory
+            const href = cat === 'All' ? '/stock-insights' : `/stock-insights?cat=${encodeURIComponent(cat)}`
+            return (
+              <a
+                key={cat}
+                href={href}
+                className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors ${
+                  isActive
+                    ? 'bg-blue-700 border-blue-700 text-white dark:bg-blue-600 dark:border-blue-600'
+                    : 'bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-blue-50 dark:hover:bg-blue-950 hover:text-blue-700 dark:hover:text-blue-300 hover:border-blue-300 dark:hover:border-blue-700'
+                }`}
+              >
+                {cat}
+              </a>
+            )
+          })}
+        </div>
+      )}
 
       {/* ── Article List ── */}
       <div className="flex flex-col lg:flex-row gap-6">
         <div className="flex-1 min-w-0">
           {articles.length === 0 ? (
             <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-5 py-10 text-center text-gray-500 dark:text-gray-400">
-              No articles in this category yet.
+              {searchQuery ? `No articles found for "${searchQuery}".` : 'No articles in this category yet.'}
             </div>
           ) : (
             <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-5 divide-y divide-gray-100 dark:divide-gray-800">
