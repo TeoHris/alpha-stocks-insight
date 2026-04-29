@@ -621,6 +621,15 @@ FACTUAL INTEGRITY:
 - Never invent, estimate, or extrapolate numbers not present in the data above.
 - If there is no concrete event to report (no results, no announcement, no material news), return "NO_STORY" in the title field.
 
+FINANCIAL PRECISION — mandatory:
+- Never write "earnings" as a standalone noun. Always specify the exact metric:
+  EPS (earnings per share), net income, operating income, EBIT, EBITDA, or gross profit.
+  ✗ "earnings beat" → ✓ "EPS of $1.42 beat the $1.31 consensus"
+  ✗ "earnings growth" → ✓ "net income grew 18% year-over-year to $2.1B"
+  ✗ "earnings acceleration" → ✓ "operating income expanded 220 bps to $890M"
+- Same rule applies to "revenue" — always include the actual figure and YoY change if available.
+- If the specific metric is not in the data provided, omit the claim entirely.
+
 BANNED WORDS — never use:
 "soaring", "surging", "skyrocketing", "explosive", "massive", "game-changer",
 "revolutionary", "stunning", "blockbuster", "crushing it", "blowout", "monster"
@@ -824,6 +833,12 @@ Write ONE article (400–600 words) for EACH of the {len(batch)} stocks below.
    Concise, useful. Grounded in facts from the data. No speculation.
 
 ━━ STRICT QUALITY RULES ━━
+- FINANCIAL PRECISION — never write "earnings" as a standalone noun. Always specify the exact metric:
+  EPS (earnings per share), net income, operating income, EBIT, EBITDA, or gross profit.
+  ✗ "earnings beat" → ✓ "EPS of $1.42 beat the $1.31 consensus"
+  ✗ "earnings growth" → ✓ "net income grew 18% year-over-year to $2.1B"
+  ✗ "earnings acceleration" → ✓ "operating income expanded to $890M"
+  If the specific figure is not in the data, omit the claim — do not guess.
 - BANNED phrases: "navigates the shifting landscape", "measured optimism", "bright spot", "ongoing transformation", "resilience in core segments", "remains to be seen", "time will tell", "headwinds", "tailwinds" used vaguely, any other generic business-speak.
 - Short, direct sentences. No repetition of the same idea.
 - Do NOT add disclaimers (added automatically by the site).
