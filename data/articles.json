@@ -1,6 +1,522 @@
 [
   {
     "id": 1,
+    "slug": "roundup-2026-04-30",
+    "title": "Today's Top Stock Highlights — April 30, 2026",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:21 PM ET",
+    "dateISO": "2026-04-30T13:21:46Z",
+    "teaser": "A roundup of today's most significant stock moves and news across the market.",
+    "content": "## Today's Top Stock Highlights — April 30, 2026\n\n**AAPL (Apple Inc.) — $270.17 (-0.20%)**\n\nApple shares held relatively steady as investors digested the company's earnings report, which centered on iPhone demand trends and its artificial intelligence strategy heading into the second half of 2026. The tech giant's results come amid a broader rally in big tech equities, with US equity futures climbing on the back of favorable Fed rate expectations. Market analysts are keenly watching how Apple's AI initiatives will drive future growth, particularly as the company seeks to differentiate its product ecosystem. The modest decline suggests cautious investor sentiment despite solid headline numbers.\n\n**AJG (Arthur J. Gallagher & Co.) — $211.81 (-0.75%)**\n\nArthur J. Gallagher & Co. announced its regular second quarter dividend while the insurance and risk management firm prepares to report first quarter earnings. Investors took a slight step back from the stock today, though attention remains on the company's Q1 performance metrics and forward guidance. The dividend announcement underscores management's confidence in cash generation and shareholder returns despite an uncertain economic backdrop. Upcoming earnings could provide clarity on premium growth and organic expansion in the brokerage segment.\n\n**AME (AMETEK Inc.) — $227.87 (-0.47%)**\n\nAMETEK shares edged higher following a record first quarter beat and raised full-year guidance, signaling robust demand across its instrumentation and specialty electronics divisions. The company also announced an agreement to acquire First Aviation Services, a strategic move aimed at strengthening its aerospace and defense capabilities. Despite the positive developments, the stock's minimal upward movement suggests investors may have already priced in the strong results. The acquisition diversifies AMETEK's revenue streams and positions the company well for ongoing defense sector momentum.\n\n**AMGN (Amgen Inc.) — $338.02 (-0.46%)**\n\nAmgen shares declined modestly as the pharmaceutical heavyweight prepared to report first quarter 2026 results, with investors balancing near-term earnings expectations against broader macroeconomic data points including March PCE inflation, Q1 GDP, and mortgage rate movements. The company's portfolio of legacy and newer therapies will be scrutinized for revenue growth and pipeline progress. Today's slight pullback reflects typical pre-earnings caution, though Amgen's defensive characteristics have supported its valuation amid market volatility. The earnings report tomorrow will be critical for addressing investor concerns about near-term growth drivers.\n\n**AOS (A. O. Smith Corporation) — $63.68 (-0.36%)**\n\nA. O. Smith shares retreated modestly after the water heating and treatment equipment manufacturer missed first quarter earnings estimates and lowered full-year guidance amid faltering sales. The company's revenue fell short of forecasts, signaling softening demand in both residential and commercial segments. Management attributed the disappointment to challenging market conditions that are expected to persist, prompting conservative full-year outlooks. The guidance cut is likely to weigh on sentiment until the company demonstrates stabilization in its core markets.\n\n**BBIO (BridgeBio Pharma Inc.) — $70.94 (+1.76%)**\n\nBridgeBio Pharma gained ground today as the specialty pharma company prepares to report first quarter 2026 financial results on May 7, with early momentum building around Attruby's commercial performance. The stock's strength reflects growing investor conviction in the company's pipeline and the potential for Attruby to become a significant revenue driver. The upcoming earnings call will offer critical updates on prescription volumes and market adoption of its key therapeutic asset. BridgeBio's positive trajectory suggests the bull case is gaining credibility in the market.\n\n**BLDR (Builders FirstSource Inc.) — $83.38 (-5.38%)**\n\nBuilders FirstSource shares dropped sharply today despite mixed earnings results, as the building materials supplier missed earnings per share estimates even while beating revenue expectations in first quarter 2026. The disconnect between top-line performance and profitability metrics suggests margin pressures that may reflect input cost inflation or promotional intensity in the housing supply chain. The significant selloff indicates investors are concerned about earnings quality and future profitability, even as housing demand remains resilient. Management commentary on margins and competitive positioning will be closely watched by shareholders.\n\n**BMY (Bristol-Myers Squibb Company) — $57.59 (-1.15%)**\n\nBristol-Myers Squibb shares declined slightly despite beating first quarter 2026 earnings estimates, driven by strong performance from its growth portfolio and pipeline momentum. The company maintained its full-year guidance, offering investors visibility into near-term expectations. The mild pullback may reflect profit-taking after recent strength or cautious sentiment ahead of a potentially busy pharma earnings season. Bristol-Myers continues to execute on its portfolio transformation strategy, positioning itself for sustainable long-term growth.\n\n### Key Takeaways\n\n• **AAPL**: Apple's steady stock performance reflects balanced investor sentiment on iPhone demand and AI strategy, with futures support from broader tech strength offsetting modest earnings-related uncertainty.\n\n• **AJG**: Arthur J. Gallagher's dividend announcement underscores shareholder-friendly capital allocation ahead of Q1 earnings that will validate organic growth assumptions.\n\n• **AME**: AMETEK's record quarter and First Aviation acquisition demonstrate strong operational momentum and strategic vision, though the stock suggests further upside may require execution clarity.\n\n• **AMGN**: Amgen faces the typical pre-earnings caution as macro data and earnings expectations collide, with tomorrow's results critical for validating the pharmaceutical thesis.\n\n• **AOS**: A. O. Smith's missed estimates and lowered guidance signal demand softness that likely persists, warranting cautious positioning until stabilization emerges.\n\n• **BBIO**: BridgeBio's upside momentum reflects growing confidence in Attruby's commercial trajectory and the investment thesis for specialty pharma.\n\n• **BLDR**: Builders FirstSource's sharp decline highlights investor concern over margin deterioration despite revenue growth, signaling potential headwinds in housing supply chain profitability.\n\n• **BMY**: Bristol-Myers Squibb's beat and guidance maintenance provide near-term reassurance, though the stock's modest decline suggests investors await clarity on sustainable growth drivers.",
+    "tickers": [
+      {
+        "exchange": "NASDAQ",
+        "symbol": "AAPL"
+      },
+      {
+        "exchange": "NYSE",
+        "symbol": "AJG"
+      },
+      {
+        "exchange": "NYSE",
+        "symbol": "AME"
+      },
+      {
+        "exchange": "NASDAQ",
+        "symbol": "AMGN"
+      },
+      {
+        "exchange": "NYSE",
+        "symbol": "AOS"
+      },
+      {
+        "exchange": "NASDAQ",
+        "symbol": "BBIO"
+      },
+      {
+        "exchange": "NYSE",
+        "symbol": "BLDR"
+      },
+      {
+        "exchange": "NYSE",
+        "symbol": "BMY"
+      }
+    ],
+    "category": "Stock Analysis",
+    "featured": false,
+    "readTime": "4 min read",
+    "tags": [
+      "market roundup",
+      "daily highlights",
+      "April 30, 2026"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "dte-dte-energy-nyse-dte-posts-q1-2026-earnings-miss-amid-strong-",
+    "title": "DTE Energy (NYSE: DTE) Posts Q1 2026 Earnings Miss Amid Strong Capital Investment",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:21 PM ET",
+    "dateISO": "2026-04-30T13:21:06Z",
+    "teaser": "DTE slipped 1.04% after Q1 EPS miss, though heavy infrastructure spending and revenue growth offer longer-term upside.",
+    "content": "DTE Energy Company (NYSE: DTE) posted a first-quarter 2026 earnings miss despite accelerating revenue growth and record capital investments in grid modernization and renewable energy infrastructure, with shares declining 1.04% to $147.03 as the market repriced near-term profitability expectations.\n\nThe Detroit-based utility reported lower-than-expected EPS while simultaneously announcing record capital deployment toward distribution system upgrades and renewable generation assets. Management's forward guidance emphasized multi-year earnings growth potential as rate base expansion and infrastructure investment returns offset current-period margin compression from elevated labor and material costs.\n\n## Q1 2026 At a Glance\n\n- **Revenue Growth:** 28.9% year-over-year expansion from rate increases, customer growth, and full-period contributions from recent acquisitions or regulatory approvals\n- **EPS Growth:** 25.5% year-over-year earnings expansion, but Q1 results missed consensus, signaling execution or timing issues versus forward expectations\n- **Operating Margin:** 15.92%, reflecting disciplined cost management but pressured by elevated labor inflation and material input costs\n- **Valuation:** Trading at 20.91x trailing P/E and 17.61x forward P/E, pricing in recovery from current miss to sustainable earnings growth\n\n## What Drove the Results\n\nDTE's strong revenue growth reflects successful regulatory rate case outcomes across Michigan and other jurisdictions, granting recovery for prior-period infrastructure investments and allowing cost-of-service rate adjustments. The utility also benefited from customer growth and full-period integration of recently acquired generation assets.\n\nHowever, Q1 EPS missed consensus due to timing of capital expenditure deferrals, higher-than-expected operating costs related to grid modernization projects, and labor-related expenses tied to union contract settlements and workforce inflation. The company's aggressive capital spending program—designed to advance toward net-zero emissions targets and improve system resilience—pressured near-term profitability.\n\nManagement emphasized that 2026 capital investment of approximately $7+ billion is essential to maintain rate base growth momentum and support future earnings accretion, signaling that current-quarter pressure is temporary and reflects near-term investment cycle dynamics.\n\n## Wall Street View\n\nUtility analysts have acknowledged DTE's miss but remain constructive on the multi-year earnings growth trajectory, citing supportive regulatory environments and essential infrastructure spending. The forward P/E of 17.61x appears reasonable given 25%+ near-term EPS growth if management executes on capital deployment and achieves projected rate recovery.\n\n## Investor Takeaway\n\nDTE's Q1 miss is disappointing in isolation but appears tactical rather than strategic; near-term margin compression from elevated costs and capex timing should reverse as rate recovery materializes and inflation moderates. Income investors seeking utility exposure with earnings growth should wait for confirmation in Q2 that management is achieving guidance targets before adding. Existing shareholders should hold and monitor subsequent quarterly results for evidence that the company is navigating labor costs and capex execution successfully.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "DTE"
+      }
+    ],
+    "category": "Earnings Report",
+    "sectors": [
+      "Earnings Report",
+      "Utilities"
+    ],
+    "featured": false,
+    "readTime": "4 min read",
+    "tags": [
+      "Utilities",
+      "Q1 2026",
+      "Capital Investment",
+      "Earnings Miss"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "ctmx-cytomx-therapeutics-nasdaq-ctmx-to-report-q1-2026-results-on",
+    "title": "CytomX Therapeutics (NASDAQ: CTMX) to Report Q1 2026 Results on May 7",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:21 PM ET",
+    "dateISO": "2026-04-30T13:21:06Z",
+    "teaser": "CytomX slipped 1.70% ahead of May 7 earnings announcement; biotech faces revenue collapse and mounting losses.",
+    "content": "CytomX Therapeutics Inc. (NASDAQ: CTMX) declined 1.70% to $4.05 as investors await the company's first-quarter 2026 financial results announcement scheduled for May 7, 2026. The clinical-stage immuno-oncology company faces structural challenges reflected in recent financial metrics.\n\n## By the Numbers\n\n- **Market Capitalization:** $875.5 million, down sharply from historical peaks as clinical programs face competitive pressure\n- **Revenue Collapse:** Revenue contracted 98.3% year-over-year, indicating discontinued commercialization or milestone recognition in prior periods\n- **Net Loss Expansion:** Operating margin of -37.9% reflects R&D spending without offsetting revenue; net loss margin of -22.79% signals mounting cash burn\n- **Valuation:** Forward P/E of -8.56x is meaningless due to negative earnings; stock trading on cash runway and clinical trial milestone risk\n\n## What Drove the Deterioration\n\nCytomX's revenue implosion reflects the termination or non-renewal of earlier-stage partnerships and the absence of commercialized products generating meaningful top-line revenue. The company remains in development mode, burning cash on immunotherapy programs without near-term revenue catalysts.\n\nOperating losses indicate R&D spending has not been curtailed despite revenue collapse, suggesting management is prioritizing clinical advancement over breakeven operations. This is typical for immuno-oncology biotechs with promising pipelines but currently reflects unsustainable cash burn.\n\n## Investor Takeaway\n\nCytomX is a pure clinical-stage bet with no material revenues and significant quarterly cash burn. The May 7 earnings call will likely focus on pipeline advancement, cash runway, and potential partnership or financing options rather than near-term profitability. This stock is appropriate only for risk-tolerant investors who believe the company's checkpoint inhibitor technology can generate clinical wins and attract partnership interest. Conservative investors should avoid until the company demonstrates clinical validation or secures strategic partnerships with established pharma.",
+    "tickers": [
+      {
+        "exchange": "NASDAQ",
+        "symbol": "CTMX"
+      }
+    ],
+    "category": "Stock Analysis",
+    "sectors": [
+      "Health Care",
+      "Stock Analysis"
+    ],
+    "featured": false,
+    "readTime": "3 min read",
+    "tags": [
+      "Biotechnology",
+      "Clinical Stage",
+      "Losses",
+      "Upcoming Earnings"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "cop-conocophillips-nyse-cop-beats-q1-estimates-but-cuts-guidance",
+    "title": "ConocoPhillips (NYSE: COP) Beats Q1 Estimates but Cuts Guidance on Qatar Uncertainty",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:21 PM ET",
+    "dateISO": "2026-04-30T13:21:06Z",
+    "teaser": "COP rose 3.16% on Q1 beat but slashed full-year guidance citing geopolitical disruptions to Qatar LNG operations.",
+    "content": "ConocoPhillips (NYSE: COP) delivered a first-quarter 2026 earnings beat but immediately trimmed full-year guidance due to operational uncertainty stemming from geopolitical disruptions affecting its Qatar liquefied natural gas portfolio, sending shares 3.16% higher to $128.25 as energy traders sorted conflicting signals.\n\nThe independent oil and gas producer topped consensus estimates on stronger-than-expected refining margins and higher realized prices for crude and liquids during the quarter. However, management signaled that escalating regional tensions and potential sanctions risks in the Middle East pose material downside to production and export capacity, prompting a cautious outlook revision.\n\n## Q1 2026 At a Glance\n\n- **Earnings Per Share Beat:** Topped first-quarter consensus as crude prices held elevated and refining margins improved sequentially\n- **Profit Margin:** 13.25% demonstrates pricing power in tight energy markets, though operating leverage faces headwinds from geopolitical uncertainty\n- **Full-Year Guidance Cut:** Company reduced 2026 production and earnings outlook, citing Iran war disruptions and Qatar LNG export risks\n- **Revenue Decline:** Revenue contracted 6.8% year-over-year as lower volumes partially offset higher commodity prices\n\n## What Drove the Results\n\nFirst-quarter results benefited from an extended period of crude oil strength above $80 per barrel and robust European natural gas pricing. Refining operations in California and the Gulf Coast captured wide margin spreads as global supply tightened amid geopolitical instability.\n\nEarnings per share fell 39% year-over-year, however, as the company took charges related to potential asset impairments in troubled regions and accelerated depreciation schedules for Qatar-exposed infrastructure. Management acknowledged that the Iran conflict has disrupted logistics and raised insurance costs for Middle East operations, while uncertainty over Qatar's geopolitical alignment with OPEC created production contingency planning expenses.\n\nThe guidance cut signals management expects these headwinds to persist throughout 2026, pressuring full-year production volumes and free cash flow generation.\n\n## Wall Street View\n\nAnalysts commend ConocoPhillips' operational discipline but acknowledge the company's significant exposure to Middle Eastern geopolitical risk at an inopportune time. The 20.2x trailing P/E reflects cautious sentiment despite strong near-term crude fundamentals, as investors demand a risk discount for Qatar operations.\n\n## Investor Takeaway\n\nConocoPhillips' Q1 beat is partially offset by the forward-looking guidance cut, creating a timing dilemma for investors. Energy traders seeking commodity upside should wait for clearer geopolitical resolution in the Middle East before adding exposure. Existing shareholders should monitor quarterly production reports for evidence that disruptions are temporary and management can restore previous full-year targets by year-end.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "COP"
+      }
+    ],
+    "category": "Earnings Report",
+    "sectors": [
+      "Earnings Report",
+      "Energy"
+    ],
+    "featured": false,
+    "readTime": "4 min read",
+    "tags": [
+      "Energy",
+      "Q1 2026",
+      "Guidance Cut",
+      "Geopolitics"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "ci-cigna-nyse-ci-beats-q1-estimates-on-evernorth-strength-raise",
+    "title": "Cigna (NYSE: CI) Beats Q1 Estimates on Evernorth Strength, Raises Full-Year Guidance",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:21 PM ET",
+    "dateISO": "2026-04-30T13:21:06Z",
+    "teaser": "Cigna surged 2.60% after Q1 EPS beat and full-year guidance hike, driven by robust Evernorth healthcare services performance.",
+    "content": "Cigna Group (NYSE: CI) posted a strong first-quarter 2026 earnings beat and immediately raised full-year guidance, powering a 2.60% rally to $292.32 as investors rewarded the insurer's diversified healthcare services growth and operational momentum.\n\nThe health insurance and pharmacy benefits conglomerate exceeded consensus expectations on the back of accelerating performance in its Evernorth health services division, which has become the company's growth engine through integrated medical, pharmacy, and behavioral health offerings. First-quarter revenue topped analyst estimates, while cost management initiatives preserved profitability.\n\n## Q1 2026 At a Glance\n\n- **Revenue Growth:** 10.4% year-over-year, reflecting strong premium and service revenue across medical and pharmacy lines\n- **Operating Margin:** 3.53%, driven by disciplined claims management and administrative cost controls\n- **Full-Year Guidance Raise:** Company raised 2026 outlook, signaling confidence in sustained momentum through year-end\n- **Valuation:** Trading at 13.17x trailing P/E and 8.75x forward P/E, a discount to historical averages\n\n## What Drove the Results\n\nEvernorth delivered outsized contribution growth, with demand for integrated healthcare solutions from employers and government payors accelerating. The division's ability to manage care costs while improving member outcomes attracted new contract wins and retention, offsetting competitive pricing pressure in core medical underwriting.\n\nPharmacy services benefited from scale efficiencies and specialty drug adoption, while medical loss ratios improved as the company's data analytics and care coordination tools reduced unnecessary utilization. Administrative expenses declined as a percentage of revenue, reflecting operational leverage from digital transformation investments.\n\nEarnings per share growth contracted 9.3% year-over-year, but management's decision to raise full-year guidance signals confidence that Q1 represents a sustainable run-rate rather than a one-time benefit.\n\n## Wall Street View\n\nAnalysts view Cigna's Evernorth expansion as a durable competitive advantage in an increasingly consolidated healthcare services market. The forward P/E of 8.75x is trading below the managed care peer group, suggesting limited growth expectations are priced in—leaving upside if the company continues to execute. Ratings have tilted positive on visibility into full-year achievement.\n\n## Investor Takeaway\n\nCigna's Q1 beat and guidance raise validate management's strategy to pivot away from pure insurance underwriting toward higher-margin health services. The stock's attractive forward valuation combined with confirmed earnings momentum makes it a credible candidate for disciplined value investors. Monitor Evernorth's contract win-rate and medical loss ratios in coming quarters to confirm the guidance raise is achievable.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "CI"
+      }
+    ],
+    "category": "Earnings Report",
+    "sectors": [
+      "Earnings Report",
+      "Health Care"
+    ],
+    "featured": false,
+    "readTime": "4 min read",
+    "tags": [
+      "Health Care",
+      "Q1 2026",
+      "Guidance Raise",
+      "Evernorth"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "cat-caterpillar-nyse-cat-crushes-q1-estimates-as-ai-power-demand",
+    "title": "Caterpillar (NYSE: CAT) Crushes Q1 Estimates as AI Power Demand Drives Record Sales",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:21 PM ET",
+    "dateISO": "2026-04-30T13:21:06Z",
+    "teaser": "CAT delivered record Q1 sales fueled by AI infrastructure demand, though stock dipped 0.96% as market digests results.",
+    "content": "Caterpillar Inc. (NYSE: CAT) posted record first-quarter sales driven by surging demand for power equipment tied to artificial intelligence infrastructure buildouts, though shares slipped 0.96% to $810.05 as investors weighed the blowout results against macroeconomic uncertainty.\n\nThe equipment maker crushed first-quarter consensus estimates on the back of robust order flow from data center operators and cloud service providers seeking reliable power generation for AI compute clusters. Revenue expanded 18% year-over-year, significantly outpacing typical growth rates for the company's mature end markets.\n\n## By the Numbers\n\n- **Revenue Growth:** 18% year-over-year expansion driven by AI infrastructure and energy transition investments\n- **Profit Margin:** 13.14% net profit margin reflects strong operational execution and pricing power\n- **Operating Margin:** 16.03% demonstrates disciplined cost management amid elevated production volumes\n- **Valuation:** Trading at 43.1x trailing P/E and 28.95x forward P/E, pricing in significant future growth expectations\n\n## What Drove the Results\n\nThe first quarter benefited from exceptional demand across Caterpillar's energy and power systems division, where AI data center operators are deploying backup power solutions and microgrids to support continuous operations. Global energy transition initiatives also bolstered sales of excavation and material handling equipment used in renewable energy projects and critical mineral mining.\n\nDespite the strong top-line performance, earnings per share growth contracted 11.4% year-over-year, signaling that cost pressures and elevated commodity input prices partially offset revenue gains. Supply chain normalization and labor cost inflation across manufacturing facilities weighed on margin expansion.\n\n## Wall Street View\n\nAnalysts have praised Caterpillar's exposure to structural AI infrastructure spending, citing the company's dominant position in backup power and modular generation systems as a multi-year tailwind. However, the elevated forward P/E multiple of 28.95x reflects lofty expectations already priced into the stock, leaving limited room for guidance misses.\n\n## Investor Takeaway\n\nCaterpillar's record Q1 results validate thesis around AI-driven infrastructure spending, but investors should monitor whether the company can sustain these growth rates beyond 2026 as data center buildouts normalize. The stock's valuation warrants a wait-and-see approach until management clarifies full-year guidance and provides visibility on order pipeline sustainability. Current shareholders may face headwinds if macro conditions deteriorate or data center capex cycles slow.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "CAT"
+      }
+    ],
+    "category": "Earnings Report",
+    "sectors": [
+      "Earnings Report",
+      "Industrials"
+    ],
+    "featured": false,
+    "readTime": "4 min read",
+    "tags": [
+      "Industrials",
+      "Q1 2026",
+      "AI Demand",
+      "Earnings Beat"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "carr-carrier-global-nyse-carr-edges-higher-on-q1-earnings-beat-de",
+    "title": "Carrier Global (NYSE: CARR) Edges Higher on Q1 Earnings Beat Despite Negative EPS Growth",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:20 PM ET",
+    "dateISO": "2026-04-30T13:20:30Z",
+    "teaser": "Stock barely moves after beating EPS and revenue estimates, but year-over-year earnings fell sharply.",
+    "content": "Carrier Global shares edged 0.42% lower to $61.74 following the release of first-quarter 2026 results, which beat both EPS and revenue expectations but failed to excite investors given a sharp 97.8% year-over-year EPS decline. The muted reaction underscores market skepticism around near-term profitability despite operational execution meeting expectations.\n\n## Q1 2026 At a Glance\n\n- EPS beat consensus estimates; revenue also exceeded first-quarter expectations\n- EPS declined 97.8% year-over-year, signaling material earnings deterioration despite topline beat\n- Revenue declined 6.0% year-over-year, indicating demand softness in core HVAC and refrigeration markets\n- Net profit margin of 6.82% remains solid but under pressure from revenue deleveraging\n- Trailing P/E of 36.53 and forward P/E of 19.47 suggest the market is pricing in earnings recovery\n\n## What Drove the Results\n\nCarrier's paradoxical situation—beating estimates while reporting a 97.8% EPS decline—reflects the severity of year-over-year margin compression. Revenue decline of 6.0% combined with fixed-cost absorption pressure drove EPS down sharply despite the company meeting consensus expectations. This pattern suggests that analyst estimates for Q1 were already heavily discounted and that Carrier cleared a very low bar.\n\nThe company's 26.05% gross margin and 1.92% operating margin are typical for industrial equipment manufacturers, but the negative 6.0% revenue growth indicates the company is not growing into fixed costs. The market's implied expectation—visible in the forward P/E of 19.47, significantly below the trailing P/E of 36.53—is that revenue will stabilize and reaccelerate in coming quarters.\n\n## Investor Takeaway\n\nCarrier Global's Q1 beat on estimates is less encouraging than the headline suggests, given the company's 97.8% year-over-year EPS decline and negative 6.0% revenue growth. The stock's muted reaction reflects this reality: investors are waiting for evidence that demand is stabilizing, not simply that the company can beat a reduced set of expectations. The gap between the trailing P/E of 36.53 and the forward P/E of 19.47 implies significant earnings recovery is already priced in. Watch closely for Q2 2026 guidance and commentary on HVAC demand trends, particularly in commercial retrofit and new construction. A return to flat or positive revenue growth would validate the forward valuation, but another quarter of 5–10% revenue decline could pressure shares meaningfully.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "CARR"
+      }
+    ],
+    "category": "Earnings Report",
+    "sectors": [
+      "Earnings Report",
+      "Industrials"
+    ],
+    "featured": false,
+    "readTime": "3 min read",
+    "tags": [
+      "Carrier Global",
+      "HVAC",
+      "earnings beat",
+      "CARR"
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "cah-cardinal-health-nyse-cah-surges-on-q3-guidance-raise-despite",
+    "title": "Cardinal Health (NYSE: CAH) Surges on Q3 Guidance Raise Despite Thin Margins",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:20 PM ET",
+    "dateISO": "2026-04-30T13:20:30Z",
+    "teaser": "Stock gains on third-quarter earnings beat and raised full-year guidance, reversing earlier sales weakness.",
+    "content": "Cardinal Health shares surged following the release of third-quarter fiscal 2026 results, which delivered an earnings beat and prompted management to raise its full-year outlook. The move reverses earlier concerns around first-quarter sales weakness and signals improved operational execution in the core distribution business. Despite the positive reaction, the company's razor-thin margins merit careful monitoring.\n\n## Q3 2026 At a Glance\n\n- Q3 earnings beat consensus expectations, driving stock outperformance\n- Full-year 2026 guidance raised, indicating confidence in remainder of fiscal year\n- Revenue growth of 18.8% year-over-year accelerates from earlier quarters\n- Net income and EPS both grew 19.4% year-over-year, matching top-line momentum\n- Gross margin of 3.69% and operating margin of 1.23% reflect the low-margin nature of drug distribution\n\n## What Drove the Results\n\nCardinal Health's Q3 outperformance and guidance raise were anchored by accelerating revenue growth of 18.8%, a material improvement from the flat first-quarter performance reported earlier in the year. Net income growth of 19.4% year-over-year demonstrates the company's ability to convert top-line growth into earnings expansion despite operating in a structurally low-margin business. The company's trailing P/E of 29.14 and forward P/E of 17.51 suggest the market is pricing in sustained earnings momentum.\n\nThe guidance raise confirms that Q3 results were not a one-time benefit but reflect structural improvements in the distribution business, likely driven by volume growth, mix improvement, or cost management. Cardinal Health's 3.69% gross margin and 1.23% operating margin are typical for large pharmaceutical distributors, where competitive intensity and supplier power compress returns.\n\n## Investor Takeaway\n\nCardinal Health's Q3 beat and raised guidance demonstrate improved operational momentum after a weak start to the fiscal year. The 19.4% year-over-year net income growth is impressive in absolute terms, though it comes from a very low margin base—the company is still navigating a structurally challenging distribution business. The forward P/E of 17.51 is reasonable for a company delivering nearly 20% EPS growth, but investors should remain cognizant that distribution margins are unlikely to expand materially. Focus on whether Cardinal Health can sustain high-single-digit to low-double-digit organic revenue growth and whether cost management remains disciplined. The raised guidance provides a floor to current valuation.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "CAH"
+      }
+    ],
+    "category": "Earnings Report",
+    "sectors": [
+      "Earnings Report",
+      "Health Care"
+    ],
+    "featured": false,
+    "readTime": "3 min read",
+    "tags": [
+      "Cardinal Health",
+      "healthcare distribution",
+      "guidance raise",
+      "CAH"
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "bmy-bristol-myers-squibb-nyse-bmy-beats-q1-estimates-on-growth-p",
+    "title": "Bristol-Myers Squibb (NYSE: BMY) Beats Q1 Estimates on Growth Portfolio Strength",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:20 PM ET",
+    "dateISO": "2026-04-30T13:20:30Z",
+    "teaser": "Shares dip 1.15% despite EPS beat and revenue growth driven by key pipeline assets, with full-year outlook maintained.",
+    "content": "Bristol-Myers Squibb reported first-quarter 2026 results that beat earnings-per-share expectations, with growth driven by its portfolio of newer assets. Despite the positive fundamental outcome, shares fell 1.15% to $57.59, likely reflecting profit-taking after a strong recent run or investor focus on modest top-line growth of 1.3% year-over-year.\n\n## Q1 2026 At a Glance\n\n- EPS beat consensus estimates, driven by operating leverage from the growth portfolio\n- Net income grew 13.92% year-over-year, demonstrating underlying profit expansion\n- Revenue grew 1.3% year-over-year, led by key new medicines and strategic transitions\n- Operating margin of 28.16% reflects a high-quality, profitable operating model\n- Full-year 2026 outlook maintained, indicating management confidence in forward guidance\n\n## What Drove the Results\n\nBristol-Myers Squibb's first-quarter performance was anchored by its growth portfolio—a cohort of newer, higher-margin medicines that are gaining traction in key markets. The company's gross margin of 72.62% is among the highest in large pharma, reflecting the premium nature of its patent-protected assets. The 13.92% year-over-year EPS growth outpaced the 1.3% revenue growth, indicating the company is achieving strong operating leverage and managing the legacy portfolio transition effectively.\n\nManagement maintained full-year 2026 outlook despite modest revenue growth, a signal that near-term guidance assumptions have not changed materially and that the growth portfolio is tracking to plan. The company's trailing P/E of 16.64 and forward P/E of 9.39 suggest the market is pricing in steady state, not significant acceleration—providing a margin of safety if portfolio execution meets expectations.\n\n## Investor Takeaway\n\nBristol-Myers Squibb delivered solid operational performance in Q1 with EPS upside and healthy double-digit net income growth. The 1.3% revenue growth is modest and reflects the combination of new product uptake and legacy product declines, but management's maintained outlook signals confidence in the portfolio trajectory. The valuation remains reasonable at a forward P/E of 9.39, particularly given the 28.16% operating margin and 13.92% EPS growth. Investors should focus on upcoming quarterly reports to confirm the growth portfolio is accelerating and that the company can achieve mid-to-high single-digit revenue growth by late 2026. The stock's dip on earnings may represent a buying opportunity for long-term holders.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "BMY"
+      }
+    ],
+    "category": "Earnings Report",
+    "sectors": [
+      "Earnings Report",
+      "Health Care"
+    ],
+    "featured": false,
+    "readTime": "3 min read",
+    "tags": [
+      "Bristol Myers Squibb",
+      "pharma",
+      "earnings beat",
+      "BMY"
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "bldr-builders-firstsource-nyse-bldr-tumbles-on-q1-eps-miss-despit",
+    "title": "Builders FirstSource (NYSE: BLDR) Tumbles on Q1 EPS Miss Despite Revenue Beat",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:20 PM ET",
+    "dateISO": "2026-04-30T13:20:30Z",
+    "teaser": "Stock drops 5.38% after Q1 earnings fell short on the bottom line, though revenue exceeded expectations.",
+    "content": "Builders FirstSource shares declined 5.38% to $83.38 following the release of its first-quarter 2026 results, which revealed a mixed performance: revenue beat analyst expectations, but earnings per share fell short of consensus estimates. The miss—despite operational improvements—signals margin pressure in an otherwise resilient construction supply environment.\n\n## Q1 2026 At a Glance\n\n- Revenue exceeded first-quarter expectations, offsetting near-term EPS disappointment\n- EPS fell short of consensus estimates, pressuring shares despite top-line beat\n- Earnings per share declined 82.9% year-over-year, a material deterioration from prior-year Q1\n- Company announced a $500 million share repurchase authorization, signaling confidence in long-term value\n\n## What Drove the Results\n\nThe earnings miss occurred in the context of a –0.121% decline in revenue growth and negative 82.9% EPS decline year-over-year. These metrics suggest that while Builders FirstSource maintained revenue momentum in absolute terms, it failed to convert that topline strength into bottom-line leverage. The company's operating margins are razor-thin at 1.84%, and gross margins of 30.39% leave limited room for cost absorption or unexpected spending pressures.\n\nThe $500 million share repurchase authorization is management's direct response to the stock weakness and signals internal confidence that current valuation does not reflect intrinsic value. This capital allocation move typically accompanies management guidance that the current stock price is undervalued relative to near-term earnings power and long-term cash generation.\n\n## Investor Takeaway\n\nBuilders FirstSource traded at a trailing P/E of 21.43 and forward P/E of 11.46 at the time of earnings, suggesting the market had already begun to price in margin pressure. The forward multiple—significantly lower than the trailing multiple—implies analyst expectations for a sharp earnings recovery in the coming quarters. The company's 0–1% net profit margin and 1.84% operating margin are concerning in the context of negative EPS growth, but the $500 million buyback demonstrates management confidence in operational stabilization. Watch for confirmation in the next quarter that the EPS decline was a one-time impact and that the company can return to positive earnings momentum. The valuation floor set by the buyback should provide some support to shares.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "BLDR"
+      }
+    ],
+    "category": "Earnings Report",
+    "sectors": [
+      "Earnings Report",
+      "Materials"
+    ],
+    "featured": false,
+    "readTime": "3 min read",
+    "tags": [
+      "Builders FirstSource",
+      "earnings miss",
+      "construction",
+      "BLDR"
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "bbio-bridgebio-pharma-nasdaq-bbio-rallies-on-analyst-confidence-a",
+    "title": "BridgeBio Pharma (NASDAQ: BBIO) Rallies on Analyst Confidence Ahead of Q1 Results",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:20 PM ET",
+    "dateISO": "2026-04-30T13:20:30Z",
+    "teaser": "Shares gain as three major analysts maintain buy ratings and raise price targets, citing Attruby's commercial promise.",
+    "content": "BridgeBio Pharma shares rose 1.76% to $70.94 as Wall Street continues to express conviction in the biotech firm's pipeline, particularly around its Attruby asset. The company is scheduled to report first-quarter 2026 financial results and commercial updates on May 7, 2026, but analyst support is already building momentum ahead of that disclosure.\n\n## Wall Street View\n\nThree major investment banks have recently weighed in with bullish positions. Truist Securities maintains a buy rating and raised its price target to $102, while HC Wainwright & Co. reiterates a buy with a $100 price target. Mizuho also issued an outperform rating with a $106 price target. Collectively, these targets imply 40–50% upside from current levels, reflecting confidence in the company's clinical and commercial trajectory.\n\n## What Drove the Results\n\nAnalyst commentary has zeroed in on Attruby's early market dominance as the linchpin of the bull case. According to SeekingAlpha research, Attruby's early commercial performance is making the investment thesis compelling enough to warrant the consistent buy ratings despite the company's current unprofitability. The asset appears to be tracking ahead of internal expectations and analyst models, reducing execution risk around the broader pipeline.\n\nBridgeBio carries a forward price-to-earnings ratio of 134.48, reflecting the market's expectation of eventual profitability. The company is currently unprofitable with a net profit margin of –1.44%, but boasts a 25.21% revenue growth rate and an impressive 95.83% gross margin—key metrics indicating strong underlying unit economics and pricing power. Operating margins stand at –83.3%, typical for early-stage revenue-generating biotech firms that are still scaling infrastructure and R&D spend.\n\n## Investor Takeaway\n\nBridgeBio's near-term catalyst is the May 7 earnings call, where management will provide fresh commercial updates on Attruby and guidance for the remainder of 2026. The consistent analyst support—across buy ratings from Truist, HC Wainwright, and Mizuho—suggests limited downside risk from current levels if the company merely executes on market expectations. However, the high forward P/E of 134.48 leaves minimal margin for disappointment. Investors should focus on Attruby uptake trends, gross margin maintenance, and management's ability to narrow operating losses as the company scales revenue. The May 7 call will be critical for validating the analyst thesis.",
+    "tickers": [
+      {
+        "exchange": "NASDAQ",
+        "symbol": "BBIO"
+      }
+    ],
+    "category": "Health Care",
+    "sectors": [
+      "Health Care"
+    ],
+    "featured": false,
+    "readTime": "3 min read",
+    "tags": [
+      "BridgeBio",
+      "pharma",
+      "analyst upgrade",
+      "BBIO"
+    ]
+  },
+  {
+    "id": 12,
+    "slug": "aos-a-o-smith-nyse-aos-misses-q1-revenue-and-cuts-full-year-outl",
+    "title": "A. O. Smith (NYSE: AOS) Misses Q1 Revenue and Cuts Full-Year Outlook",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:20 PM ET",
+    "dateISO": "2026-04-30T13:20:30Z",
+    "teaser": "AOS reported Q1 revenue of $945.6M, missing estimates by ~4%, and trimmed its full-year guidance. Shares are trading near a 52-week low.",
+    "content": "A. O. Smith Corporation (NYSE: AOS) delivered a softer-than-expected first quarter, with revenue falling short of consensus and management subsequently lowering the full-year outlook — a combination that weighed on sentiment and pushed shares toward the lower end of their 52-week range. The stock was recently quoted at **$63.68**, down **$0.23** (or **0.36%**) on the day, not far above its **52-week low of $62.14**.\n\n## Q1 2026 At a Glance\n\n- **Revenue:** **$945.6M** vs. **$987.5M** expected — a miss of roughly **4%**; down **1.9%** year over year from **$963.9M**\n- **GAAP EPS:** **$0.85**, approximately **10.5%** below analyst consensus\n- **Net income:** **$118M** for the quarter\n- **Full-year revenue guidance midpoint:** **$3.95B**, described as close to prior analyst estimates\n- **SEC filing:** Results of Operations (8-K, Item 9.01) filed **April 30, 2026**\n\n## What Drove the Results\n\nThe top-line shortfall reflects a broad softening in demand across A. O. Smith's water heating and treatment segments, with sales declining on both a reported and year-over-year basis. Management's decision to lower the full-year outlook signals that the company does not expect a near-term demand rebound sufficient to close the gap created in the first quarter.\n\nDespite the revenue miss, the company's underlying profitability metrics remain constructive in a longer-term context. A **trailing P/E of 16.5x** and a **forward P/E of 14.7x** suggest the market is already pricing in earnings moderation, while a **net margin of 14.3%** and an **operating margin of 17.9%** indicate that cost discipline has been maintained even as the top line has come under pressure.\n\n## Wall Street View\n\nAnalyst sentiment has been largely stable heading into this result. As of the April 2026 consensus, the breakdown stands at **4 Strong Buy**, **4 Buy**, **9 Hold**, and **1 Sell** — a modest improvement from the prior month, when the Hold count sat at **10** and the Sell rating was not present. The slight shift toward fewer cautious ratings is notable, though the dominant positioning remains neutral, reflecting uncertainty around the demand outlook rather than outright pessimism.\n\n## Investor Takeaway\n\nA. O. Smith (NYSE: AOS) enters the remainder of 2026 with a reset full-year revenue target of **$3.95B** at the midpoint, a level management has indicated is within reach of prior analyst estimates despite the Q1 shortfall. The company's margins remain solid — a **gross margin of 38.8%** and **19.1%** year-over-year earnings growth on a trailing basis suggest the business model is holding up — but near-term share price recovery is likely to depend on whether demand stabilizes in the quarters ahead. With the stock trading near a **52-week low of $62.14**, investors will be watching closely for any improvement in order trends as the year progresses.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "AOS"
+      }
+    ],
+    "category": "Earnings Report",
+    "sectors": [
+      "Earnings Report",
+      "Industrials"
+    ],
+    "featured": false,
+    "readTime": "4 min read",
+    "tags": [
+      "A. O. Smith",
+      "AOS",
+      "Earnings Report",
+      "Industrials"
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "amgn-amgen-nasdaq-amgn-faces-fda-drug-withdrawal-proposal-ahead-o",
+    "title": "Amgen (NASDAQ: AMGN) Faces FDA Drug Withdrawal Proposal Ahead of Q1 Results",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:20 PM ET",
+    "dateISO": "2026-04-30T13:20:06Z",
+    "teaser": "Amgen shares slipped 0.46% as the FDA proposed withdrawing Tavneos approval. Q1 results are due imminently, with analyst consensus tilting toward Buy.",
+    "content": "**Amgen Inc.** (NASDAQ: AMGN) shares slipped **$1.55 (0.46%)** to **$338.02** on Wednesday, with sentiment weighed by a regulatory setback after the FDA's Center for Drug Evaluation and Research proposed withdrawing approval for **Tavneos**, the company's treatment for a rare form of vasculitis. Amgen has responded to the proposal, though the outcome remains subject to the FDA's formal review process.\n\n## Key Developments at a Glance\n\n- **Current price:** $338.02 | **Previous close:** $339.57\n- **52-week range:** $261.43 – $391.29, placing the stock roughly mid-range\n- **Market cap:** $182.2B\n- **Trailing P/E:** 23.8x | **Forward P/E:** 14.5x — a meaningful compression suggesting the market expects profitability improvement ahead\n- **Net margin:** 21.0% | **Gross margin:** 70.8% | **Operating margin:** 30.6%\n- **Revenue growth (YoY):** 8.6% | **Net income growth (YoY):** 112.1%\n- **SEC 8-K filing (2026-04-22):** Disclosed a departure or appointment of directors/officers (Item 9.01)\n\n## What Drove the Move\n\nThe proposed Tavneos withdrawal by the FDA is a material regulatory development for **Amgen** (NASDAQ: AMGN), as it introduces uncertainty around a product the company had positioned for a niche but meaningful patient population. Amgen has publicly responded to the FDA's proposal, signaling it intends to contest or engage in the process rather than accept an immediate withdrawal.\n\nSeparately, **Amgen** is also participating in a pioneering FDA initiative involving two studies where trial data will be shared with FDA scientists in real time alongside **AstraZeneca** — a development that underscores the company's ongoing engagement with regulators on innovation, even as the Tavneos situation creates near-term headline pressure.\n\n## Wall Street View\n\nAnalyst sentiment on **Amgen** (NASDAQ: AMGN) remains broadly constructive. As of the April 2026 consensus, **6** analysts rate the stock Strong Buy, **15** Buy, **19** Hold, **2** Sell, and **1** Strong Sell. Compared to the March 2026 period — which showed the same Strong Buy and Buy counts with one fewer Hold — the distribution has been essentially stable, suggesting the Tavneos news has not yet prompted a material re-rating among covering analysts.\n\n## Investor Takeaway\n\nWith a forward **P/E** of **14.5x** sitting well below the trailing multiple of **23.8x**, the market appears to be pricing in continued profitability improvement for **Amgen** (NASDAQ: AMGN) — supported by **8.6%** revenue growth and a **112.1%** year-over-year rise in net income. The Tavneos FDA proposal introduces a regulatory overhang that warrants monitoring, but the broad analyst consensus leans positive, and the company's engagement with the FDA on real-time clinical trial data sharing reflects a constructive regulatory posture overall.",
+    "tickers": [
+      {
+        "exchange": "NASDAQ",
+        "symbol": "AMGN"
+      }
+    ],
+    "category": "Health Care",
+    "sectors": [
+      "Health Care"
+    ],
+    "featured": false,
+    "readTime": "3 min read",
+    "tags": [
+      "Amgen",
+      "AMGN",
+      "Biotech",
+      "FDA"
+    ]
+  },
+  {
+    "id": 14,
+    "slug": "ame-ametek-nyse-ame-posts-record-q1-revenue-of-1-93b-raises-full",
+    "title": "AMETEK (NYSE: AME) Posts Record Q1 Revenue of $1.93B, Raises Full-Year Guidance",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:19 PM ET",
+    "dateISO": "2026-04-30T13:19:45Z",
+    "teaser": "AMETEK delivered record Q1 revenue and raised its full-year outlook, while announcing a deal to acquire First Aviation Services. Shares trade near $227.87.",
+    "content": "**AMETEK, Inc.** (NYSE: AME) reported record first-quarter 2026 revenue of **$1.93 billion** and adjusted EPS of **$1.97**, prompting management to raise its full-year guidance. The results landed ahead of analyst estimates, and the company simultaneously announced an agreement to acquire First Aviation Services, reinforcing its focus on mission-critical industrial platforms.\n\n## Q1 2026 At a Glance\n\n- **Revenue:** Record **$1.93B** for the quarter ended March 31, 2026\n- **Adjusted EPS:** **$1.97**, beating consensus estimates\n- **Net income:** **$399.4M** reported on a GAAP basis\n- **Full-year guidance:** Raised following the Q1 beat\n- **Pending acquisition:** First Aviation Services — a provider of defense and aviation MRO services and proprietary components\n- **Revenue growth (YoY):** **13.4%** on a trailing basis\n- **Net margin:** **20.0%** | **Operating margin:** **27.5%** | **Gross margin:** **36.4%**\n\n## What Drove the Results\n\n**AMETEK's** Q1 performance reflects the company's consistent strategy of targeting highly engineered, niche industrial markets where pricing power and recurring demand support above-average margins. An operating margin of **27.5%** and a net margin of **20.0%** point to disciplined cost management alongside top-line expansion, with revenue growing **13.4%** year-over-year on a trailing basis.\n\nThe announced acquisition of First Aviation Services fits squarely within **AMETEK's** long-standing acquisition-led growth model. The target is described as a leading provider of mission-critical defense and aviation MRO services, as well as a manufacturer of related proprietary components — characteristics that align with **AMETEK's** preference for businesses with defensible competitive positions and specialized end markets.\n\n## Wall Street View\n\nAnalyst sentiment on (NYSE: AME) leaned constructively heading into the results and has continued to firm up. The April 2026 consensus shows **2 Strong Buy**, **16 Buy**, and **7 Hold** ratings, with zero Sell or Strong Sell calls. Compared with the March 2026 period — which logged **2 Strong Buy**, **15 Buy**, and **7 Hold** — one additional analyst moved to a Buy rating, a modest but directionally positive shift. No price targets were available in the current data set.\n\n## Investor Takeaway\n\n**AMETEK** (NYSE: AME) enters the remainder of 2026 with a raised guidance outlook, record quarterly revenue, and a pending acquisition that extends its reach into defense and aviation services. Trading at a trailing P/E of **35.6x** and a forward P/E of **26.1x**, the valuation reflects the market's expectation of continued earnings expansion — a view broadly supported by the near-unanimous Buy-leaning analyst consensus. Investors will be watching for deal-close timing on First Aviation Services and whether the raised guidance range proves conservative as the year progresses.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "AME"
+      }
+    ],
+    "category": "Earnings Report",
+    "sectors": [
+      "Earnings Report",
+      "Industrials"
+    ],
+    "featured": false,
+    "readTime": "4 min read",
+    "tags": [
+      "AMETEK",
+      "AME",
+      "Industrials",
+      "Earnings"
+    ]
+  },
+  {
+    "id": 15,
+    "slug": "ajg-ajg-declares-q2-dividend-as-analyst-buy-ratings-climb-ahead-",
+    "title": "AJG Declares Q2 Dividend as Analyst Buy Ratings Climb Ahead of Q1 Results",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:19 PM ET",
+    "dateISO": "2026-04-30T13:19:26Z",
+    "teaser": "Arthur J. Gallagher declared a $0.70/share quarterly dividend and sees growing Wall Street conviction, with Buy ratings rising month-over-month.",
+    "content": "**Arthur J. Gallagher & Co.** (NYSE: AJG) declared a regular second-quarter cash dividend of **$0.70 per share** on its common stock, reinforcing the company's commitment to returning capital to shareholders. The stock closed at **$211.81**, down **$1.61** (**0.75%**) on the session, and currently sits near the lower end of its **52-week range of $195.00 – $351.23**.\n\n## Key Metrics at a Glance\n\n- **Quarterly dividend declared:** $0.70 per share (Q2 2026)\n- **Market capitalisation:** $54.5B\n- **Trailing P/E:** 36.9x | **Forward P/E:** 14.3x\n- **Revenue growth (YoY):** 36.7%\n- **Net margin:** 11.5%\n- **Operating margin:** 10.4%\n- **Gross margin:** 42.2%\n- **Net income growth (YoY):** -48.3%\n\n## Behind the Numbers\n\n**AJG**'s top-line momentum is notable — revenue growth of **36.7% year-over-year** reflects the scale of the company's acquisition-driven expansion strategy in insurance brokerage and risk management services. That pace of growth, however, has come alongside a **48.3% year-over-year decline in net income**, a dynamic that explains the wide gap between the trailing P/E of **36.9x** and the forward P/E of **14.3x**, which suggests the market is pricing in a meaningful earnings recovery ahead.\n\nThe operating margin of **10.4%** and net margin of **11.5%** indicate that integration and deal-related costs are likely weighing on near-term profitability — a common pattern following large-scale acquisitions in the brokerage sector. Investors will be watching closely to see whether margin expansion materialises as revenue from recent deals is absorbed into the core business.\n\n## Wall Street View\n\nAnalyst conviction in **AJG** has strengthened over the past month. As of April 1, 2026, the consensus stands at **4 Strong Buy, 15 Buy, and 9 Hold**, with zero Sell or Strong Sell ratings. That compares favourably to the March 1 reading of **4 Strong Buy, 11 Buy, and 11 Hold** — a clear shift, with four Hold ratings converting to Buy over the period. No price targets were available in the current data set.\n\n## Investor Takeaway\n\nThe declared **$0.70 quarterly dividend** provides a tangible sign of financial stability even as near-term profitability remains compressed by the costs associated with rapid expansion. The improving analyst consensus — with Buy ratings rising and Hold ratings declining month-over-month — suggests the Street sees the current earnings headwinds as transitional rather than structural. Investors with a longer-term horizon may find the valuation gap between trailing and forward P/E multiples worth monitoring as integration progress becomes clearer in upcoming quarterly results.",
+    "tickers": [
+      {
+        "exchange": "NYSE",
+        "symbol": "AJG"
+      }
+    ],
+    "category": "Financials",
+    "sectors": [
+      "Financials"
+    ],
+    "featured": false,
+    "readTime": "3 min read",
+    "tags": [
+      "AJG",
+      "Arthur J. Gallagher",
+      "Dividend",
+      "Insurance Brokerage"
+    ]
+  },
+  {
+    "id": 16,
+    "slug": "aapl-apple-aapl-leadership-transition-and-ai-strategy-headline-in",
+    "title": "Apple (AAPL) Leadership Transition and AI Strategy Headline Investor Focus",
+    "author": "Alpha Stocks Insight Staff",
+    "authorBio": "Independent stock news and analysis covering NASDAQ and NYSE markets.",
+    "date": "April 30, 2026",
+    "time": "1:19 PM ET",
+    "dateISO": "2026-04-30T13:19:10Z",
+    "teaser": "Tim Cook's planned September departure and Apple's AI roadmap dominate investor attention as AAPL trades near $270. Analyst consensus remains firmly constructive.",
+    "content": "Apple Inc. (NASDAQ: AAPL) confirmed via an SEC 8-K filing dated April 20, 2026 that CEO Tim Cook will depart the chief executive role this September, with hardware engineering head John Ternus named as his successor — a leadership transition that has quickly become the dominant narrative surrounding the stock. Shares are trading at **$270.17**, down **$0.54** (**0.20%**) on the session, with the prior close at **$270.71**, as investors assess the implications of a generational handover at one of the world's most valuable companies.\n\n## Leadership Transition at a Glance\n\n- **CEO succession:** Tim Cook to step down in September 2026; John Ternus appointed incoming CEO per the April 20 8-K (Item 5.02 filing).\n- **Market capitalisation:** **$3.97 trillion**, making Apple one of the largest publicly traded companies globally.\n- **52-week range:** **$193.25 – $288.62**; current price sits in the upper half of that band.\n- **Trailing P/E:** **34.2x** | **Forward P/E:** **28.8x** — the forward multiple implies the market anticipates continued profit growth.\n- **Net margin:** **27.0%** | **Gross margin:** **47.3%** | **Operating margin:** **35.4%**.\n- **Revenue growth (YoY):** **15.7%** | **EPS-equivalent earnings growth (YoY):** **18.3%**.\n\n## What Is Driving Investor Attention\n\nBeyond the leadership change, the durability of Apple's next iPhone upgrade cycle and the pace of its artificial intelligence integration are at the forefront of analyst discussion, according to reporting from Yahoo Finance. Baird senior research analyst William Power has noted that investors are parsing both the CEO announcement and the company's AI strategy simultaneously, with the two narratives closely intertwined — Ternus's hardware engineering background lending credibility to the view that the product roadmap will remain intact.\n\nApple's financial profile provides meaningful context here. An operating margin of **35.4%** and a gross margin of **47.3%** reflect a business with substantial pricing power and cost discipline, while **15.7%** revenue growth suggests the installed base continues to expand at a healthy clip. The compression from a trailing P/E of **34.2x** to a forward P/E of **28.8x** implies the market expects net income expansion to continue into the next fiscal year.\n\n## Wall Street View\n\nAnalyst sentiment has held steady and tilted incrementally more positive. As of April 1, 2026, the consensus breakdown stands at **14 Strong Buy**, **23 Buy**, **15 Hold**, **2 Sell**, and **0 Strong Sell**. Compared with the March 1 snapshot — **14 Strong Buy**, **22 Buy**, **16 Hold** — one analyst moved from Hold to Buy, while the Sell count remained unchanged, signalling modest but directional improvement in conviction.\n\n## Investor Takeaway\n\nThe SEC-confirmed leadership transition to John Ternus represents a significant structural moment for Apple (NASDAQ: AAPL), though Wall Street's broadly constructive stance — with **37** Buy-or-better ratings against just **2** Sells — suggests analysts view operational continuity as likely. Apple's combination of a **27.0%** net margin, **18.3%** earnings growth, and a **$3.97 trillion** market capitalisation underscores the financial foundation underpinning that confidence. Investors will be watching closely for any strategic commentary that clarifies how Ternus intends to advance the company's AI positioning alongside its core hardware franchise.",
+    "tickers": [
+      {
+        "exchange": "NASDAQ",
+        "symbol": "AAPL"
+      }
+    ],
+    "category": "Stock Analysis",
+    "sectors": [
+      "Stock Analysis",
+      "Technology"
+    ],
+    "featured": false,
+    "readTime": "4 min read",
+    "tags": [
+      "Apple",
+      "AAPL",
+      "Leadership Change",
+      "Artificial Intelligence"
+    ]
+  },
+  {
+    "id": 17,
     "slug": "eg-everest-group-ltd-nyse-eg-beats-q1-estimates-amid-strategic-",
     "title": "Everest Group Ltd. (NYSE: EG) Beats Q1 Estimates Amid Strategic Shift in Insurance Operations",
     "author": "Alpha Stocks Insight Staff",
@@ -32,7 +548,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 18,
     "slug": "ebay-ebay-inc-nasdaq-ebay-beats-q1-profit-and-sales-stock-rises-o",
     "title": "eBay Inc. (NASDAQ: EBAY) Beats Q1 Profit and Sales; Stock Rises on Merchandise Volume Strength",
     "author": "Alpha Stocks Insight Staff",
@@ -63,7 +579,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 19,
     "slug": "ctsh-cognizant-technology-solutions-nasdaq-ctsh-guides-below-cons",
     "title": "Cognizant Technology Solutions (NASDAQ: CTSH) Guides Below Consensus on IT Spending Caution",
     "author": "Alpha Stocks Insight Staff",
@@ -95,7 +611,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 20,
     "slug": "crs-carpenter-technology-nyse-crs-beats-q3-estimates-raises-guid",
     "title": "Carpenter Technology (NYSE: CRS) Beats Q3 Estimates; Raises Guidance on Aerospace Surge",
     "author": "Alpha Stocks Insight Staff",
@@ -126,7 +642,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 21,
     "slug": "cmg-chipotle-mexican-grill-nyse-cmg-beats-q1-sales-expectations-",
     "title": "Chipotle Mexican Grill (NYSE: CMG) Beats Q1 Sales Expectations Amid Menu Innovation",
     "author": "Alpha Stocks Insight Staff",
@@ -157,7 +673,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 22,
     "slug": "chrw-c-h-robinson-nasdaq-chrw-posts-mixed-q1-results-on-freight-b",
     "title": "C.H. Robinson (NASDAQ: CHRW) Posts Mixed Q1 Results on Freight Broker Headwinds",
     "author": "Alpha Stocks Insight Staff",
@@ -188,7 +704,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 23,
     "slug": "biib-biogen-nasdaq-biib-surges-6-on-q1-sales-sweep-and-alzheimer-",
     "title": "Biogen (NASDAQ: BIIB) Surges 6% on Q1 Sales Sweep and Alzheimer's Momentum",
     "author": "Alpha Stocks Insight Staff",
@@ -219,7 +735,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 24,
     "slug": "awk-american-water-works-nyse-awk-misses-q1-but-affirms-2026-eps",
     "title": "American Water Works (NYSE: AWK) Misses Q1 but Affirms 2026 EPS Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -250,7 +766,7 @@
     ]
   },
   {
-    "id": 9,
+    "id": 25,
     "slug": "aph-amphenol-nasdaq-aph-beats-q1-estimates-with-57-6-earnings-gr",
     "title": "Amphenol (NASDAQ: APH) Beats Q1 Estimates with 57.6% Earnings Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -281,7 +797,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 26,
     "slug": "amzn-amazon-com-nasdaq-amzn-beats-q1-estimates-as-cloud-growth-ac",
     "title": "Amazon.com (NASDAQ: AMZN) Beats Q1 Estimates as Cloud Growth Accelerates",
     "author": "Alpha Stocks Insight Staff",
@@ -312,7 +828,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": 27,
     "slug": "all-allstate-nyse-all-posts-strong-q1-2026-results-with-eps-47-a",
     "title": "Allstate (NYSE: ALL) Posts Strong Q1 2026 Results With EPS 47% Above Consensus",
     "author": "Alpha Stocks Insight Staff",
@@ -343,7 +859,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 28,
     "slug": "algn-align-technology-nasdaq-algn-posts-q1-2026-eps-beat-as-reven",
     "title": "Align Technology (NASDAQ: ALGN) Posts Q1 2026 EPS Beat as Revenue Hits $1.04B",
     "author": "Alpha Stocks Insight Staff",
@@ -374,7 +890,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 29,
     "slug": "afl-aflac-nyse-afl-q1-2026-revenue-beat-eps-misses-consensus-by-",
     "title": "Aflac (NYSE: AFL) Q1 2026: Revenue Beat, EPS Misses Consensus by 2.5%",
     "author": "Alpha Stocks Insight Staff",
@@ -405,7 +921,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 30,
     "slug": "adp-adp-q3-2026-results-revenue-hits-3-63b-on-7-growth-full-year",
     "title": "ADP Q3 2026 Results: Revenue Hits $3.63B on 7% Growth, Full-Year Outlook Raised",
     "author": "Alpha Stocks Insight Staff",
@@ -436,7 +952,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": 31,
     "slug": "abbv-abbvie-abbv-raises-2026-outlook-after-q1-eps-and-revenue-bea",
     "title": "AbbVie (ABBV) Raises 2026 Outlook After Q1 EPS and Revenue Beat",
     "author": "Alpha Stocks Insight Staff",
@@ -467,7 +983,7 @@
     ]
   },
   {
-    "id": 16,
+    "id": 32,
     "slug": "roundup-2026-04-29",
     "title": "Today's Top Stock Highlights — April 29, 2026",
     "author": "Alpha Stocks Insight Staff",
@@ -521,7 +1037,7 @@
     ]
   },
   {
-    "id": 17,
+    "id": 33,
     "slug": "ftai-ftai-aviation-nyse-ftai-slides-6-04-despite-strong-fundament",
     "title": "FTAI Aviation (NYSE: FTAI) Slides 6.04% Despite Strong Fundamentals and Double-Digit Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -552,7 +1068,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": 34,
     "slug": "etsy-etsy-nyse-etsy-surges-on-q1-earnings-beat-despite-modest-3-5",
     "title": "Etsy (NYSE: ETSY) Surges on Q1 Earnings Beat Despite Modest 3.5% Revenue Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -583,7 +1099,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": 35,
     "slug": "etr-entergy-nyse-etr-edges-higher-on-q1-results-and-raised-long-",
     "title": "Entergy (NYSE: ETR) Edges Higher on Q1 Results and Raised Long-Term Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -614,7 +1130,7 @@
     ]
   },
   {
-    "id": 20,
+    "id": 36,
     "slug": "eg-everest-group-nyse-eg-rises-on-q1-earnings-preview-as-valuat",
     "title": "Everest Group (NYSE: EG) Rises on Q1 Earnings Preview as Valuation Signals Upside",
     "author": "Alpha Stocks Insight Staff",
@@ -645,7 +1161,7 @@
     ]
   },
   {
-    "id": 21,
+    "id": 37,
     "slug": "ebay-ebay-nasdaq-ebay-edges-higher-as-ubs-raises-price-target-ami",
     "title": "eBay (NASDAQ: EBAY) Edges Higher as UBS Raises Price Target Amid Q1 Momentum",
     "author": "Alpha Stocks Insight Staff",
@@ -676,7 +1192,7 @@
     ]
   },
   {
-    "id": 22,
+    "id": 38,
     "slug": "ctsh-cognizant-nasdaq-ctsh-misses-q1-revenue-but-beats-eps-guides",
     "title": "Cognizant (NASDAQ: CTSH) Misses Q1 Revenue but Beats EPS; Guides Q2 Below Consensus",
     "author": "Alpha Stocks Insight Staff",
@@ -707,7 +1223,7 @@
     ]
   },
   {
-    "id": 23,
+    "id": 39,
     "slug": "crs-carpenter-technology-nyse-crs-reports-q3-earnings-as-special",
     "title": "Carpenter Technology (NYSE: CRS) Reports Q3 Earnings as Specialty Materials Demand Remains Steady",
     "author": "Alpha Stocks Insight Staff",
@@ -738,7 +1254,7 @@
     ]
   },
   {
-    "id": 24,
+    "id": 40,
     "slug": "cmg-chipotle-nyse-cmg-trades-sideways-as-analyst-optimism-clashe",
     "title": "Chipotle (NYSE: CMG) Trades Sideways as Analyst Optimism Clashes With Modest Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -769,7 +1285,7 @@
     ]
   },
   {
-    "id": 25,
+    "id": 41,
     "slug": "biib-biogen-nasdaq-biib-wallops-q1-estimates-cuts-full-year-profi",
     "title": "Biogen (NASDAQ: BIIB) Wallops Q1 Estimates, Cuts Full-Year Profit Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -800,7 +1316,7 @@
     ]
   },
   {
-    "id": 26,
+    "id": 42,
     "slug": "aph-amphenol-nasdaq-aph-posts-record-q1-results-as-sales-growth-",
     "title": "Amphenol (NASDAQ: APH) Posts Record Q1 Results as Sales Growth Extends Into Q2",
     "author": "Alpha Stocks Insight Staff",
@@ -831,7 +1347,7 @@
     ]
   },
   {
-    "id": 27,
+    "id": 43,
     "slug": "amzn-amzn-trades-near-52-week-high-as-ai-spending-scrutiny-builds",
     "title": "AMZN Trades Near 52-Week High as AI Spending Scrutiny Builds Ahead of Results",
     "author": "Alpha Stocks Insight Staff",
@@ -862,7 +1378,7 @@
     ]
   },
   {
-    "id": 28,
+    "id": 44,
     "slug": "all-allstate-nyse-all-trades-near-52-week-high-as-analysts-flag-",
     "title": "Allstate (NYSE: ALL) Trades Near 52-Week High as Analysts Flag Improving Fundamentals",
     "author": "Alpha Stocks Insight Staff",
@@ -892,7 +1408,7 @@
     ]
   },
   {
-    "id": 29,
+    "id": 45,
     "slug": "afl-aflac-nyse-afl-rises-1-4-ahead-of-q1-results-as-analysts-sta",
     "title": "Aflac (NYSE: AFL) Rises 1.4% Ahead of Q1 Results as Analysts Stay Cautious",
     "author": "Alpha Stocks Insight Staff",
@@ -922,7 +1438,7 @@
     ]
   },
   {
-    "id": 30,
+    "id": 46,
     "slug": "adp-adp-beats-q3-estimates-raises-full-year-outlook-as-payroll-d",
     "title": "ADP Beats Q3 Estimates, Raises Full-Year Outlook as Payroll Demand Holds Firm",
     "author": "Alpha Stocks Insight Staff",
@@ -953,7 +1469,7 @@
     ]
   },
   {
-    "id": 31,
+    "id": 47,
     "slug": "abbv-abbvie-nyse-abbv-beats-q1-2026-eps-estimates-raises-full-yea",
     "title": "AbbVie (NYSE: ABBV) Beats Q1 2026 EPS Estimates, Raises Full-Year Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -984,7 +1500,7 @@
     ]
   },
   {
-    "id": 32,
+    "id": 48,
     "slug": "fe-firstenergy-nyse-fe-misses-q1-earnings-despite-revenue-beat-",
     "title": "FirstEnergy (NYSE: FE) Misses Q1 Earnings Despite Revenue Beat and Guides Stability",
     "author": "Alpha Stocks Insight Staff",
@@ -1015,7 +1531,7 @@
     ]
   },
   {
-    "id": 33,
+    "id": 49,
     "slug": "exr-extra-space-storage-nyse-exr-crushes-q1-earnings-but-guides-",
     "title": "Extra Space Storage (NYSE: EXR) Crushes Q1 Earnings But Guides FFO Below Consensus",
     "author": "Alpha Stocks Insight Staff",
@@ -1046,7 +1562,7 @@
     ]
   },
   {
-    "id": 34,
+    "id": 50,
     "slug": "ess-essex-property-trust-nyse-ess-beats-ffo-expectations-amid-st",
     "title": "Essex Property Trust (NYSE: ESS) Beats FFO Expectations Amid Strong Operations",
     "author": "Alpha Stocks Insight Staff",
@@ -1077,7 +1593,7 @@
     ]
   },
   {
-    "id": 35,
+    "id": 51,
     "slug": "eqr-equity-residential-nyse-eqr-rallies-despite-q1-earnings-miss",
     "title": "Equity Residential (NYSE: EQR) Rallies Despite Q1 Earnings Miss",
     "author": "Alpha Stocks Insight Staff",
@@ -1108,7 +1624,7 @@
     ]
   },
   {
-    "id": 36,
+    "id": 52,
     "slug": "enph-enphase-energy-nasdaq-enph-slides-after-mixed-q1-results-dis",
     "title": "Enphase Energy (NASDAQ: ENPH) Slides After Mixed Q1 Results Disappoint",
     "author": "Alpha Stocks Insight Staff",
@@ -1139,7 +1655,7 @@
     ]
   },
   {
-    "id": 37,
+    "id": 53,
     "slug": "eix-edison-international-nyse-eix-beats-core-earnings-but-revenu",
     "title": "Edison International (NYSE: EIX) Beats Core Earnings but Revenue Miss Tempers Optimism",
     "author": "Alpha Stocks Insight Staff",
@@ -1170,7 +1686,7 @@
     ]
   },
   {
-    "id": 38,
+    "id": 54,
     "slug": "ecl-ecolab-nyse-ecl-reports-in-line-q1-earnings-as-margin-pressu",
     "title": "Ecolab (NYSE: ECL) Reports In-Line Q1 Earnings as Margin Pressure Lingers",
     "author": "Alpha Stocks Insight Staff",
@@ -1201,7 +1717,7 @@
     ]
   },
   {
-    "id": 39,
+    "id": 55,
     "slug": "csgp-costar-group-nasdaq-csgp-posts-in-line-q1-but-stock-retreats",
     "title": "CoStar Group (NASDAQ: CSGP) Posts In-Line Q1 but Stock Retreats on Profit Concerns",
     "author": "Alpha Stocks Insight Staff",
@@ -1232,7 +1748,7 @@
     ]
   },
   {
-    "id": 40,
+    "id": 56,
     "slug": "cnc-centene-nyse-cnc-surges-14-on-q1-strength-and-medicaid-momen",
     "title": "Centene (NYSE: CNC) Surges 14% on Q1 Strength and Medicaid Momentum",
     "author": "Alpha Stocks Insight Staff",
@@ -1263,7 +1779,7 @@
     ]
   },
   {
-    "id": 41,
+    "id": 57,
     "slug": "cms-cms-energy-nyse-cms-treads-water-as-data-center-opportunity-",
     "title": "CMS Energy (NYSE: CMS) Treads Water as Data Center Opportunity Emerges",
     "author": "Alpha Stocks Insight Staff",
@@ -1294,7 +1810,7 @@
     ]
   },
   {
-    "id": 42,
+    "id": 58,
     "slug": "ccep-coca-cola-europacific-partners-nasdaq-ccep-posts-flat-q1-rev",
     "title": "Coca-Cola Europacific Partners (NASDAQ: CCEP) Posts Flat Q1 Revenue, 68% Earnings Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -1325,7 +1841,7 @@
     ]
   },
   {
-    "id": 43,
+    "id": 59,
     "slug": "bxp-boston-properties-nyse-bxp-beats-q1-on-asset-sales-eyes-ai-l",
     "title": "Boston Properties (NYSE: BXP) Beats Q1 on Asset Sales, Eyes AI Leasing Boom",
     "author": "Alpha Stocks Insight Staff",
@@ -1356,7 +1872,7 @@
     ]
   },
   {
-    "id": 44,
+    "id": 60,
     "slug": "bkng-booking-holdings-nasdaq-bkng-posts-in-line-q1-revenue-despit",
     "title": "Booking Holdings (NASDAQ: BKNG) Posts In-Line Q1 Revenue Despite Travel Uncertainty",
     "author": "Alpha Stocks Insight Staff",
@@ -1387,7 +1903,7 @@
     ]
   },
   {
-    "id": 45,
+    "id": 61,
     "slug": "ben-franklin-resources-nyse-ben-beats-q2-estimates-as-earnings-g",
     "title": "Franklin Resources (NYSE: BEN) Beats Q2 Estimates as Earnings Growth Accelerates",
     "author": "Alpha Stocks Insight Staff",
@@ -1418,7 +1934,7 @@
     ]
   },
   {
-    "id": 46,
+    "id": 62,
     "slug": "be-bloom-energy-nyse-be-shatters-q1-estimates-as-revenue-surges",
     "title": "Bloom Energy (NYSE: BE) Shatters Q1 Estimates as Revenue Surges 130%",
     "author": "Alpha Stocks Insight Staff",
@@ -1449,7 +1965,7 @@
     ]
   },
   {
-    "id": 47,
+    "id": 63,
     "slug": "avy-avery-dennison-avy-posts-7-eps-growth-in-q1-2026-beats-estim",
     "title": "Avery Dennison (AVY) Posts 7% EPS Growth in Q1 2026, Beats Estimates",
     "author": "Alpha Stocks Insight Staff",
@@ -1480,7 +1996,7 @@
     ]
   },
   {
-    "id": 48,
+    "id": 64,
     "slug": "alle-allegion-alle-drops-7-after-q1-2026-results-erp-disruption-w",
     "title": "Allegion (ALLE) Drops 7% After Q1 2026 Results; ERP Disruption Weighs on International Segment",
     "author": "Alpha Stocks Insight Staff",
@@ -1511,7 +2027,7 @@
     ]
   },
   {
-    "id": 49,
+    "id": 65,
     "slug": "ait-applied-industrial-technologies-ait-posts-record-q3-ebitda-o",
     "title": "Applied Industrial Technologies (AIT) Posts Record Q3 EBITDA on 6% Organic Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -1542,7 +2058,7 @@
     ]
   },
   {
-    "id": 50,
+    "id": 66,
     "slug": "acgl-arch-capital-nasdaq-acgl-posts-strong-q1-2026-earnings-beat-",
     "title": "Arch Capital (NASDAQ: ACGL) Posts Strong Q1 2026 Earnings Beat on Underwriting Strength",
     "author": "Alpha Stocks Insight Staff",
@@ -1573,7 +2089,7 @@
     ]
   },
   {
-    "id": 51,
+    "id": 67,
     "slug": "roundup-2026-04-28",
     "title": "Today's Top Stock Highlights — April 28, 2026",
     "author": "Alpha Stocks Insight Staff",
@@ -1627,7 +2143,7 @@
     ]
   },
   {
-    "id": 52,
+    "id": 68,
     "slug": "ko-coca-cola-nyse-ko-beats-q1-estimates-raises-full-year-profit",
     "title": "Coca-Cola (NYSE: KO) Beats Q1 Estimates, Raises Full-Year Profit Forecast",
     "author": "Alpha Stocks Insight Staff",
@@ -1658,7 +2174,7 @@
     ]
   },
   {
-    "id": 53,
+    "id": 69,
     "slug": "kmb-kimberly-clark-nasdaq-kmb-beats-q1-expectations-reaffirms-fu",
     "title": "Kimberly-Clark (NASDAQ: KMB) Beats Q1 Expectations, Reaffirms Full-Year Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -1689,7 +2205,7 @@
     ]
   },
   {
-    "id": 54,
+    "id": 70,
     "slug": "ivz-invesco-nyse-ivz-misses-q1-estimates-despite-strong-inflows",
     "title": "Invesco (NYSE: IVZ) Misses Q1 Estimates Despite Strong Inflows",
     "author": "Alpha Stocks Insight Staff",
@@ -1720,7 +2236,7 @@
     ]
   },
   {
-    "id": 55,
+    "id": 71,
     "slug": "ir-ingersoll-rand-nyse-ir-prepares-q1-earnings-amid-valuation-q",
     "title": "Ingersoll Rand (NYSE: IR) Prepares Q1 Earnings Amid Valuation Questions",
     "author": "Alpha Stocks Insight Staff",
@@ -1751,7 +2267,7 @@
     ]
   },
   {
-    "id": 56,
+    "id": 72,
     "slug": "incy-incyte-nasdaq-incy-beats-q1-estimates-as-pipeline-catalysts-",
     "title": "Incyte (NASDAQ: INCY) Beats Q1 Estimates as Pipeline Catalysts Loom",
     "author": "Alpha Stocks Insight Staff",
@@ -1782,7 +2298,7 @@
     ]
   },
   {
-    "id": 57,
+    "id": 73,
     "slug": "hood-robinhood-nasdaq-hood-heads-to-earnings-as-growth-slows-expa",
     "title": "Robinhood (NASDAQ: HOOD) Heads to Earnings as Growth Slows, Expansion Adds Risk",
     "author": "Alpha Stocks Insight Staff",
@@ -1813,7 +2329,7 @@
     ]
   },
   {
-    "id": 58,
+    "id": 74,
     "slug": "hlt-hilton-nyse-hlt-beats-eps-misses-revenue-but-raises-full-yea",
     "title": "Hilton (NYSE: HLT) Beats EPS, Misses Revenue, but Raises Full-Year RevPAR",
     "author": "Alpha Stocks Insight Staff",
@@ -1844,7 +2360,7 @@
     ]
   },
   {
-    "id": 59,
+    "id": 75,
     "slug": "gm-general-motors-nyse-gm-beats-q1-raises-2026-outlook-amid-tar",
     "title": "General Motors (NYSE: GM) Beats Q1, Raises 2026 Outlook Amid Tariff Pressures",
     "author": "Alpha Stocks Insight Staff",
@@ -1875,7 +2391,7 @@
     ]
   },
   {
-    "id": 60,
+    "id": 76,
     "slug": "glw-corning-nyse-glw-beats-q1-but-soft-q2-guidance-triggers-4-5-",
     "title": "Corning (NYSE: GLW) Beats Q1, but Soft Q2 Guidance Triggers 4.5% Slide",
     "author": "Alpha Stocks Insight Staff",
@@ -1906,7 +2422,7 @@
     ]
   },
   {
-    "id": 61,
+    "id": 77,
     "slug": "ecl-ecolab-nyse-ecl-posts-higher-q1-sales-raises-2026-eps-outloo",
     "title": "Ecolab (NYSE: ECL) Posts Higher Q1 Sales, Raises 2026 EPS Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -1937,7 +2453,7 @@
     ]
   },
   {
-    "id": 62,
+    "id": 78,
     "slug": "cnc-centene-corporation-nyse-cnc-crushes-q1-estimates-raises-ful",
     "title": "Centene Corporation (NYSE: CNC) Crushes Q1 Estimates, Raises Full-Year Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -1967,7 +2483,7 @@
     ]
   },
   {
-    "id": 63,
+    "id": 79,
     "slug": "cms-cms-energy-nyse-cms-beats-q1-estimates-as-capex-plans-expand",
     "title": "CMS Energy (NYSE: CMS) Beats Q1 Estimates as Capex Plans Expand Amid Power Demand Surge",
     "author": "Alpha Stocks Insight Staff",
@@ -1997,7 +2513,7 @@
     ]
   },
   {
-    "id": 64,
+    "id": 80,
     "slug": "ccep-coca-cola-europacific-partners-nyse-ccep-raises-dividend-on-",
     "title": "Coca-Cola Europacific Partners (NYSE: CCEP) Raises Dividend on Earnings Surge",
     "author": "Alpha Stocks Insight Staff",
@@ -2027,7 +2543,7 @@
     ]
   },
   {
-    "id": 65,
+    "id": 81,
     "slug": "bkng-booking-holdings-nasdaq-bkng-drops-on-profit-taking-despite-",
     "title": "Booking Holdings (NASDAQ: BKNG) Drops on Profit-Taking Despite Analyst Optimism",
     "author": "Alpha Stocks Insight Staff",
@@ -2057,7 +2573,7 @@
     ]
   },
   {
-    "id": 66,
+    "id": 82,
     "slug": "ben-franklin-resources-nyse-ben-posts-strong-earnings-growth-ami",
     "title": "Franklin Resources (NYSE: BEN) Posts Strong Earnings Growth Amid Market Recovery",
     "author": "Alpha Stocks Insight Staff",
@@ -2087,7 +2603,7 @@
     ]
   },
   {
-    "id": 67,
+    "id": 83,
     "slug": "amt-american-tower-nyse-amt-beats-q1-estimates-raises-full-year-",
     "title": "American Tower (NYSE: AMT) Beats Q1 Estimates, Raises Full-Year 2026 Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -2118,7 +2634,7 @@
     ]
   },
   {
-    "id": 68,
+    "id": 84,
     "slug": "alle-allegion-nyse-alle-q1-2026-revenue-beats-but-eps-and-margins",
     "title": "Allegion (NYSE: ALLE) Q1 2026: Revenue Beats but EPS and Margins Disappoint",
     "author": "Alpha Stocks Insight Staff",
@@ -2149,7 +2665,7 @@
     ]
   },
   {
-    "id": 69,
+    "id": 85,
     "slug": "ait-applied-industrial-technologies-ait-beats-q3-estimates-raise",
     "title": "Applied Industrial Technologies (AIT) Beats Q3 Estimates, Raises FY2026 Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -2180,7 +2696,7 @@
     ]
   },
   {
-    "id": 70,
+    "id": 86,
     "slug": "acgl-arch-capital-group-acgl-trades-near-mid-range-as-valuation-a",
     "title": "Arch Capital Group (ACGL) Trades Near Mid-Range as Valuation and Growth Metrics Draw Analyst Attention",
     "author": "Alpha Stocks Insight Staff",
@@ -2210,7 +2726,7 @@
     ]
   },
   {
-    "id": 71,
+    "id": 87,
     "slug": "mrk-merck-nyse-mrk-slides-1-49-amid-pharma-m-a-activity-and-pipe",
     "title": "Merck (NYSE: MRK) Slides 1.49% Amid Pharma M&A Activity and Pipeline Updates",
     "author": "Alpha Stocks Insight Staff",
@@ -2240,7 +2756,7 @@
     ]
   },
   {
-    "id": 72,
+    "id": 88,
     "slug": "amd-amd-nasdaq-amd-falls-3-79-as-semiconductor-winning-streak-en",
     "title": "AMD (NASDAQ: AMD) Falls 3.79% as Semiconductor Winning Streak Ends",
     "author": "Alpha Stocks Insight Staff",
@@ -2270,7 +2786,7 @@
     ]
   },
   {
-    "id": 73,
+    "id": 89,
     "slug": "aapl-apple-nasdaq-aapl-slips-1-27-despite-strong-earnings-and-rev",
     "title": "Apple (NASDAQ: AAPL) Slips 1.27% Despite Strong Earnings and Revenue Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -2301,7 +2817,7 @@
     ]
   },
   {
-    "id": 74,
+    "id": 90,
     "slug": "intc-intel-nasdaq-intc-rebounds-2-97-as-semiconductor-sector-shif",
     "title": "Intel (NASDAQ: INTC) Rebounds 2.97% as Semiconductor Sector Shifts",
     "author": "Alpha Stocks Insight Staff",
@@ -2331,7 +2847,7 @@
     ]
   },
   {
-    "id": 75,
+    "id": 91,
     "slug": "amzn-amazon-nasdaq-amzn-hits-2-trillion-milestone-as-cloud-and-re",
     "title": "Amazon (NASDAQ: AMZN) Hits $2 Trillion Milestone as Cloud and Retail Power Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -2362,7 +2878,7 @@
     ]
   },
   {
-    "id": 76,
+    "id": 92,
     "slug": "googl-alphabet-nyse-googl-crosses-2-trillion-as-gemini-ai-bets-pay",
     "title": "Alphabet (NYSE: GOOGL) Crosses $2 Trillion as Gemini AI Bets Pay Off",
     "author": "Alpha Stocks Insight Staff",
@@ -2393,7 +2909,7 @@
     ]
   },
   {
-    "id": 77,
+    "id": 93,
     "slug": "goog-alphabet-nasdaq-goog-hits-2-trillion-valuation-as-ai-spendin",
     "title": "Alphabet (NASDAQ: GOOG) Hits $2 Trillion Valuation as AI Spending Fuels Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -2424,7 +2940,7 @@
     ]
   },
   {
-    "id": 78,
+    "id": 94,
     "slug": "vz-verizon-nyse-vz-posts-positive-subscriber-growth-amid-teleco",
     "title": "Verizon (NYSE: VZ) Posts Positive Subscriber Growth Amid Telecom Stabilization",
     "author": "Alpha Stocks Insight Staff",
@@ -2455,7 +2971,7 @@
     ]
   },
   {
-    "id": 79,
+    "id": 95,
     "slug": "vtr-ventas-nyse-vtr-beats-q1-estimates-as-senior-housing-boom-li",
     "title": "Ventas (NYSE: VTR) Beats Q1 Estimates as Senior Housing Boom Lifts Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -2486,7 +3002,7 @@
     ]
   },
   {
-    "id": 80,
+    "id": 96,
     "slug": "uhs-universal-health-services-nyse-uhs-pops-after-hours-on-q1-ea",
     "title": "Universal Health Services (NYSE: UHS) Pops After Hours on Q1 Earnings and Sales Beat",
     "author": "Alpha Stocks Insight Staff",
@@ -2516,7 +3032,7 @@
     ]
   },
   {
-    "id": 81,
+    "id": 97,
     "slug": "rmbs-rambus-nasdaq-rmbs-tumbles-10-8-despite-meeting-q1-guidance-",
     "title": "Rambus (NASDAQ: RMBS) Tumbles 10.8% Despite Meeting Q1 Guidance Amid AI Demand Disconnect",
     "author": "Alpha Stocks Insight Staff",
@@ -2546,7 +3062,7 @@
     ]
   },
   {
-    "id": 82,
+    "id": 98,
     "slug": "psa-public-storage-nyse-psa-tops-earnings-but-misses-revenue-on-",
     "title": "Public Storage (NYSE: PSA) Tops Earnings but Misses Revenue on NSA Acquisition",
     "author": "Alpha Stocks Insight Staff",
@@ -2576,7 +3092,7 @@
     ]
   },
   {
-    "id": 83,
+    "id": 99,
     "slug": "nue-nucor-nyse-nue-soars-after-hours-on-stellar-q1-2026-earnings",
     "title": "Nucor (NYSE: NUE) Soars After Hours on Stellar Q1 2026 Earnings Beat",
     "author": "Alpha Stocks Insight Staff",
@@ -2606,7 +3122,7 @@
     ]
   },
   {
-    "id": 84,
+    "id": 100,
     "slug": "dpz-domino-s-pizza-nyse-dpz-slides-8-8-as-consumer-sentiment-con",
     "title": "Domino's Pizza (NYSE: DPZ) Slides 8.8% as Consumer Sentiment Concerns Weigh",
     "author": "Alpha Stocks Insight Staff",
@@ -2635,7 +3151,7 @@
     ]
   },
   {
-    "id": 85,
+    "id": 101,
     "slug": "cinf-cincinnati-financial-nasdaq-cinf-beats-q1-2026-eps-estimates",
     "title": "Cincinnati Financial (NASDAQ: CINF) Beats Q1 2026 EPS Estimates on Lower Catastrophe Losses",
     "author": "Alpha Stocks Insight Staff",
@@ -2666,7 +3182,7 @@
     ]
   },
   {
-    "id": 86,
+    "id": 102,
     "slug": "cdns-cadence-design-systems-nasdaq-cdns-beats-q1-estimates-raises",
     "title": "Cadence Design Systems (NASDAQ: CDNS) Beats Q1 Estimates, Raises Full-Year Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -2697,7 +3213,7 @@
     ]
   },
   {
-    "id": 87,
+    "id": 103,
     "slug": "avb-avalonbay-nyse-avb-q1-core-ffo-meets-estimates-but-soft-q2-g",
     "title": "AvalonBay (NYSE: AVB) Q1 Core FFO Meets Estimates but Soft Q2 Guidance Clouds Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -2728,7 +3244,7 @@
     ]
   },
   {
-    "id": 88,
+    "id": 104,
     "slug": "are-alexandria-real-estate-are-posts-ffo-beat-in-q1-2026-amid-re",
     "title": "Alexandria Real Estate (ARE) Posts FFO Beat in Q1 2026 Amid Revenue Miss and Weak Leasing",
     "author": "Alpha Stocks Insight Staff",
@@ -2759,7 +3275,7 @@
     ]
   },
   {
-    "id": 89,
+    "id": 105,
     "slug": "amkr-amkor-technology-nasdaq-amkr-beats-q1-2026-on-revenue-and-ep",
     "title": "Amkor Technology (NASDAQ: AMKR) Beats Q1 2026 on Revenue and EPS, But Shares Pull Back",
     "author": "Alpha Stocks Insight Staff",
@@ -2790,7 +3306,7 @@
     ]
   },
   {
-    "id": 90,
+    "id": 106,
     "slug": "klac-kla-corporation-nasdaq-klac-surges-6-59-on-ubs-price-target-",
     "title": "KLA Corporation (NASDAQ: KLAC) Surges 6.59% on UBS Price Target Lift Ahead of Earnings",
     "author": "Alpha Stocks Insight Staff",
@@ -2820,7 +3336,7 @@
     ]
   },
   {
-    "id": 91,
+    "id": 107,
     "slug": "jpm-jpmorgan-chase-nyse-jpm-holds-steady-as-banking-strength-und",
     "title": "JPMorgan Chase (NYSE: JPM) Holds Steady as Banking Strength Underpins Valuation",
     "author": "Alpha Stocks Insight Staff",
@@ -2850,7 +3366,7 @@
     ]
   },
   {
-    "id": 92,
+    "id": 108,
     "slug": "chtr-charter-communications-nasdaq-chtr-crashes-25-50-on-q1-profi",
     "title": "Charter Communications (NASDAQ: CHTR) Crashes 25.50% on Q1 Profit Miss",
     "author": "Alpha Stocks Insight Staff",
@@ -2881,7 +3397,7 @@
     ]
   },
   {
-    "id": 93,
+    "id": 109,
     "slug": "meta-meta-nasdaq-meta-rises-2-41-despite-china-blocking-2-billion",
     "title": "Meta (NASDAQ: META) Rises 2.41% Despite China Blocking $2 Billion AI Acquisition",
     "author": "Alpha Stocks Insight Staff",
@@ -2911,7 +3427,7 @@
     ]
   },
   {
-    "id": 94,
+    "id": 110,
     "slug": "goog-alphabet-nasdaq-goog-edges-up-1-35-as-ai-investments-and-dee",
     "title": "Alphabet (NASDAQ: GOOG) Edges Up 1.35% as AI Investments and DeepSeek Pricing Shift Market Dynamics",
     "author": "Alpha Stocks Insight Staff",
@@ -2942,7 +3458,7 @@
     ]
   },
   {
-    "id": 95,
+    "id": 111,
     "slug": "amzn-amazon-nasdaq-amzn-climbs-3-49-as-aws-ai-services-drive-clou",
     "title": "Amazon (NASDAQ: AMZN) Climbs 3.49% as AWS AI Services Drive Cloud Market Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -2973,7 +3489,7 @@
     ]
   },
   {
-    "id": 96,
+    "id": 112,
     "slug": "nvda-nvidia-nasdaq-nvda-surges-past-5-trillion-valuation-as-ai-ch",
     "title": "NVIDIA (NASDAQ: NVDA) Surges Past $5 Trillion Valuation as AI Chip Demand Accelerates",
     "author": "Alpha Stocks Insight Staff",
@@ -3003,7 +3519,7 @@
     ]
   },
   {
-    "id": 97,
+    "id": 113,
     "slug": "googl-googl-nears-52-week-high-as-anthropic-deal-and-ai-momentum-l",
     "title": "GOOGL Nears 52-Week High as Anthropic Deal and AI Momentum Lift Sentiment",
     "author": "Alpha Stocks Insight Staff",
@@ -3033,7 +3549,7 @@
     ]
   },
   {
-    "id": 98,
+    "id": 114,
     "slug": "intc-intel-nasdaq-intc-jumps-23-6-after-earnings-release-and-lead",
     "title": "Intel (NASDAQ: INTC) Jumps 23.6% After Earnings Release and Leadership Update",
     "author": "Alpha Stocks Insight Staff",
@@ -3064,7 +3580,7 @@
     ]
   },
   {
-    "id": 99,
+    "id": 115,
     "slug": "vz-verizon-vz-beats-q1-earnings-raises-guidance-posts-first-spr",
     "title": "Verizon (VZ) Beats Q1 Earnings, Raises Guidance, Posts First Spring Subscriber Gains Since 2013",
     "author": "Alpha Stocks Insight Staff",
@@ -3095,7 +3611,7 @@
     ]
   },
   {
-    "id": 100,
+    "id": 116,
     "slug": "roundup-2026-04-27",
     "title": "Today's Top Stock Highlights — April 27, 2026",
     "author": "Alpha Stocks Insight Staff",
@@ -3149,7 +3665,7 @@
     ]
   },
   {
-    "id": 101,
+    "id": 117,
     "slug": "luv-southwest-airlines-nyse-luv-rebounds-4-50-despite-q1-profit-",
     "title": "Southwest Airlines (NYSE: LUV) Rebounds 4.50% Despite Q1 Profit Rebound as Fuel Costs and Policy Risks Persist",
     "author": "Alpha Stocks Insight Staff",
@@ -3178,7 +3694,7 @@
     ]
   },
   {
-    "id": 102,
+    "id": 118,
     "slug": "klac-kla-corporation-nasdaq-klac-rallies-6-59-on-ubs-upgrade-and-",
     "title": "KLA Corporation (NASDAQ: KLAC) Rallies 6.59% on UBS Upgrade and Semiconductor Cycle Recovery",
     "author": "Alpha Stocks Insight Staff",
@@ -3207,7 +3723,7 @@
     ]
   },
   {
-    "id": 103,
+    "id": 119,
     "slug": "jpm-jpmorgan-chase-nyse-jpm-slips-1-09-as-geopolitical-tensions-",
     "title": "JPMorgan Chase (NYSE: JPM) Slips 1.09% as Geopolitical Tensions Weigh on Emerging Markets",
     "author": "Alpha Stocks Insight Staff",
@@ -3236,7 +3752,7 @@
     ]
   },
   {
-    "id": 104,
+    "id": 120,
     "slug": "chtr-charter-communications-nasdaq-chtr-plummets-25-5-after-q1-ea",
     "title": "Charter Communications (NASDAQ: CHTR) Plummets 25.5% After Q1 Earnings Miss Despite Subscriber Gains",
     "author": "Alpha Stocks Insight Staff",
@@ -3265,7 +3781,7 @@
     ]
   },
   {
-    "id": 105,
+    "id": 121,
     "slug": "lly-eli-lilly-nyse-lly-acquires-ajax-therapeutics-for-2-3b-to-ex",
     "title": "Eli Lilly (NYSE: LLY) Acquires Ajax Therapeutics for $2.3B to Expand Blood Disorder Portfolio",
     "author": "Alpha Stocks Insight Staff",
@@ -3294,7 +3810,7 @@
     ]
   },
   {
-    "id": 106,
+    "id": 122,
     "slug": "hood-robinhood-nasdaq-hood-advances-1-4-ahead-of-q1-earnings-repo",
     "title": "Robinhood (NASDAQ: HOOD) Advances 1.4% Ahead of Q1 Earnings Report",
     "author": "Alpha Stocks Insight Staff",
@@ -3323,7 +3839,7 @@
     ]
   },
   {
-    "id": 107,
+    "id": 123,
     "slug": "qcom-qualcomm-nasdaq-qcom-rallies-11-on-next-gen-ai-catalyst-opti",
     "title": "Qualcomm (NASDAQ: QCOM) Rallies 11% on Next-Gen AI Catalyst Optimism",
     "author": "Alpha Stocks Insight Staff",
@@ -3352,7 +3868,7 @@
     ]
   },
   {
-    "id": 108,
+    "id": 124,
     "slug": "hca-hca-healthcare-nyse-hca-plunges-8-8-on-q1-headwinds-cautious",
     "title": "HCA Healthcare (NYSE: HCA) Plunges 8.8% on Q1 Headwinds, Cautious Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -3381,7 +3897,7 @@
     ]
   },
   {
-    "id": 109,
+    "id": 125,
     "slug": "jnj-johnson-johnson-nyse-jnj-acquires-atraverse-medical-for-card",
     "title": "Johnson & Johnson (NYSE: JNJ) Acquires Atraverse Medical for Cardiac Portfolio",
     "author": "Alpha Stocks Insight Staff",
@@ -3410,7 +3926,7 @@
     ]
   },
   {
-    "id": 110,
+    "id": 126,
     "slug": "amd-amd-nasdaq-amd-surges-14-as-ai-chip-demand-accelerates-growt",
     "title": "AMD (NASDAQ: AMD) Surges 14% as AI Chip Demand Accelerates Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -3439,7 +3955,7 @@
     ]
   },
   {
-    "id": 111,
+    "id": 127,
     "slug": "msft-microsoft-nasdaq-msft-gains-2-1-as-ai-software-market-leader",
     "title": "Microsoft (NASDAQ: MSFT) Gains 2.1% as AI Software Market Leadership Continues to Expand",
     "author": "Alpha Stocks Insight Staff",
@@ -3468,7 +3984,7 @@
     ]
   },
   {
-    "id": 112,
+    "id": 128,
     "slug": "meta-meta-nasdaq-meta-rises-2-4-despite-2b-manus-acquisition-bloc",
     "title": "Meta (NASDAQ: META) Rises 2.4% Despite $2B Manus Acquisition Blocked by China",
     "author": "Alpha Stocks Insight Staff",
@@ -3497,7 +4013,7 @@
     ]
   },
   {
-    "id": 113,
+    "id": 129,
     "slug": "goog-alphabet-nasdaq-goog-gains-1-4-amid-strategic-ai-investments",
     "title": "Alphabet (NASDAQ: GOOG) Gains 1.4% Amid Strategic AI Investments and Competitive Pressures",
     "author": "Alpha Stocks Insight Staff",
@@ -3527,7 +4043,7 @@
     ]
   },
   {
-    "id": 114,
+    "id": 130,
     "slug": "nvda-nvidia-nasdaq-nvda-surges-past-208-on-ai-chip-dominance-and-",
     "title": "Nvidia (NASDAQ: NVDA) Surges Past $208 on AI Chip Dominance and Record Valuations",
     "author": "Alpha Stocks Insight Staff",
@@ -3556,7 +4072,7 @@
     ]
   },
   {
-    "id": 115,
+    "id": 131,
     "slug": "googl-googl-approaches-52-week-high-as-analyst-consensus-holds-str",
     "title": "GOOGL Approaches 52-Week High as Analyst Consensus Holds Strong Buy",
     "author": "Alpha Stocks Insight Staff",
@@ -3586,7 +4102,7 @@
     ]
   },
   {
-    "id": 116,
+    "id": 132,
     "slug": "intc-intel-nasdaq-intc-surges-23-6-after-earnings-release-hitting",
     "title": "Intel (NASDAQ: INTC) Surges 23.6% After Earnings Release, Hitting Near 52-Week High",
     "author": "Alpha Stocks Insight Staff",
@@ -3617,7 +4133,7 @@
     ]
   },
   {
-    "id": 117,
+    "id": 133,
     "slug": "vz-verizon-vz-beats-q1-earnings-raises-full-year-guidance-as-su",
     "title": "Verizon (VZ) Beats Q1 Earnings, Raises Full-Year Guidance as Subscriber Growth Returns",
     "author": "Alpha Stocks Insight Staff",
@@ -3648,7 +4164,7 @@
     ]
   },
   {
-    "id": 118,
+    "id": 134,
     "slug": "rmbs-rambus-nasdaq-rmbs-jumps-14-on-socamm2-ai-memory-launch-and-",
     "title": "Rambus (NASDAQ: RMBS) Jumps 14% on SOCAMM2 AI Memory Launch and Q1 2026 Earnings Optimism",
     "author": "Alpha Stocks Insight Staff",
@@ -3679,7 +4195,7 @@
     ]
   },
   {
-    "id": 119,
+    "id": 135,
     "slug": "dpz-domino-s-pizza-nasdaq-dpz-slides-after-q1-2026-miss-on-reven",
     "title": "Domino's Pizza (NASDAQ: DPZ) Slides After Q1 2026 Miss on Revenue and EPS",
     "author": "Alpha Stocks Insight Staff",
@@ -3710,7 +4226,7 @@
     ]
   },
   {
-    "id": 120,
+    "id": 136,
     "slug": "hims-hims-hers-nyse-hims-climbs-8-56-on-jpmorgan-overweight-ratin",
     "title": "Hims & Hers (NYSE: HIMS) Climbs 8.56% on JPMorgan Overweight Rating and Novo Nordisk Partnership",
     "author": "Alpha Stocks Insight Staff",
@@ -3740,7 +4256,7 @@
     ]
   },
   {
-    "id": 121,
+    "id": 137,
     "slug": "cmcsa-comcast-nasdaq-cmcsa-plummets-12-90-as-broadband-competition",
     "title": "Comcast (NASDAQ: CMCSA) Plummets 12.90% as Broadband Competition Intensifies, Growth Stalls",
     "author": "Alpha Stocks Insight Staff",
@@ -3770,7 +4286,7 @@
     ]
   },
   {
-    "id": 122,
+    "id": 138,
     "slug": "bsx-boston-scientific-nyse-bsx-falls-5-51-despite-early-earnings",
     "title": "Boston Scientific (NYSE: BSX) Falls 5.51% Despite Early Earnings Beat, Investor Caution Emerges",
     "author": "Alpha Stocks Insight Staff",
@@ -3800,7 +4316,7 @@
     ]
   },
   {
-    "id": 123,
+    "id": 139,
     "slug": "amd-advanced-micro-devices-nasdaq-amd-surges-13-91-on-ai-chip-de",
     "title": "Advanced Micro Devices (NASDAQ: AMD) Surges 13.91% on AI Chip Demand and Competitive Positioning",
     "author": "Alpha Stocks Insight Staff",
@@ -3830,7 +4346,7 @@
     ]
   },
   {
-    "id": 124,
+    "id": 140,
     "slug": "meta-meta-platforms-nasdaq-meta-gains-2-41-as-tech-sector-powers-",
     "title": "Meta Platforms (NASDAQ: META) Gains 2.41% as Tech Sector Powers Broader Market Higher",
     "author": "Alpha Stocks Insight Staff",
@@ -3861,7 +4377,7 @@
     ]
   },
   {
-    "id": 125,
+    "id": 141,
     "slug": "luv-southwest-airlines-nyse-luv-surges-4-50-on-q1-earnings-beat-",
     "title": "Southwest Airlines (NYSE: LUV) Surges 4.50% on Q1 Earnings Beat and Raised Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -3890,7 +4406,7 @@
     ]
   },
   {
-    "id": 126,
+    "id": 142,
     "slug": "googl-alphabet-nasdaq-googl-climbs-1-63-as-class-a-shares-track-co",
     "title": "Alphabet (NASDAQ: GOOGL) Climbs 1.63% as Class A Shares Track Core AI Strength",
     "author": "Alpha Stocks Insight Staff",
@@ -3920,7 +4436,7 @@
     ]
   },
   {
-    "id": 127,
+    "id": 143,
     "slug": "goog-alphabet-nasdaq-goog-advances-1-35-as-ai-leadership-anchors-",
     "title": "Alphabet (NASDAQ: GOOG) Advances 1.35% as AI Leadership Anchors Tech Sector Momentum",
     "author": "Alpha Stocks Insight Staff",
@@ -3950,7 +4466,7 @@
     ]
   },
   {
-    "id": 128,
+    "id": 144,
     "slug": "orcl-oracle-nyse-orcl-declines-1-70-amid-contract-cancellation-an",
     "title": "Oracle (NYSE: ORCL) Declines 1.70% Amid Contract Cancellation and Valuation Concerns",
     "author": "Alpha Stocks Insight Staff",
@@ -3979,7 +4495,7 @@
     ]
   },
   {
-    "id": 129,
+    "id": 145,
     "slug": "msft-microsoft-nasdaq-msft-surges-2-13-as-tech-sector-powers-mark",
     "title": "Microsoft (NASDAQ: MSFT) Surges 2.13% as Tech Sector Powers Market to New Highs",
     "author": "Alpha Stocks Insight Staff",
@@ -4008,7 +4524,7 @@
     ]
   },
   {
-    "id": 130,
+    "id": 146,
     "slug": "amzn-amazon-nasdaq-amzn-rises-3-49-amid-ai-driven-earnings-moment",
     "title": "Amazon (NASDAQ: AMZN) Rises 3.49% Amid AI-Driven Earnings Momentum and Cloud Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -4039,7 +4555,7 @@
     ]
   },
   {
-    "id": 131,
+    "id": 147,
     "slug": "now-servicenow-nyse-now-rallies-6-36-as-analysts-reset-price-tar",
     "title": "ServiceNow (NYSE: NOW) Rallies 6.36% as Analysts Reset Price Targets Post-Earnings",
     "author": "Alpha Stocks Insight Staff",
@@ -4070,7 +4586,7 @@
     ]
   },
   {
-    "id": 132,
+    "id": 148,
     "slug": "nvda-nvidia-nasdaq-nvda-climbs-4-32-amid-record-ai-chip-demand-an",
     "title": "NVIDIA (NASDAQ: NVDA) Climbs 4.32% Amid Record AI Chip Demand and Revenue Acceleration",
     "author": "Alpha Stocks Insight Staff",
@@ -4101,7 +4617,7 @@
     ]
   },
   {
-    "id": 133,
+    "id": 149,
     "slug": "intc-intel-nasdaq-intc-surges-23-6-on-ai-demand-and-advanced-manu",
     "title": "Intel (NASDAQ: INTC) Surges 23.6% on AI Demand and Advanced Manufacturing Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -4132,7 +4648,7 @@
     ]
   },
   {
-    "id": 134,
+    "id": 150,
     "slug": "slb-schlumberger-nyse-slb-beats-q1-estimates-on-digital-growth-a",
     "title": "Schlumberger (NYSE: SLB) Beats Q1 Estimates on Digital Growth and ChampionX Contributions",
     "author": "Alpha Stocks Insight Staff",
@@ -4163,7 +4679,7 @@
     ]
   },
   {
-    "id": 135,
+    "id": 151,
     "slug": "pg-p-g-nyse-pg-posts-strong-quarter-but-flags-1b-oil-cost-hit-a",
     "title": "P&G (NYSE: PG) Posts Strong Quarter but Flags $1B Oil Cost Hit Ahead",
     "author": "Alpha Stocks Insight Staff",
@@ -4194,7 +4710,7 @@
     ]
   },
   {
-    "id": 136,
+    "id": 152,
     "slug": "hca-hca-healthcare-hca-drops-8-77-after-q1-2026-earnings-amid-vo",
     "title": "HCA Healthcare (HCA) Drops 8.77% After Q1 2026 Earnings Amid Volume Headwinds",
     "author": "Alpha Stocks Insight Staff",
@@ -4225,7 +4741,7 @@
     ]
   },
   {
-    "id": 137,
+    "id": 153,
     "slug": "chtr-chtr-drops-25-as-subscriber-losses-fuel-competition-fears-fo",
     "title": "CHTR Drops 25% as Subscriber Losses Fuel Competition Fears for Charter Communications",
     "author": "Alpha Stocks Insight Staff",
@@ -4255,7 +4771,7 @@
     ]
   },
   {
-    "id": 138,
+    "id": 154,
     "slug": "axp-american-express-nyse-axp-falls-4-3-despite-strong-cardholde",
     "title": "American Express (NYSE: AXP) Falls 4.3% Despite Strong Cardholder Spending in Q1",
     "author": "Alpha Stocks Insight Staff",
@@ -4285,7 +4801,7 @@
     ]
   },
   {
-    "id": 139,
+    "id": 155,
     "slug": "regn-regeneron-nasdaq-regn-gains-2-6-on-trump-pricing-deal-and-fr",
     "title": "Regeneron (NASDAQ: REGN) Gains 2.6% on Trump Pricing Deal and Free Gene Therapy Offer",
     "author": "Alpha Stocks Insight Staff",
@@ -4315,7 +4831,7 @@
     ]
   },
   {
-    "id": 140,
+    "id": 156,
     "slug": "googl-alphabet-nasdaq-googl-flat-ahead-of-earnings-as-ai-investmen",
     "title": "Alphabet (NASDAQ: GOOGL) Flat Ahead of Earnings as AI Investments Draw Scrutiny",
     "author": "Alpha Stocks Insight Staff",
@@ -4345,7 +4861,7 @@
     ]
   },
   {
-    "id": 141,
+    "id": 157,
     "slug": "fds-factset-research-systems-nasdaq-fds-slides-on-market-rotatio",
     "title": "FactSet Research Systems (NASDAQ: FDS) Slides on Market Rotation Amid Solid Fundamentals",
     "author": "Alpha Stocks Insight Staff",
@@ -4375,7 +4891,7 @@
     ]
   },
   {
-    "id": 142,
+    "id": 158,
     "slug": "bsx-boston-scientific-nyse-bsx-edges-up-1-26-despite-guidance-cu",
     "title": "Boston Scientific (NYSE: BSX) Edges Up 1.26% Despite Guidance Cut as Analysts Reassess Growth Story",
     "author": "Alpha Stocks Insight Staff",
@@ -4406,7 +4922,7 @@
     ]
   },
   {
-    "id": 143,
+    "id": 159,
     "slug": "amzn-amazon-nasdaq-amzn-holds-steady-as-big-tech-earnings-season-",
     "title": "Amazon (NASDAQ: AMZN) Holds Steady as Big Tech Earnings Season Sets Stage for Volatility",
     "author": "Alpha Stocks Insight Staff",
@@ -4437,7 +4953,7 @@
     ]
   },
   {
-    "id": 144,
+    "id": 160,
     "slug": "ibm-ibm-nyse-ibm-slides-8-25-as-software-sector-weakness-spreads",
     "title": "IBM (NYSE: IBM) Slides 8.25% as Software Sector Weakness Spreads Across Enterprise Stack",
     "author": "Alpha Stocks Insight Staff",
@@ -4468,7 +4984,7 @@
     ]
   },
   {
-    "id": 145,
+    "id": 161,
     "slug": "orcl-oracle-nasdaq-orcl-falls-6-as-ai-infrastructure-narrative-fa",
     "title": "Oracle (NASDAQ: ORCL) Falls 6% as AI Infrastructure Narrative Faces Investor Skepticism",
     "author": "Alpha Stocks Insight Staff",
@@ -4499,7 +5015,7 @@
     ]
   },
   {
-    "id": 146,
+    "id": 162,
     "slug": "msft-microsoft-nasdaq-msft-falls-3-97-amid-rotation-away-from-meg",
     "title": "Microsoft (NASDAQ: MSFT) Falls 3.97% Amid Rotation Away from Mega-Cap Tech",
     "author": "Alpha Stocks Insight Staff",
@@ -4530,7 +5046,7 @@
     ]
   },
   {
-    "id": 147,
+    "id": 163,
     "slug": "nvda-nvidia-nasdaq-nvda-declines-1-41-as-deepseek-ai-model-raises",
     "title": "NVIDIA (NASDAQ: NVDA) Declines 1.41% as DeepSeek AI Model Raises Efficiency Questions",
     "author": "Alpha Stocks Insight Staff",
@@ -4562,7 +5078,7 @@
     ]
   },
   {
-    "id": 148,
+    "id": 164,
     "slug": "intc-intel-nasdaq-intc-gains-2-31-on-ceo-credibility-and-strategi",
     "title": "Intel (NASDAQ: INTC) Gains 2.31% on CEO Credibility and Strategic Focus",
     "author": "Alpha Stocks Insight Staff",
@@ -4593,7 +5109,7 @@
     ]
   },
   {
-    "id": 149,
+    "id": 165,
     "slug": "now-servicenow-nyse-now-plunges-17-75-as-market-reprices-cloud-s",
     "title": "ServiceNow (NYSE: NOW) Plunges 17.75% as Market Reprices Cloud Software Valuations",
     "author": "Alpha Stocks Insight Staff",
@@ -4624,7 +5140,7 @@
     ]
   },
   {
-    "id": 150,
+    "id": 166,
     "slug": "tsla-tesla-nasdaq-tsla-declines-as-cybercab-capex-spending-weighs",
     "title": "Tesla (NASDAQ: TSLA) Declines as Cybercab CapEx Spending Weighs on Stock",
     "author": "Alpha Stocks Insight Staff",
@@ -4655,7 +5171,7 @@
     ]
   },
   {
-    "id": 151,
+    "id": 167,
     "slug": "pg-procter-gamble-nyse-pg-beats-q1-cy2026-estimates-as-tariffs-",
     "title": "Procter & Gamble (NYSE: PG) Beats Q1 CY2026 Estimates as Tariffs Cloud Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -4686,7 +5202,7 @@
     ]
   },
   {
-    "id": 152,
+    "id": 168,
     "slug": "nsc-norfolk-southern-nsc-jumps-7-75-as-earnings-release-and-unio",
     "title": "Norfolk Southern (NSC) Jumps 7.75% as Earnings Release and Union Pacific Merger Talk Drive Interest",
     "author": "Alpha Stocks Insight Staff",
@@ -4716,7 +5232,7 @@
     ]
   },
   {
-    "id": 153,
+    "id": 169,
     "slug": "hca-hca-healthcare-nyse-hca-meets-q1-2026-revenue-estimates-as-p",
     "title": "HCA Healthcare (NYSE: HCA) Meets Q1 2026 Revenue Estimates as Profit Beats on Strong Care Demand",
     "author": "Alpha Stocks Insight Staff",
@@ -4747,7 +5263,7 @@
     ]
   },
   {
-    "id": 154,
+    "id": 170,
     "slug": "chtr-charter-communications-chtr-q1-2026-broadband-losses-weigh-o",
     "title": "Charter Communications (CHTR) Q1 2026: Broadband Losses Weigh on Results",
     "author": "Alpha Stocks Insight Staff",
@@ -4778,7 +5294,7 @@
     ]
   },
   {
-    "id": 155,
+    "id": 171,
     "slug": "roundup-2026-04-24",
     "title": "Today's Top Stock Highlights — April 24, 2026",
     "author": "Alpha Stocks Insight Staff",
@@ -4832,7 +5348,7 @@
     ]
   },
   {
-    "id": 156,
+    "id": 172,
     "slug": "googl-alphabet-nasdaq-googl-edges-down-despite-strength-amid-macro",
     "title": "Alphabet (NASDAQ: GOOGL) Edges Down Despite Strength Amid Macro Headwinds",
     "author": "Alpha Stocks Insight Staff",
@@ -4863,7 +5379,7 @@
     ]
   },
   {
-    "id": 157,
+    "id": 173,
     "slug": "nee-nextera-energy-nyse-nee-surges-7-on-q1-beat-and-expanded-gas",
     "title": "NextEra Energy (NYSE: NEE) Surges 7% on Q1 Beat and Expanded Gas-Nuclear Strategy",
     "author": "Alpha Stocks Insight Staff",
@@ -4894,7 +5410,7 @@
     ]
   },
   {
-    "id": 158,
+    "id": 174,
     "slug": "fds-factset-research-nyse-fds-falls-6-as-earnings-growth-stalls",
     "title": "FactSet Research (NYSE: FDS) Falls 6% as Earnings Growth Stalls",
     "author": "Alpha Stocks Insight Staff",
@@ -4925,7 +5441,7 @@
     ]
   },
   {
-    "id": 159,
+    "id": 175,
     "slug": "bsx-boston-scientific-nyse-bsx-cuts-2026-guidance-amid-q2-headwi",
     "title": "Boston Scientific (NYSE: BSX) Cuts 2026 Guidance Amid Q2 Headwinds",
     "author": "Alpha Stocks Insight Staff",
@@ -4956,7 +5472,7 @@
     ]
   },
   {
-    "id": 160,
+    "id": 176,
     "slug": "txn-texas-instruments-nasdaq-txn-soars-to-all-time-high-on-silic",
     "title": "Texas Instruments (NASDAQ: TXN) Soars to All-Time High on Silicon Labs Acquisition",
     "author": "Alpha Stocks Insight Staff",
@@ -4987,7 +5503,7 @@
     ]
   },
   {
-    "id": 161,
+    "id": 177,
     "slug": "ibm-ibm-nyse-ibm-drops-8-3-despite-q1-revenue-growth-and-earning",
     "title": "IBM (NYSE: IBM) Drops 8.3% Despite Q1 Revenue Growth and Earnings Beat",
     "author": "Alpha Stocks Insight Staff",
@@ -5020,7 +5536,7 @@
     ]
   },
   {
-    "id": 162,
+    "id": 178,
     "slug": "nvda-nvidia-nasdaq-nvda-pulls-back-1-4-despite-ai-momentum-and-73",
     "title": "NVIDIA (NASDAQ: NVDA) Pulls Back 1.4% Despite AI Momentum and 73% Revenue Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -5053,7 +5569,7 @@
     ]
   },
   {
-    "id": 163,
+    "id": 179,
     "slug": "intc-intel-nasdaq-intc-rallies-2-3-on-ai-driven-q1-revenue-beat",
     "title": "Intel (NASDAQ: INTC) Rallies 2.3% on AI-Driven Q1 Revenue Beat",
     "author": "Alpha Stocks Insight Staff",
@@ -5085,7 +5601,7 @@
     ]
   },
   {
-    "id": 164,
+    "id": 180,
     "slug": "amzn-amazon-nasdaq-amzn-holds-steady-on-jefferies-buy-rating-desp",
     "title": "Amazon (NASDAQ: AMZN) Holds Steady on Jefferies Buy Rating Despite Valuation Concerns",
     "author": "Alpha Stocks Insight Staff",
@@ -5117,7 +5633,7 @@
     ]
   },
   {
-    "id": 165,
+    "id": 181,
     "slug": "orcl-oracle-nyse-orcl-falls-6-as-software-sector-faces-margin-pre",
     "title": "Oracle (NYSE: ORCL) Falls 6% as Software Sector Faces Margin Pressures",
     "author": "Alpha Stocks Insight Staff",
@@ -5149,7 +5665,7 @@
     ]
   },
   {
-    "id": 166,
+    "id": 182,
     "slug": "msft-microsoft-msft-slides-4-as-ai-spending-push-prompts-workforc",
     "title": "Microsoft (MSFT) Slides 4% as AI Spending Push Prompts Workforce Restructuring",
     "author": "Alpha Stocks Insight Staff",
@@ -5179,7 +5695,7 @@
     ]
   },
   {
-    "id": 167,
+    "id": 183,
     "slug": "now-servicenow-now-drops-17-75-after-q1-guidance-disappoints-des",
     "title": "ServiceNow (NOW) Drops 17.75% After Q1 Guidance Disappoints Despite Beat",
     "author": "Alpha Stocks Insight Staff",
@@ -5210,7 +5726,7 @@
     ]
   },
   {
-    "id": 168,
+    "id": 184,
     "slug": "tsla-tesla-nasdaq-tsla-slides-3-6-as-cybercab-rollout-concerns-we",
     "title": "Tesla (NASDAQ: TSLA) Slides 3.6% as Cybercab Rollout Concerns Weigh on Sentiment",
     "author": "Alpha Stocks Insight Staff",
@@ -5241,7 +5757,7 @@
     ]
   },
   {
-    "id": 169,
+    "id": 185,
     "slug": "nsc-nsc-jumps-7-75-as-union-pacific-s-85b-acquisition-bid-drives",
     "title": "NSC Jumps 7.75% as Union Pacific's $85B Acquisition Bid Drives Investor Interest",
     "author": "Alpha Stocks Insight Staff",
@@ -5271,7 +5787,7 @@
     ]
   },
   {
-    "id": 170,
+    "id": 186,
     "slug": "cri-carter-s-cri-trades-near-mid-range-as-analyst-sentiment-turn",
     "title": "Carter's (CRI) Trades Near Mid-Range as Analyst Sentiment Turns Cautious",
     "author": "Alpha Stocks Insight Staff",
@@ -5301,7 +5817,7 @@
     ]
   },
   {
-    "id": 171,
+    "id": 187,
     "slug": "roundup-2026-04-23",
     "title": "Today's Top Stock Highlights — April 23, 2026",
     "author": "Alpha Stocks Insight Staff",
@@ -5355,7 +5871,7 @@
     ]
   },
   {
-    "id": 172,
+    "id": 188,
     "slug": "pool-pool-q1-beat-builds-sales-momentum-as-guidance-holds-firm",
     "title": "POOL Q1 Beat Builds Sales Momentum as Guidance Holds Firm",
     "author": "Alpha Stocks Insight Staff",
@@ -5385,7 +5901,7 @@
     ]
   },
   {
-    "id": 173,
+    "id": 189,
     "slug": "phm-phm-earnings-miss-as-housing-market-softens-margins-compress",
     "title": "PHM Earnings Miss as Housing Market Softens, Margins Compress",
     "author": "Alpha Stocks Insight Staff",
@@ -5415,7 +5931,7 @@
     ]
   },
   {
-    "id": 174,
+    "id": 190,
     "slug": "pcg-pcg-earnings-beat-supported-by-rate-adjustments-and-strong-o",
     "title": "PCG Earnings Beat Supported by Rate Adjustments and Strong Operations",
     "author": "Alpha Stocks Insight Staff",
@@ -5445,7 +5961,7 @@
     ]
   },
   {
-    "id": 175,
+    "id": 191,
     "slug": "nee-nee-q1-results-mixed-as-renewables-growth-offsets-revenue-mi",
     "title": "NEE Q1 Results Mixed as Renewables Growth Offsets Revenue Miss",
     "author": "Alpha Stocks Insight Staff",
@@ -5475,7 +5991,7 @@
     ]
   },
   {
-    "id": 176,
+    "id": 192,
     "slug": "ndaq-ndaq-posts-strong-q1-earnings-despite-market-weakness",
     "title": "NDAQ Posts Strong Q1 Earnings Despite Market Weakness",
     "author": "Alpha Stocks Insight Staff",
@@ -5505,7 +6021,7 @@
     ]
   },
   {
-    "id": 177,
+    "id": 193,
     "slug": "lmt-lmt-slides-2-89-as-q1-earnings-and-revenue-miss-cash-flow-pr",
     "title": "LMT Slides 2.89% as Q1 Earnings and Revenue Miss; Cash Flow Pressured",
     "author": "Alpha Stocks Insight Staff",
@@ -5535,7 +6051,7 @@
     ]
   },
   {
-    "id": 178,
+    "id": 194,
     "slug": "kdp-kdp-exceeds-q1-expectations-and-reaffirms-full-year-2026-gui",
     "title": "KDP Exceeds Q1 Expectations and Reaffirms Full-Year 2026 Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -5565,7 +6081,7 @@
     ]
   },
   {
-    "id": 179,
+    "id": 195,
     "slug": "intc-intc-drops-1-49-as-fed-policy-emerges-as-key-spring-catalyst",
     "title": "INTC Drops 1.49% as Fed Policy Emerges as Key Spring Catalyst",
     "author": "Alpha Stocks Insight Staff",
@@ -5595,7 +6111,7 @@
     ]
   },
   {
-    "id": 180,
+    "id": 196,
     "slug": "hon-hon-q1-earnings-beat-offset-by-revenue-miss-in-premarket",
     "title": "HON Q1 Earnings Beat Offset by Revenue Miss in Premarket",
     "author": "Alpha Stocks Insight Staff",
@@ -5625,7 +6141,7 @@
     ]
   },
   {
-    "id": 181,
+    "id": 197,
     "slug": "hban-hban-beats-on-earnings-but-revenue-falls-short-in-q1",
     "title": "HBAN Beats on Earnings But Revenue Falls Short in Q1",
     "author": "Alpha Stocks Insight Staff",
@@ -5655,7 +6171,7 @@
     ]
   },
   {
-    "id": 182,
+    "id": 198,
     "slug": "dow-dow-inc-beats-q1-estimates-despite-revenue-decline",
     "title": "Dow Inc. Beats Q1 Estimates Despite Revenue Decline",
     "author": "Alpha Stocks Insight Staff",
@@ -5685,7 +6201,7 @@
     ]
   },
   {
-    "id": 183,
+    "id": 199,
     "slug": "dov-dover-corp-beats-revenue-but-misses-eps-stock-slides-1-87",
     "title": "Dover Corp Beats Revenue but Misses EPS; Stock Slides 1.87%",
     "author": "Alpha Stocks Insight Staff",
@@ -5715,7 +6231,7 @@
     ]
   },
   {
-    "id": 184,
+    "id": 200,
     "slug": "cnp-centerpoint-energy-posts-strong-q1-maintains-2026-guidance",
     "title": "CenterPoint Energy Posts Strong Q1; Maintains 2026 Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -5745,7 +6261,7 @@
     ]
   },
   {
-    "id": 185,
+    "id": 201,
     "slug": "cmcsa-comcast-beats-q1-revenue-estimates-stock-gains-on-earnings",
     "title": "Comcast Beats Q1 Revenue Estimates; Stock Gains on Earnings",
     "author": "Alpha Stocks Insight Staff",
@@ -5775,7 +6291,7 @@
     ]
   },
   {
-    "id": 186,
+    "id": 202,
     "slug": "cbre-cbre-group-beats-q1-sales-targets-as-data-center-demand-surg",
     "title": "CBRE Group Beats Q1 Sales Targets as Data Center Demand Surges",
     "author": "Alpha Stocks Insight Staff",
@@ -5805,7 +6321,7 @@
     ]
   },
   {
-    "id": 187,
+    "id": 203,
     "slug": "bx-blackstone-nyse-bx-posts-strong-q1-2026-with-revenue-beat-an",
     "title": "Blackstone (NYSE: BX) Posts Strong Q1 2026 With Revenue Beat and Rising AUM",
     "author": "Alpha Stocks Insight Staff",
@@ -5836,7 +6352,7 @@
     ]
   },
   {
-    "id": 188,
+    "id": 204,
     "slug": "axp-american-express-axp-posts-15-profit-jump-in-q1-2026-reaffir",
     "title": "American Express (AXP) Posts 15% Profit Jump in Q1 2026, Reaffirms Full-Year Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -5867,7 +6383,7 @@
     ]
   },
   {
-    "id": 189,
+    "id": 205,
     "slug": "amp-ameriprise-amp-gains-1-6-amid-charitable-honours-and-pending",
     "title": "Ameriprise (AMP) Gains 1.6% Amid Charitable Honours and Pending Q1 Results",
     "author": "Alpha Stocks Insight Staff",
@@ -5897,7 +6413,7 @@
     ]
   },
   {
-    "id": 190,
+    "id": 206,
     "slug": "pm-philip-morris-international-pm-jumps-6-98-on-q1-2026-earning",
     "title": "Philip Morris International (PM) Jumps 6.98% on Q1 2026 Earnings Release",
     "author": "Alpha Stocks Insight Staff",
@@ -5928,7 +6444,7 @@
     ]
   },
   {
-    "id": 191,
+    "id": 207,
     "slug": "pkg-pkg-misses-q1-2026-revenue-and-eps-estimates-despite-10-6-sa",
     "title": "PKG Misses Q1 2026 Revenue and EPS Estimates Despite 10.6% Sales Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -5959,7 +6475,7 @@
     ]
   },
   {
-    "id": 192,
+    "id": 208,
     "slug": "nvr-nvr-inc-nyse-nvr-misses-q1-2026-estimates-as-revenue-falls-2",
     "title": "NVR Inc. (NYSE: NVR) Misses Q1 2026 Estimates as Revenue Falls 21.7%",
     "author": "Alpha Stocks Insight Staff",
@@ -5990,7 +6506,7 @@
     ]
   },
   {
-    "id": 193,
+    "id": 209,
     "slug": "now-servicenow-now-q1-2026-earnings-meet-estimates-armis-deal-we",
     "title": "ServiceNow (NOW) Q1 2026 Earnings Meet Estimates; Armis Deal Weighs on Margin Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -6021,7 +6537,7 @@
     ]
   },
   {
-    "id": 194,
+    "id": 210,
     "slug": "moh-molina-healthcare-moh-beats-q1-profit-estimates-reaffirms-fu",
     "title": "Molina Healthcare (MOH) Beats Q1 Profit Estimates, Reaffirms Full-Year 2026 Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -6052,7 +6568,7 @@
     ]
   },
   {
-    "id": 195,
+    "id": 211,
     "slug": "lvs-las-vegas-sands-lvs-posts-strong-q1-2026-beat-on-macau-and-s",
     "title": "Las Vegas Sands (LVS) Posts Strong Q1 2026 Beat on Macau and Singapore Demand",
     "author": "Alpha Stocks Insight Staff",
@@ -6083,7 +6599,7 @@
     ]
   },
   {
-    "id": 196,
+    "id": 212,
     "slug": "lrcx-lam-research-lrcx-beats-q3-estimates-as-ai-demand-lifts-resu",
     "title": "Lam Research (LRCX) Beats Q3 Estimates as AI Demand Lifts Results",
     "author": "Alpha Stocks Insight Staff",
@@ -6114,7 +6630,7 @@
     ]
   },
   {
-    "id": 197,
+    "id": 213,
     "slug": "kmi-kinder-morgan-kmi-q1-2026-earnings-beat-22-raises-outlook-an",
     "title": "Kinder Morgan (KMI) Q1 2026 Earnings Beat 22%, Raises Outlook and Dividend",
     "author": "Alpha Stocks Insight Staff",
@@ -6146,7 +6662,7 @@
     ]
   },
   {
-    "id": 198,
+    "id": 214,
     "slug": "ibm-ibm-q1-2026-earnings-beat-estimates-but-shares-slip-on-guida",
     "title": "IBM Q1 2026 Earnings Beat Estimates, but Shares Slip on Guidance Concerns",
     "author": "Alpha Stocks Insight Staff",
@@ -6177,7 +6693,7 @@
     ]
   },
   {
-    "id": 199,
+    "id": 215,
     "slug": "gl-globe-life-nyse-gl-raises-2026-guidance-after-q1-eps-growth-",
     "title": "Globe Life (NYSE: GL) Raises 2026 Guidance After Q1 EPS Growth, Revenue In Line",
     "author": "Alpha Stocks Insight Staff",
@@ -6208,7 +6724,7 @@
     ]
   },
   {
-    "id": 200,
+    "id": 216,
     "slug": "csx-csx-nasdaq-csx-posts-strong-q1-2026-earnings-beat-stock-jump",
     "title": "CSX (NASDAQ: CSX) Posts Strong Q1 2026 Earnings Beat, Stock Jumps 7%",
     "author": "Alpha Stocks Insight Staff",
@@ -6239,7 +6755,7 @@
     ]
   },
   {
-    "id": 201,
+    "id": 217,
     "slug": "cme-cme-group-nasdaq-cme-posts-record-q1-revenue-and-net-income-",
     "title": "CME Group (NASDAQ: CME) Posts Record Q1 Revenue and Net Income on 22% ADV Surge",
     "author": "Alpha Stocks Insight Staff",
@@ -6270,7 +6786,7 @@
     ]
   },
   {
-    "id": 202,
+    "id": 218,
     "slug": "cci-crown-castle-cci-beats-q1-2026-estimates-reaffirms-full-year",
     "title": "Crown Castle (CCI) Beats Q1 2026 Estimates, Reaffirms Full-Year Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -6301,7 +6817,7 @@
     ]
   },
   {
-    "id": 203,
+    "id": 219,
     "slug": "bsx-boston-scientific-bsx-jumps-9-after-q1-2026-earnings-release",
     "title": "Boston Scientific (BSX) Jumps 9% After Q1 2026 Earnings Release",
     "author": "Alpha Stocks Insight Staff",
@@ -6332,7 +6848,7 @@
     ]
   },
   {
-    "id": 204,
+    "id": 220,
     "slug": "ba-boeing-nyse-ba-jumps-5-5-as-q1-2026-earnings-release-lifts-s",
     "title": "Boeing (NYSE: BA) Jumps 5.5% as Q1 2026 Earnings Release Lifts Sentiment",
     "author": "Alpha Stocks Insight Staff",
@@ -6363,7 +6879,7 @@
     ]
   },
   {
-    "id": 205,
+    "id": 221,
     "slug": "t-at-t-nyse-t-beats-q1-revenue-estimates-but-free-cash-flow-ra",
     "title": "AT&T (NYSE: T) Beats Q1 Revenue Estimates but Free Cash Flow Raises Questions",
     "author": "Alpha Stocks Insight Staff",
@@ -6393,7 +6909,7 @@
     ]
   },
   {
-    "id": 206,
+    "id": 222,
     "slug": "pm-philip-morris-nyse-pm-beats-q1-2026-revenue-estimates-on-smo",
     "title": "Philip Morris (NYSE: PM) Beats Q1 2026 Revenue Estimates on Smoke-Free Momentum",
     "author": "Alpha Stocks Insight Staff",
@@ -6424,7 +6940,7 @@
     ]
   },
   {
-    "id": 207,
+    "id": 223,
     "slug": "pkg-pkg-holds-buy-consensus-as-truist-trims-target-ahead-of-q1-r",
     "title": "PKG Holds Buy Consensus as Truist Trims Target Ahead of Q1 Results",
     "author": "Alpha Stocks Insight Staff",
@@ -6454,7 +6970,7 @@
     ]
   },
   {
-    "id": 208,
+    "id": 224,
     "slug": "otis-otis-worldwide-nyse-otis-posts-mixed-q1-2026-revenue-beats-e",
     "title": "Otis Worldwide (NYSE: OTIS) Posts Mixed Q1 2026: Revenue Beats, EPS Narrows",
     "author": "Alpha Stocks Insight Staff",
@@ -6485,7 +7001,7 @@
     ]
   },
   {
-    "id": 209,
+    "id": 225,
     "slug": "nvr-nvr-inc-q1-2026-profit-falls-34-as-tariffs-and-rates-weigh-o",
     "title": "NVR Inc. Q1 2026 Profit Falls 34% as Tariffs and Rates Weigh on Homebuilding",
     "author": "Alpha Stocks Insight Staff",
@@ -6516,7 +7032,7 @@
     ]
   },
   {
-    "id": 210,
+    "id": 226,
     "slug": "now-servicenow-now-gains-3-2-as-analyst-conviction-holds-despite",
     "title": "ServiceNow (NOW) Gains 3.2% as Analyst Conviction Holds Despite Hedge Fund Shorts",
     "author": "Alpha Stocks Insight Staff",
@@ -6547,7 +7063,7 @@
     ]
   },
   {
-    "id": 211,
+    "id": 227,
     "slug": "mco-moody-s-nyse-mco-posts-record-q1-2026-results-raises-full-ye",
     "title": "Moody's (NYSE: MCO) Posts Record Q1 2026 Results, Raises Full-Year Forecast",
     "author": "Alpha Stocks Insight Staff",
@@ -6578,7 +7094,7 @@
     ]
   },
   {
-    "id": 212,
+    "id": 228,
     "slug": "mas-masco-nyse-mas-jumps-12-after-q1-2026-beat-on-plumbing-stren",
     "title": "Masco (NYSE: MAS) Jumps 12% After Q1 2026 Beat on Plumbing Strength",
     "author": "Alpha Stocks Insight Staff",
@@ -6609,7 +7125,7 @@
     ]
   },
   {
-    "id": 213,
+    "id": 229,
     "slug": "lvs-las-vegas-sands-lvs-earns-strong-buy-consensus-ahead-of-q1-e",
     "title": "Las Vegas Sands (LVS) Earns Strong Buy Consensus Ahead of Q1 Earnings",
     "author": "Alpha Stocks Insight Staff",
@@ -6640,7 +7156,7 @@
     ]
   },
   {
-    "id": 214,
+    "id": 230,
     "slug": "luv-southwest-airlines-luv-holds-near-52-week-highs-as-earnings-",
     "title": "Southwest Airlines (LUV) Holds Near 52-Week Highs as Earnings Test Approaches",
     "author": "Alpha Stocks Insight Staff",
@@ -6670,7 +7186,7 @@
     ]
   },
   {
-    "id": 215,
+    "id": 231,
     "slug": "lrcx-lam-research-nasdaq-lrcx-approaches-earnings-with-strong-fun",
     "title": "Lam Research (NASDAQ: LRCX) Approaches Earnings With Strong Fundamentals and Broad Analyst Support",
     "author": "Alpha Stocks Insight Staff",
@@ -6701,7 +7217,7 @@
     ]
   },
   {
-    "id": 216,
+    "id": 232,
     "slug": "ibm-ibm-steady-near-257-as-ai-partnerships-and-strong-fundamenta",
     "title": "IBM Steady Near $257 as AI Partnerships and Strong Fundamentals Draw Analyst Attention",
     "author": "Alpha Stocks Insight Staff",
@@ -6732,7 +7248,7 @@
     ]
   },
   {
-    "id": 217,
+    "id": 233,
     "slug": "cme-cme-group-nasdaq-cme-posts-record-q1-2026-revenue-of-1-88b-s",
     "title": "CME Group (NASDAQ: CME) Posts Record Q1 2026 Revenue of $1.88B, Shares Slip 1.17%",
     "author": "Alpha Stocks Insight Staff",
@@ -6763,7 +7279,7 @@
     ]
   },
   {
-    "id": 218,
+    "id": 234,
     "slug": "bsx-bsx-rallies-8-7-after-q1-2026-earnings-beat-and-guidance-res",
     "title": "BSX Rallies 8.7% After Q1 2026 Earnings Beat and Guidance Reset",
     "author": "Alpha Stocks Insight Staff",
@@ -6794,7 +7310,7 @@
     ]
   },
   {
-    "id": 219,
+    "id": 235,
     "slug": "ba-boeing-ba-narrows-q1-loss-as-deliveries-rise-beats-wall-stre",
     "title": "Boeing (BA) Narrows Q1 Loss as Deliveries Rise, Beats Wall Street Estimates",
     "author": "Alpha Stocks Insight Staff",
@@ -6825,7 +7341,7 @@
     ]
   },
   {
-    "id": 220,
+    "id": 236,
     "slug": "roundup-2026-04-22",
     "title": "Today's Top Stock Highlights — April 22, 2026",
     "author": "Alpha Stocks Insight Staff",
@@ -6879,7 +7395,7 @@
     ]
   },
   {
-    "id": 221,
+    "id": 237,
     "slug": "ibm-ibm-navigates-doj-settlement-and-ai-partnership-momentum-ahe",
     "title": "IBM Navigates DOJ Settlement and AI Partnership Momentum Ahead of Q1 Results (NYSE: IBM)",
     "author": "Alpha Stocks Insight Staff",
@@ -6910,7 +7426,7 @@
     ]
   },
   {
-    "id": 222,
+    "id": 238,
     "slug": "elv-elevance-health-elv-raises-full-year-guidance-after-q1-2026-",
     "title": "Elevance Health (ELV) Raises Full-Year Guidance After Q1 2026 Beat",
     "author": "Alpha Stocks Insight Staff",
@@ -6941,7 +7457,7 @@
     ]
   },
   {
-    "id": 223,
+    "id": 239,
     "slug": "ba-boeing-ba-draws-fresh-787-order-and-737-max-progress-amid-br",
     "title": "Boeing (BA) Draws Fresh 787 Order and 737 MAX Progress Amid Broad Analyst Confidence",
     "author": "Alpha Stocks Insight Staff",
@@ -6971,7 +7487,7 @@
     ]
   },
   {
-    "id": 224,
+    "id": 240,
     "slug": "unh-unitedhealth-nyse-unh-beats-q1-2026-estimates-raises-full-ye",
     "title": "UnitedHealth (NYSE: UNH) Beats Q1 2026 Estimates and Raises Full-Year Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -7002,7 +7518,7 @@
     ]
   },
   {
-    "id": 225,
+    "id": 241,
     "slug": "ual-ual-rises-as-american-airlines-rejects-united-merger-proposa",
     "title": "UAL Rises as American Airlines Rejects United Merger Proposal Amid Antitrust Concerns",
     "author": "Alpha Stocks Insight Staff",
@@ -7033,7 +7549,7 @@
     ]
   },
   {
-    "id": 226,
+    "id": 242,
     "slug": "syf-synchrony-financial-syf-beats-q1-2026-estimates-launches-6-5",
     "title": "Synchrony Financial (SYF) Beats Q1 2026 Estimates, Launches $6.5B Buyback Program",
     "author": "Alpha Stocks Insight Staff",
@@ -7064,7 +7580,7 @@
     ]
   },
   {
-    "id": 227,
+    "id": 243,
     "slug": "rtx-rtx-nyse-rtx-beats-q1-2026-estimates-raises-full-year-guidan",
     "title": "RTX (NYSE:RTX) Beats Q1 2026 Estimates, Raises Full-Year Guidance on Defense Strength",
     "author": "Alpha Stocks Insight Staff",
@@ -7095,7 +7611,7 @@
     ]
   },
   {
-    "id": 228,
+    "id": 244,
     "slug": "ntrs-northern-trust-ntrs-beats-q1-2026-estimates-on-fee-income-st",
     "title": "Northern Trust (NTRS) Beats Q1 2026 Estimates on Fee Income Strength",
     "author": "Alpha Stocks Insight Staff",
@@ -7126,7 +7642,7 @@
     ]
   },
   {
-    "id": 229,
+    "id": 245,
     "slug": "noc-northrop-grumman-noc-beats-q1-2026-estimates-as-stock-falls-",
     "title": "Northrop Grumman (NOC) Beats Q1 2026 Estimates as Stock Falls 3.98%",
     "author": "Alpha Stocks Insight Staff",
@@ -7157,7 +7673,7 @@
     ]
   },
   {
-    "id": 230,
+    "id": 246,
     "slug": "msci-msci-inc-nyse-msci-posts-q1-2026-revenue-beat-on-index-segme",
     "title": "MSCI Inc. (NYSE:MSCI) Posts Q1 2026 Revenue Beat on Index Segment Strength",
     "author": "Alpha Stocks Insight Staff",
@@ -7188,7 +7704,7 @@
     ]
   },
   {
-    "id": 231,
+    "id": 247,
     "slug": "mmm-3m-mmm-q1-2026-earnings-eps-beats-by-7-9-revenue-meets-estim",
     "title": "3M (MMM) Q1 2026 Earnings: EPS Beats by 7.9%, Revenue Meets Estimates",
     "author": "Alpha Stocks Insight Staff",
@@ -7219,7 +7735,7 @@
     ]
   },
   {
-    "id": 232,
+    "id": 248,
     "slug": "hal-halliburton-nyse-hal-beats-q1-2026-estimates-as-shares-rise-",
     "title": "Halliburton (NYSE:HAL) Beats Q1 2026 Estimates as Shares Rise 3.79%",
     "author": "Alpha Stocks Insight Staff",
@@ -7250,7 +7766,7 @@
     ]
   },
   {
-    "id": 233,
+    "id": 249,
     "slug": "gpc-genuine-parts-nyse-gpc-q1-2026-revenue-beats-estimates-profi",
     "title": "Genuine Parts (NYSE:GPC) Q1 2026 Revenue Beats Estimates, Profit Falls on Higher Costs",
     "author": "Alpha Stocks Insight Staff",
@@ -7281,7 +7797,7 @@
     ]
   },
   {
-    "id": 234,
+    "id": 250,
     "slug": "ge-ge-aerospace-nyse-ge-beats-q1-estimates-as-orders-jump-87-ra",
     "title": "GE Aerospace (NYSE:GE) Beats Q1 Estimates as Orders Jump 87%, Raises Profit Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -7312,7 +7828,7 @@
     ]
   },
   {
-    "id": 235,
+    "id": 251,
     "slug": "eqt-eqt-nyse-eqt-declares-0-165-quarterly-dividend-as-analysts-m",
     "title": "EQT (NYSE:EQT) Declares $0.165 Quarterly Dividend as Analysts Maintain Strong Buy Consensus",
     "author": "Alpha Stocks Insight Staff",
@@ -7343,7 +7859,7 @@
     ]
   },
   {
-    "id": 236,
+    "id": 252,
     "slug": "efx-equifax-efx-beats-q1-2026-estimates-as-mortgage-strength-dri",
     "title": "Equifax (EFX) Beats Q1 2026 Estimates as Mortgage Strength Drives 14.3% Revenue Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -7374,7 +7890,7 @@
     ]
   },
   {
-    "id": 237,
+    "id": 253,
     "slug": "dhi-d-r-horton-dhi-jumps-8-35-after-q2-2026-eps-beat-and-strong-",
     "title": "D.R. Horton (DHI) Jumps 8.35% After Q2 2026 EPS Beat and Strong Order Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -7405,7 +7921,7 @@
     ]
   },
   {
-    "id": 238,
+    "id": 254,
     "slug": "cb-chubb-nyse-cb-faces-earnings-scrutiny-as-analyst-consensus-h",
     "title": "Chubb (NYSE:CB) Faces Earnings Scrutiny as Analyst Consensus Holds at Mixed Buy",
     "author": "Alpha Stocks Insight Staff",
@@ -7436,7 +7952,7 @@
     ]
   },
   {
-    "id": 239,
+    "id": 255,
     "slug": "roundup-2026-04-21",
     "title": "Today's Top Stock Highlights — April 21, 2026",
     "author": "Alpha Stocks Insight Staff",
@@ -7497,7 +8013,7 @@
     ]
   },
   {
-    "id": 240,
+    "id": 256,
     "slug": "eqt-eqt-corporation-nyse-eqt-slips-2-5-ahead-of-q1-earnings-repo",
     "title": "EQT Corporation (NYSE:EQT) Slips 2.5% Ahead of Q1 Earnings Report",
     "author": "Alpha Stocks Insight Staff",
@@ -7528,7 +8044,7 @@
     ]
   },
   {
-    "id": 241,
+    "id": 257,
     "slug": "elv-elevance-health-elv-slips-ahead-of-q1-earnings-jefferies-tri",
     "title": "Elevance Health (ELV) Slips Ahead of Q1 Earnings; Jefferies Trims Target",
     "author": "Alpha Stocks Insight Staff",
@@ -7559,7 +8075,7 @@
     ]
   },
   {
-    "id": 242,
+    "id": 258,
     "slug": "efx-equifax-nyse-efx-beats-q1-2026-estimates-on-mortgage-strengt",
     "title": "Equifax (NYSE:EFX) Beats Q1 2026 Estimates on Mortgage Strength",
     "author": "Alpha Stocks Insight Staff",
@@ -7590,7 +8106,7 @@
     ]
   },
   {
-    "id": 243,
+    "id": 259,
     "slug": "dhr-danaher-dhr-beats-q1-earnings-but-misses-revenue-raises-full",
     "title": "Danaher (DHR) Beats Q1 Earnings but Misses Revenue, Raises Full-Year Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -7621,7 +8137,7 @@
     ]
   },
   {
-    "id": 244,
+    "id": 260,
     "slug": "dhi-d-r-horton-dhi-rises-2-36-after-mixed-q2-2026-results-with-e",
     "title": "D.R. Horton (DHI) Rises 2.36% After Mixed Q2 2026 Results With EPS Beat",
     "author": "Alpha Stocks Insight Staff",
@@ -7652,7 +8168,7 @@
     ]
   },
   {
-    "id": 245,
+    "id": 261,
     "slug": "dgx-quest-diagnostics-dgx-beats-q1-2026-estimates-raises-full-ye",
     "title": "Quest Diagnostics (DGX) Beats Q1 2026 Estimates, Raises Full-Year Guidance",
     "author": "Alpha Stocks Insight Staff",
@@ -7683,7 +8199,7 @@
     ]
   },
   {
-    "id": 246,
+    "id": 262,
     "slug": "csx-csx-nasdaq-csx-approaches-52-week-high-ahead-of-earnings-rep",
     "title": "CSX (NASDAQ:CSX) Approaches 52-Week High Ahead of Earnings Report",
     "author": "Alpha Stocks Insight Staff",
@@ -7714,7 +8230,7 @@
     ]
   },
   {
-    "id": 247,
+    "id": 263,
     "slug": "cof-capital-one-cof-eyes-higher-q1-profit-as-earnings-report-app",
     "title": "Capital One (COF) Eyes Higher Q1 Profit as Earnings Report Approaches",
     "author": "Alpha Stocks Insight Staff",
@@ -7745,7 +8261,7 @@
     ]
   },
   {
-    "id": 248,
+    "id": 264,
     "slug": "cci-crown-castle-cci-slides-ahead-of-q1-earnings-as-analysts-lea",
     "title": "Crown Castle (CCI) Slides Ahead of Q1 Earnings as Analysts Lean Bullish",
     "author": "Alpha Stocks Insight Staff",
@@ -7776,7 +8292,7 @@
     ]
   },
   {
-    "id": 249,
+    "id": 265,
     "slug": "ba-boeing-ba-rises-0-76-ahead-of-earnings-ethiopian-airlines-ad",
     "title": "Boeing (BA) Rises 0.76% Ahead of Earnings; Ethiopian Airlines Adds Six 787s",
     "author": "Alpha Stocks Insight Staff",
@@ -7807,7 +8323,7 @@
     ]
   },
   {
-    "id": 250,
+    "id": 266,
     "slug": "cme-cme-group-cme-approaches-q1-earnings-with-revenue-growth-exp",
     "title": "CME Group (CME) Approaches Q1 Earnings With Revenue Growth Expected at 14%",
     "author": "Alpha Stocks Insight Staff",
@@ -7838,7 +8354,7 @@
     ]
   },
   {
-    "id": 251,
+    "id": 267,
     "slug": "cci-crown-castle-cci-slips-1-3-as-investors-weigh-q1-earnings-ou",
     "title": "Crown Castle (CCI) Slips 1.3% as Investors Weigh Q1 Earnings Outlook",
     "author": "Alpha Stocks Insight Staff",
@@ -7869,7 +8385,7 @@
     ]
   },
   {
-    "id": 252,
+    "id": 268,
     "slug": "cb-chubb-cb-approaches-q1-earnings-with-premium-growth-and-ai-t",
     "title": "Chubb (CB) Approaches Q1 Earnings With Premium Growth and AI Tailwinds",
     "author": "Alpha Stocks Insight Staff",
@@ -7900,7 +8416,7 @@
     ]
   },
   {
-    "id": 253,
+    "id": 269,
     "slug": "bsx-boston-scientific-bsx-drops-5-ahead-of-q1-earnings-report",
     "title": "Boston Scientific (BSX) Drops 5% Ahead of Q1 Earnings Report",
     "author": "Alpha Stocks Insight Staff",
@@ -7931,7 +8447,7 @@
     ]
   },
   {
-    "id": 254,
+    "id": 270,
     "slug": "ba-boeing-ba-heads-into-earnings-with-strong-analyst-backing-an",
     "title": "Boeing (BA) Heads Into Earnings With Strong Analyst Backing and New Orders",
     "author": "Alpha Stocks Insight Staff",
@@ -7962,7 +8478,7 @@
     ]
   },
   {
-    "id": 255,
+    "id": 271,
     "slug": "tsla-tesla-tsla-slips-2-ahead-of-q1-earnings-as-analyst-sentiment",
     "title": "Tesla (TSLA) Slips 2% Ahead of Q1 Earnings as Analyst Sentiment Remains Mixed",
     "author": "Alpha Stocks Insight Staff",
@@ -7993,7 +8509,7 @@
     ]
   },
   {
-    "id": 256,
+    "id": 272,
     "slug": "nvda-nvidia-nvda-holds-near-52-week-high-as-chip-rally-extends-an",
     "title": "NVIDIA (NVDA) Holds Near 52-Week High as Chip Rally Extends, Analysts Stay Bullish",
     "author": "Alpha Stocks Insight Staff",
@@ -8023,7 +8539,7 @@
     ]
   },
   {
-    "id": 257,
+    "id": 273,
     "slug": "aapl-apple-inc-aapl-tim-cook-s-departure-marks-a-pivotal-inflecti",
     "title": "Apple Inc. (AAPL): Tim Cook's Departure Marks a Pivotal Inflection Point — What Investors Need to Know",
     "author": "Alpha Stocks Insight Staff",
@@ -8054,7 +8570,7 @@
     ]
   },
   {
-    "id": 258,
+    "id": 274,
     "slug": "nvda-nvidia-nvda-can-slim-momentum-ai-partnerships-and-a-surging-",
     "title": "NVIDIA (NVDA): CAN SLIM Momentum, AI Partnerships, and a Surging Semiconductor Sector Converge",
     "author": "Alpha Stocks Insight Staff",
@@ -8084,7 +8600,7 @@
     ]
   },
   {
-    "id": 259,
+    "id": 275,
     "slug": "nvidia-ai-dominance-q1-2026-preview",
     "title": "NVIDIA's AI Dominance Continues: Q1 2026 Preview Shows Massive Data Center Growth",
     "author": "Alpha Stocks Insight Staff",
@@ -8116,7 +8632,7 @@
     ]
   },
   {
-    "id": 260,
+    "id": 276,
     "slug": "apple-services-revenue-record-safe-haven",
     "title": "Apple's Services Revenue Hits Record High: Is AAPL the Ultimate Safe Haven Stock?",
     "author": "Alpha Stocks Insight Staff",
@@ -8148,7 +8664,7 @@
     ]
   },
   {
-    "id": 261,
+    "id": 277,
     "slug": "tesla-fsd-14-analyst-upgrades",
     "title": "Tesla Full Self-Driving 14.0 Launch Triggers Analyst Upgrades Across the Board",
     "author": "Alpha Stocks Insight Staff",
@@ -8180,7 +8696,7 @@
     ]
   },
   {
-    "id": 262,
+    "id": 278,
     "slug": "microsoft-azure-copilot-q2-earnings-beat",
     "title": "Microsoft Azure Growth Accelerates: AI Copilot Adoption Drives Q2 Earnings Beat",
     "author": "Alpha Stocks Insight Staff",
@@ -8213,7 +8729,7 @@
     ]
   },
   {
-    "id": 263,
+    "id": 279,
     "slug": "amazon-aws-reclaims-cloud-position-ai-contracts",
     "title": "Amazon AWS Reclaims Top Cloud Position as Enterprise AI Contracts Surge",
     "author": "Alpha Stocks Insight Staff",
@@ -8246,7 +8762,7 @@
     ]
   },
   {
-    "id": 264,
+    "id": 280,
     "slug": "meta-ai-glasses-advertising-surge",
     "title": "Meta's AI Glasses Reach 5 Million Units: Advertising Revenue Surges 34% YoY",
     "author": "Alpha Stocks Insight Staff",
@@ -8279,7 +8795,7 @@
     ]
   },
   {
-    "id": 265,
+    "id": 281,
     "slug": "alphabet-gemini-ultra-3-search-rebound",
     "title": "Alphabet's Gemini Ultra 3 Outperforms Rivals: Search Revenue Rebounds Strongly",
     "author": "Alpha Stocks Insight Staff",
@@ -8312,7 +8828,7 @@
     ]
   },
   {
-    "id": 266,
+    "id": 282,
     "slug": "amd-mi400-data-center-enterprise-orders",
     "title": "AMD MI400 GPUs Challenge NVIDIA's Data Center Monopoly: $8B in Enterprise Orders",
     "author": "Alpha Stocks Insight Staff",
@@ -8343,7 +8859,7 @@
     ]
   },
   {
-    "id": 267,
+    "id": 283,
     "slug": "palantir-dod-ai-contract-government-revenue",
     "title": "Palantir Wins $2.5B DoD AI Contract Extension: Government Revenue to Double",
     "author": "Alpha Stocks Insight Staff",
@@ -8376,7 +8892,7 @@
     ]
   },
   {
-    "id": 268,
+    "id": 284,
     "slug": "super-micro-computer-record-revenue-ai-infrastructure",
     "title": "Super Micro Computer: Record $7.8B Revenue as AI Infrastructure Boom Continues",
     "author": "Alpha Stocks Insight Staff",
