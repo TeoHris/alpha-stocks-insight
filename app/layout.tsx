@@ -77,6 +77,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* RSS feed auto-discovery — picked up by browsers and feed readers */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Alpha Stocks Insight — Stock News &amp; Analysis"
+          href="https://alphastocksinsight.com/feed.xml"
+        />
         {/*
           ════════════════════════════════════════════════════════
           GOOGLE ADSENSE SCRIPT
