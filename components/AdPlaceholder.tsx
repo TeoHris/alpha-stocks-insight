@@ -47,6 +47,13 @@ export default function AdPlaceholder({
   label,
   id,
 }: AdPlaceholderProps) {
+  // ── ADS HIDDEN until AdSense is approved ──────────────────
+  // To re-enable: remove the line below and replace the inner
+  // <div> contents with the real AdSense <ins> tag per the
+  // instructions at the top of this file.
+  return null
+
+  // eslint-disable-next-line no-unreachable
   const heightMap: Record<string, string> = {
     '728x90': 'h-[90px]',
     '300x250': 'h-[250px]',
@@ -64,9 +71,6 @@ export default function AdPlaceholder({
         bg-gray-50 dark:bg-gray-900/50
         flex flex-col items-center justify-center rounded-lg`}
     >
-      {/* ═══════════════════════════════════════════════════════
-          REPLACE THIS ENTIRE BLOCK WITH YOUR ADSENSE <ins> TAG
-          ═══════════════════════════════════════════════════════ */}
       <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-gray-400 dark:text-gray-600 select-none">
         Advertisement
       </span>
